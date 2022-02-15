@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "80ef5f26-01a2-446a-9037-5b51ccba874a",
+		"name": "Kiosk tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authorization test",
+			"item": [
+				{
+					"name": "Sending sms code",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"console.log(\"_______________________________________________\");\r",
+									"console.log(\"Authorization Test #1 - 'SMS sender test'\");\r",
+									"pm.test(\"Server response\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    console.log(\"Code sended\");\r",
+									"});\r",
+									"console.log(\"_______________________________________________\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dev.robotoir.cloud:8443/v1/auth/request",
+							"protocol": "https",
+							"host": [
+								"dev",
+								"robotoir",
+								"cloud"
+							],
+							"port": "8443",
+							"path": [
+								"v1",
+								"auth",
+								"request"
+							],
+							"query": [
+								{
+									"key": "phone",
+									"value": "+7(905) 608 07 08",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate token",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"console.log(\"_______________________________________________\");\r",
+									"console.log(\"Authorization Test #2 - 'User token generation'\");\r",
+									"\r",
+									"const schema = {\r",
+									"    \"type\": \"object\",\r",
+									"    \"properties\": {\r",
+									"        \"user_id\": {\r",
+									"            \"type\": \"string\"\r",
+									"        },\r",
+									"        \"access_token\": {\r",
+									"            \"type\": \"string\"\r",
+									"        }\r",
+									"    },\r",
+									"    \"required\": [\r",
+									"        \"user_id\",\r",
+									"        \"access_token\"\r",
+									"    ]\r",
+									"};\r",
+									"\r",
+									"pm.test(\"Server response\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    console.log(\"1) Token given\");\r",
+									"});\r",
+									"\r",
+									"pm.test('Schema is valid', () => {\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"    console.log(\"2) JSON schema is valid\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+									"});\r",
+									"console.log(\"_______________________________________________\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"phone\":\"+7(905) 608 07 08\",\"code\":\"12345\"}"
+						},
+						"url": {
+							"raw": "https://dev.robotoir.cloud:8443/v1/auth",
+							"protocol": "https",
+							"host": [
+								"dev",
+								"robotoir",
+								"cloud"
+							],
+							"port": "8443",
+							"path": [
+								"v1",
+								"auth"
+							],
+							"query": [
+								{
+									"key": "phone",
+									"value": "+7(937) 883 94 59",
+									"disabled": true
+								},
+								{
+									"key": "code",
+									"value": "12345",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile test",
+			"item": [
+				{
+					"name": "Get user profile data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"console.log(\"_______________________________________________\");\r",
+									"console.log(\"Profile Test #1 - 'Get user profile data'\");\r",
+									"\r",
+									"const schema = {\r",
+									"    \"type\": \"object\",\r",
+									"    \"properties\": {\r",
+									"        \"id_user\": {\r",
+									"            \"type\": \"number\"\r",
+									"        },\r",
+									"        \"login\": {\r",
+									"            \"type\": \"string\"\r",
+									"        },\r",
+									"        \"created_at\": {\r",
+									"            \"type\": \"string\"\r",
+									"        },\r",
+									"        \"updated_at\": {\r",
+									"            \"type\": \"string\"\r",
+									"        },\r",
+									"        \"photo\": {\r",
+									"            \"type\": \"string\"\r",
+									"        },\r",
+									"        \"active\": {\r",
+									"            \"type\": \"string\"\r",
+									"        },\r",
+									"        \"last_login_time\": {\r",
+									"            \"type\": \"string\"\r",
+									"        },\r",
+									"        \"login\": {\r",
+									"            \"type\": \"string\"\r",
+									"        },\r",
+									"        \"email\": {\r",
+									"            \"type\": \"string\"\r",
+									"        },\r",
+									"        \"sex\": {\r",
+									"            \"type\": \"number\"\r",
+									"        },\r",
+									"        \"name\": {\r",
+									"            \"type\": \"string\"\r",
+									"        },\r",
+									"        \"lastname\": {\r",
+									"            \"type\": \"string\"\r",
+									"        },\r",
+									"        \"patronymic\": {\r",
+									"            \"type\": \"string\"\r",
+									"        },\r",
+									"        \"full_name\": {\r",
+									"            \"type\": \"string\"\r",
+									"        },\r",
+									"        \"birthday\": {\r",
+									"            \"type\": \"string\"\r",
+									"        },\r",
+									"        \"address\": {\r",
+									"            \"type\": \"string\"\r",
+									"        },\r",
+									"        \"city\": {\r",
+									"            \"type\": \"string\"\r",
+									"        },\r",
+									"        \"country\": {\r",
+									"            \"type\": \"string\"\r",
+									"        },\r",
+									"        \"phone\": {\r",
+									"            \"type\": \"string\"\r",
+									"        },\r",
+									"        \"deleted\": {\r",
+									"            \"type\": \"string\"\r",
+									"        }\r",
+									"    },\r",
+									"    \"required\": [\r",
+									"        \"id_user\",\r",
+									"        \"login\",\r",
+									"        \"created_at\",\r",
+									"        \"updated_at\",\r",
+									"        \"photo\",\r",
+									"        \"active\",\r",
+									"        \"last_login_time\",\r",
+									"        \"email\",\r",
+									"        \"sex\",\r",
+									"        \"name\",\r",
+									"        \"lastname\",\r",
+									"        \"patronymic\",\r",
+									"        \"full_name\",\r",
+									"        \"birthday\",\r",
+									"        \"address\",\r",
+									"        \"city\",\r",
+									"        \"country\",\r",
+									"        \"phone\",\r",
+									"        \"deleted\"\r",
+									"    ]\r",
+									"};\r",
+									"\r",
+									"pm.test(\"Server response\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    console.log(\"1) User exist\");\r",
+									"});\r",
+									"\r",
+									"pm.test('Schema is valid', () => {\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"    console.log(\"2) JSON schema is valid\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+									"});\r",
+									"console.log(\"_______________________________________________\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dev.robotoir.cloud:8443/v1/user/2/",
+							"protocol": "https",
+							"host": [
+								"dev",
+								"robotoir",
+								"cloud"
+							],
+							"port": "8443",
+							"path": [
+								"v1",
+								"user",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user profile photo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"console.log(\"_______________________________________________\");\r",
+									"console.log(\"Profile Test #2 - 'Get user photo'\");\r",
+									"\r",
+									"pm.test(\"Server response\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    console.log(\"1) User exist\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type header is image\", () => {\r",
+									"    pm.expect(pm.response.headers.get('Content-Type')).to.be.oneOf(['image/jpeg', 'image/png']);\r",
+									"    console.log(\"2) User profile photo exist - it is image\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"    console.log(\"2) Server response time is: \" + pm.response.responseTime)\r",
+									"});\r",
+									"console.log(\"_______________________________________________\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dev.robotoir.cloud:8443/v1/user/2/photo?output=my_logo.jpg",
+							"protocol": "https",
+							"host": [
+								"dev",
+								"robotoir",
+								"cloud"
+							],
+							"port": "8443",
+							"path": [
+								"v1",
+								"user",
+								"2",
+								"photo"
+							],
+							"query": [
+								{
+									"key": "output",
+									"value": "my_logo.jpg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user metrics",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"console.log(\"_______________________________________________\");\r",
+									"console.log(\"Profile Test #3 - 'Get user metrics'\");\r",
+									"const schema = {\r",
+									"\r",
+									"}\r",
+									"\r",
+									"pm.test(\"Server response\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    console.log(\"1) User exist\");\r",
+									"});\r",
+									"console.log(\"_______________________________________________\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dev.robotoir.cloud:8443/v1/user/2/metric",
+							"protocol": "https",
+							"host": [
+								"dev",
+								"robotoir",
+								"cloud"
+							],
+							"port": "8443",
+							"path": [
+								"v1",
+								"user",
+								"2",
+								"metric"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
