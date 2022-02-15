@@ -15,27 +15,14 @@ jobs:
     - name: Install Node
       uses: actions/setup-node@v1
       with: 
-        node-version: '14.x'
+        node-version: '17.x'
     
     # Install the newman command line utility and also install the html extra reporter
     - name: Install newman
       run: |
        npm install -g newman
-       npm install -g newman-reporter-htmlextra
-
-    # Make directory to upload the test results
-    - name: Make Directory for results
-      run: mkdir -p testResults
-
 
     # Run the POSTMAN collection
     - name: Run POSTMAN collection
       run: |
        newman run https://api.getpostman.com/collections/19581218-80ef5f26-01a2-446a-9037-5b51ccba874a?apikey=PMAK-620a8ece9efb854f07d81bc9-1bc8f5f02ac06cc0c01bde0ed26aa3911e
-
-    # Upload the contents of Test Results directory to workspace
-    #- name: Output the run Details
-    #  uses: actions/upload-artifact@v2
-    #  with: 
-    #   name: RunReports
-    #   path: testResults
