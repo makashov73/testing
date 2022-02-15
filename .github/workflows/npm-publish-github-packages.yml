@@ -31,7 +31,7 @@ jobs:
     # Run the POSTMAN collection
     - name: Run POSTMAN collection
       run: |
-       newman run ./qatest/collection.json -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html
+       newman run https://api.getpostman.com/collections/19581218-80ef5f26-01a2-446a-9037-5b51ccba874a?apikey=PMAK-620a8ece9efb854f07d81bc9-1bc8f5f02ac06cc0c01bde0ed26aa3911e -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html
 
     # Upload the contents of Test Results directory to workspace
     - name: Output the run Details
