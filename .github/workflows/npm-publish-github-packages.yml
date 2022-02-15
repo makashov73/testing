@@ -34,8 +34,8 @@ jobs:
        newman run https://api.getpostman.com/collections/19581218-80ef5f26-01a2-446a-9037-5b51ccba874a?apikey=PMAK-620a8ece9efb854f07d81bc9-1bc8f5f02ac06cc0c01bde0ed26aa3911e
 
     # Upload the contents of Test Results directory to workspace
-    - name: Output the run Details
-      uses: actions/upload-artifact@v2
-      with: 
-       name: RunReports
-       path: testResults
+    #- name: Output the run Details
+    #  uses: actions/upload-artifact@v2
+    #  with: 
+    #   name: RunReports
+    #   path: testResults
