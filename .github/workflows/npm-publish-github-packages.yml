@@ -28,4 +28,4 @@ jobs:
     - name: Run POSTMAN collection
       
       run: |
-       newman run https://api.getpostman.com/collections/${{ secrets.ref }}?apikey=${{ secrets.token }}
+       newman run https://api.getpostman.com/collections/${{ secrets.POSTMAN_COLLECION }}?apikey=${{ secrets.POSTMAN_APIKEY }}
