@@ -8,7 +8,7 @@ jobs:
   test-api:
     runs-on: ubuntu-latest
     steps:
-    
+      
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     
@@ -17,6 +17,9 @@ jobs:
       uses: actions/setup-node@v1
       with: 
         node-version: '17.x'
+      env:
+        POSTMAN_COLLECTION: ${{ secrets.POSTMAN_COLLECTION }}
+        POSTMAN_APIKEY: ${{ secrets.POSTMAN_APIKEY }}
     
     # Install the newman command line utility and also install the html extra reporter
     - name: Install newman
@@ -27,4 +30,4 @@ jobs:
     - name: Run POSTMAN collection
       
       run: |
-       newman run https://api.getpostman.com/collections/${{ secrets.POSTMAN_COLLECION }}?apikey=${{ secrets.POSTMAN_APIKEY }}
+       newman run https://api.getpostman.com/collections/"$POSTMAN_COLLECION"?apikey="$POSTMAN_APIKEY"
