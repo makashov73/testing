@@ -9,14 +9,10 @@ jobs:
     
     runs-on: ubuntu-latest
     steps:
+    
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-      with:
-        POSTMAN_COLLECTION: ${{ secrets.ref }}
-        POSTMAN_APIKEY: ${{ secrets.POSTMAN_APIKEY }}
-      env:
-        POSTMAN_COLLECTION: ${{ secrets.token }}
-        POSTMAN_APIKEY: ${{ secrets.POSTMAN_APIKEY }} 
+    
     # INstall Node on the runner
     - name: Install Node
       uses: actions/setup-node@v1
@@ -32,4 +28,4 @@ jobs:
     - name: Run POSTMAN collection
       
       run: |
-       newman run https://api.getpostman.com/collections/"$POSTMAN_COLLECTION"?apikey="$POSTMAN_APIKEY"
+       newman run https://api.getpostman.com/collections/${{ secrets.ref }}?apikey=${{ secrets.token }}
