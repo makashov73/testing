@@ -27,4 +27,4 @@ jobs:
     - name: Run POSTMAN collection
       
       run: |
-       newman run ../../qatest/collection.json
+       newman run ../qatest/collection.json
