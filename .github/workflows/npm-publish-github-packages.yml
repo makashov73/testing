@@ -27,4 +27,4 @@ jobs:
     - name: Run POSTMAN collection
       
       run: |
-       newman run https://api.getpostman.com/collections/${{ secrets.POSTMAN_COLLECTION }}?apikey=${{ secrets.POSTMAN_APIKEY }}
+       newman ./qatest/collection.json
