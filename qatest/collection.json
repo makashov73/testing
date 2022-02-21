@@ -55,7 +55,7 @@
               }
             }
           ],
-          "_postman_id": "c0e5e92e-1ad8-4925-9302-c1a65ce52b32",
+          "id": "c0e5e92e-1ad8-4925-9302-c1a65ce52b32",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -157,7 +157,7 @@
               }
             }
           ],
-          "_postman_id": "481bc49e-f1b2-411b-a1cc-2a15b0ce726b",
+          "id": "481bc49e-f1b2-411b-a1cc-2a15b0ce726b",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -166,10 +166,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\"phone\":\"+7(905) 608 07 08\", \"code\":\"12345\"}",
-              "options": {
-                "raw": {}
-              }
+              "raw": "{\"phone\":\"+7(905) 608 07 08\", \"code\":\"12345\"}"
             },
             "url": {
               "raw": "{{baseURL}}/v1/auth/",
@@ -245,7 +242,7 @@
               }
             }
           ],
-          "_postman_id": "5d2961e7-c942-4f1b-8193-7075a969b5a0",
+          "id": "5d2961e7-c942-4f1b-8193-7075a969b5a0",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -264,7 +261,7 @@
           "response": []
         }
       ],
-      "_postman_id": "98711013-a1f7-4b3e-9b14-ead08bf6a57c"
+      "id": "98711013-a1f7-4b3e-9b14-ead08bf6a57c"
     },
     {
       "name": "User profile tests",
@@ -369,7 +366,7 @@
               }
             }
           ],
-          "_postman_id": "5f744819-8e2c-4c13-ad24-64d7eee14633",
+          "id": "5f744819-8e2c-4c13-ad24-64d7eee14633",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -419,7 +416,7 @@
               }
             }
           ],
-          "_postman_id": "34c1cd3a-a97f-40ba-8c54-751ae233038d",
+          "id": "34c1cd3a-a97f-40ba-8c54-751ae233038d",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -540,7 +537,7 @@
               }
             }
           ],
-          "_postman_id": "d037dfaf-d65a-42dc-ae7e-889092e5a3b2",
+          "id": "d037dfaf-d65a-42dc-ae7e-889092e5a3b2",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -616,7 +613,7 @@
               }
             }
           ],
-          "_postman_id": "f060358c-152d-4801-9371-e820480b9eb8",
+          "id": "f060358c-152d-4801-9371-e820480b9eb8",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -712,7 +709,7 @@
               }
             }
           ],
-          "_postman_id": "7f90ea5b-ed2d-4d51-a7b4-01177a727e72",
+          "id": "7f90ea5b-ed2d-4d51-a7b4-01177a727e72",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -730,7 +727,7 @@
           "response": []
         }
       ],
-      "_postman_id": "dd4a9a4e-ecff-439e-9bd3-345ad066b962"
+      "id": "dd4a9a4e-ecff-439e-9bd3-345ad066b962"
     },
     {
       "name": "Help topics tests",
@@ -771,7 +768,7 @@
               }
             }
           ],
-          "_postman_id": "cce89dd6-fcb1-433f-ab85-0b366ffa3804",
+          "id": "cce89dd6-fcb1-433f-ab85-0b366ffa3804",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -824,7 +821,7 @@
               }
             }
           ],
-          "_postman_id": "6e083f60-e81c-4255-85d4-25bbf8569cec",
+          "id": "6e083f60-e81c-4255-85d4-25bbf8569cec",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -842,7 +839,7 @@
           "response": []
         }
       ],
-      "_postman_id": "640f1a63-309c-4a3d-9162-6f0c0ffde614"
+      "id": "640f1a63-309c-4a3d-9162-6f0c0ffde614"
     },
     {
       "name": "Kiosk list tests",
@@ -895,7 +892,7 @@
               }
             }
           ],
-          "_postman_id": "c6bd3f96-8859-4271-91d4-d06ca50b87b4",
+          "id": "c6bd3f96-8859-4271-91d4-d06ca50b87b4",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -907,7 +904,7 @@
           "response": []
         }
       ],
-      "_postman_id": "64dc1be6-6778-4a37-9a7d-1de520158c96"
+      "id": "64dc1be6-6778-4a37-9a7d-1de520158c96"
     }
   ],
   "auth": {
@@ -940,28 +937,27 @@
   ],
   "variable": [
     {
-      "id": "5aca019c-1d69-40f7-93d1-9c3ec834f16e",
+      "id": "b9699e24-ab2f-4911-9e68-8744123dc182",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "c5433cc8-62f5-418a-8b1b-2c7e5eb2baa7",
+      "id": "3ddaf33d-2d67-4be8-87e4-8861a650fb25",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "16b6948c-a4d7-40e7-8ae1-32c14a12bc0b",
+      "id": "3d0d06af-ee4f-42c5-9ddc-9fa944a3fcb3",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d0457571-8575-4f60-8611-a7085b89603f",
+      "id": "ecfec2df-d73d-4ef0-9d01-1503335080e6",
       "key": "authtoken",
-      "value": "",
-      "type": "string"
+      "value": ""
     }
   ]
 }
