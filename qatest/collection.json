@@ -166,7 +166,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\"phone\":\"+7(905) 608 07 08\", \"code\":\"12345\"}"
+              "raw": "{\"phone\":\"+7(905) 608 07 08\", \"code\":\"1234\"}"
             },
             "url": {
               "raw": "{{baseURL}}/v1/auth/",
@@ -937,25 +937,25 @@
   ],
   "variable": [
     {
-      "id": "0ee87c81-8286-4729-918a-3534721eeb16",
+      "id": "df1772ec-defb-44d4-aac0-60378b0d63f2",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "605dbf6f-0c08-4d07-b21a-105ceca9069c",
+      "id": "aef09f24-b5c3-4dc8-977f-7dcda0b639f8",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "f3cecb2b-82b1-4534-862e-fd9c02d61cfe",
+      "id": "3dc377c5-342a-42a8-8dc3-b1407760af65",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b2e554d3-21fd-40b1-99a0-47246351e657",
+      "id": "6b234d79-9ea8-4a60-afd3-dd89d22e8a65",
       "key": "authtoken",
       "value": ""
     }
