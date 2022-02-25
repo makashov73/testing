@@ -1003,25 +1003,25 @@
   ],
   "variable": [
     {
-      "id": "e008c931-5ace-4f66-a094-0d673b43ec0f",
+      "id": "5e87e4b4-2e56-4aec-b3b7-013cafb70951",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "39c10bf1-9248-4920-85ae-7ff2f596bab1",
+      "id": "cc96f3fd-f618-4c05-80fe-76c5af798708",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "bfb25a20-7ac8-4172-9021-0f10498cdf51",
+      "id": "4d5ad7d3-d9ee-453c-a8b7-88e106b7bf79",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "21da67ad-06cb-4eb6-b05e-22f8570c9408",
+      "id": "4d8288f9-55f7-4cd2-9498-3b10dec155f5",
       "key": "authtoken",
       "value": ""
     }
