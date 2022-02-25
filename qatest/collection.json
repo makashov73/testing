@@ -725,6 +725,19 @@
             "url": "{{baseURL}}/v1/user/{{id_user}}/report/"
           },
           "response": []
+        },
+        {
+          "name": "New Request",
+          "id": "42d007fa-7ad8-44d0-8f21-c8987e59f387",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": null
+          },
+          "response": []
         }
       ],
       "id": "dd4a9a4e-ecff-439e-9bd3-345ad066b962"
@@ -937,25 +950,25 @@
   ],
   "variable": [
     {
-      "id": "6a24c6f9-54cb-40ed-8509-08c6489a61bb",
+      "id": "05e96fb6-3318-4795-9755-fb29d1919fd0",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "a8a9ae08-a98a-48cb-a235-9371123d29fe",
+      "id": "640f29ab-907b-41a2-b499-bd72a6402ab6",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "b646828c-b13b-4db9-a63b-832bea4498c7",
+      "id": "62145001-2e1f-4066-b7b7-573cab196826",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f7a65d61-5154-49e1-809c-b75e509d7bf7",
+      "id": "8a1777e2-9db8-460a-a360-9127d866c9e5",
       "key": "authtoken",
       "value": ""
     }
