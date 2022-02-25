@@ -683,6 +683,18 @@
           "response": []
         },
         {
+          "name": "Update user metric data",
+          "id": "e18ee6ff-f2f9-4abf-bde6-8749022c07df",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
           "name": "Obtain user report list",
           "event": [
             {
@@ -841,18 +853,6 @@
             "method": "GET",
             "header": [],
             "url": "{{baseURL}}/v1/user/{{id_user}}/tests/"
-          },
-          "response": []
-        },
-        {
-          "name": "New Request",
-          "id": "e18ee6ff-f2f9-4abf-bde6-8749022c07df",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": []
           },
           "response": []
         }
@@ -1067,25 +1067,25 @@
   ],
   "variable": [
     {
-      "id": "927fb20d-661c-4e5b-a8ae-53fbbacf09fa",
+      "id": "6f8bc479-7d07-4ac4-be3f-494d13e06a60",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "5f125e3d-5014-4c0b-9062-d16d6d040cbd",
+      "id": "f44c365b-3c1f-40ae-a042-9a37cf37bbf0",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "4dc83d65-08fe-419c-9f66-0810d5113363",
+      "id": "24fb6686-2873-4e0d-9cf1-a8e34f89dc71",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6902b235-2978-40e0-a0ae-bb29e98f4217",
+      "id": "cc1cb4d1-1e78-438a-82bb-2b0e4b490992",
       "key": "authtoken",
       "value": ""
     }
