@@ -727,7 +727,7 @@
           "response": []
         },
         {
-          "name": "New Request",
+          "name": "Obtain user available test list",
           "id": "42d007fa-7ad8-44d0-8f21-c8987e59f387",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -950,25 +950,25 @@
   ],
   "variable": [
     {
-      "id": "f696b8d5-bb90-4629-b9db-cf01e64a3b8a",
+      "id": "c0e1cd1d-96d0-4a2f-84ff-129802ca681c",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "57f7287c-559b-473e-be59-2916dcf593f6",
+      "id": "a5b2bb4a-4123-46c1-b11a-879a0c6fb821",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "d9c55acc-d7cd-4384-a42e-3c2c9e2ec57e",
+      "id": "62151a76-a5f2-44c7-b54e-9248fce26523",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e0b2fdc8-b93e-4baf-9ff4-6ddc2d192b4f",
+      "id": "68b6d936-00aa-4ec1-ae59-dee14db3444b",
       "key": "authtoken",
       "value": ""
     }
