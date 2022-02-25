@@ -802,8 +802,13 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "GET",
-            "header": []
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"date_start\": \"2022-01-25T07:00:00.000Z\", \"date_end\": \"2022-02-25T16:00:00.000Z\", \"metricList\": [{\"name\": \"BodyOxygen\"},{\"name\": \"PulseRate\"}, {\"name\": \"RespiratoryRate\"}]}"
+            },
+            "url": "{{baseURL}}/v1/user/{{id_user}}/report/"
           },
           "response": []
         },
@@ -1084,25 +1089,25 @@
   ],
   "variable": [
     {
-      "id": "f108efee-495e-4bdb-bdbc-a9e22115898b",
+      "id": "97aa58ee-4c5d-4225-92d6-9e4ad733f629",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "4d8cb9ca-4090-45e3-b13e-3df4ff886e4f",
+      "id": "aeaa73fb-ea54-4a80-a96c-39b9980da840",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "41969d0b-00a7-4da8-a759-cf603e51083a",
+      "id": "d0c822ef-20b7-470c-8fbd-02dd4aedbeb7",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fd509dc8-b8a0-4923-90cf-d96d414a3596",
+      "id": "1ed67871-d72c-4ec0-b484-6a072aa5507f",
       "key": "authtoken",
       "value": ""
     }
