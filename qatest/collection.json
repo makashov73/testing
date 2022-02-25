@@ -689,8 +689,13 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "GET",
-            "header": []
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"value\": 123, \"timestamp\": \"2022-02-25T09:12:34.567Z\", \"device\": \"iphone\", \"name\": \"PulseRate\"}"
+            },
+            "url": "{{baseURL}}/v1/user/{{id_user}}/metric/"
           },
           "response": []
         },
@@ -1067,25 +1072,25 @@
   ],
   "variable": [
     {
-      "id": "feadf291-4e7e-4093-8ffe-ed31136e1933",
+      "id": "fbc98aca-a3ec-435d-bfa9-8e541badd26c",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "8f675917-7512-408c-ba10-46efbf664a06",
+      "id": "00017f85-166f-4256-97de-dc1a480bce31",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "19eebc13-2a89-4cc5-bb1e-26aebed21eca",
+      "id": "0fa6895e-399f-49f8-a96b-d5f412000ad3",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7a398936-bb9e-4c0a-a692-0e5b262d213e",
+      "id": "7603c685-b006-46f0-9d8c-4db191f9b915",
       "key": "authtoken",
       "value": ""
     }
