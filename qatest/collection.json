@@ -728,6 +728,59 @@
         },
         {
           "name": "Obtain user available tests list",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "fed870ae-a29a-4788-b4c4-3ffd2a9da417",
+                "exec": [
+                  "console.log(\"_______________________________________________\");\r",
+                  "console.log(\"Profile Test #6 - 'Obtain user available tests list'\");\r",
+                  "\r",
+                  "\r",
+                  "const schema = {\r",
+                  "    \"type\": \"array\",\r",
+                  "    \"items\": [{\r",
+                  "        \"required\": [\"id_test\", \"title\", \"description\", \"created_at\"],\r",
+                  "        \"properties\": {\r",
+                  "            \"id_test\": {\r",
+                  "                \"type\": \"number\"\r",
+                  "            },\r",
+                  "            \"title\": {\r",
+                  "                \"type\": \"string\"\r",
+                  "            },\r",
+                  "            \"description\": {\r",
+                  "                \"type\": \"string\"\r",
+                  "            },\r",
+                  "            \"created_at\": {\r",
+                  "                \"type\": \"string\"\r",
+                  "            }\r",
+                  "        }\r",
+                  "    }]\r",
+                  "};\r",
+                  "\r",
+                  "pm.test(\"Server response\", () => {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "    console.log(\"1) User exist\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test('Schema is valid', () => {\r",
+                  "    pm.response.to.have.jsonSchema(schema);\r",
+                  "    console.log(\"2) JSON schema is valid\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
+                  "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                  "});\r",
+                  "\r",
+                  "console.log(\"Profile Test #6 - Done\");\r",
+                  "console.log(\"_______________________________________________\");"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "id": "42d007fa-7ad8-44d0-8f21-c8987e59f387",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -735,7 +788,7 @@
           "request": {
             "method": "GET",
             "header": [],
-            "url": null
+            "url": "{{baseURL}}/v1/user/{{id_user}}/tests/"
           },
           "response": []
         }
@@ -950,25 +1003,25 @@
   ],
   "variable": [
     {
-      "id": "7d054cd1-19fd-4f6f-bf18-33eef6046e6b",
+      "id": "61857f85-6a98-4620-baab-23a93ea1bf55",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "21127eab-dc0b-4027-9f32-accc98205699",
+      "id": "335a18d7-6055-4a30-ba34-5a613418ab0e",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "20b5dabb-d558-4a98-8751-8991aa430415",
+      "id": "740477e8-281f-4aec-98e2-1852ddcca5ca",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "92c66fd4-875d-4a9a-b184-47d37feb1467",
+      "id": "8f9ac5b4-1ab1-4120-9e95-9913717d1fea",
       "key": "authtoken",
       "value": ""
     }
