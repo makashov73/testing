@@ -472,7 +472,7 @@
                 {
                   "key": "profileImage",
                   "type": "file",
-                  "src": "photo.png"
+                  "src": "galen.png"
                 }
               ]
             },
@@ -1031,25 +1031,25 @@
   ],
   "variable": [
     {
-      "id": "21d03f5b-1355-4b39-9045-0c67425f39bf",
+      "id": "8cdab24d-48ff-408b-8108-760683b36cd9",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "6f7b82e5-7b1a-4b0f-85da-3376b78044be",
+      "id": "8a4d8b91-361e-4d0c-92dd-a400d34063c4",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "46c3ff9f-5e2d-40b2-8c80-31b807e9b728",
+      "id": "3651edf5-49bb-4504-9e85-28aee1646b7d",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ca6b0b4d-e5a7-4e55-be2b-8ec06e605fc6",
+      "id": "ba6746e6-709d-4250-8c19-d687c5f4acf1",
       "key": "authtoken",
       "value": ""
     }
