@@ -683,7 +683,7 @@
           "response": []
         },
         {
-          "name": "Update user metric data",
+          "name": "Add user metric data",
           "id": "e18ee6ff-f2f9-4abf-bde6-8749022c07df",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -1084,25 +1084,25 @@
   ],
   "variable": [
     {
-      "id": "53d3fe08-6f92-4a73-806f-7af8fa34d7b8",
+      "id": "f108efee-495e-4bdb-bdbc-a9e22115898b",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "e27a075e-9fa1-4208-be0a-e1b992a6f6d0",
+      "id": "4d8cb9ca-4090-45e3-b13e-3df4ff886e4f",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "db426b42-eae4-4f94-953b-2bc6b011e1e0",
+      "id": "41969d0b-00a7-4da8-a759-cf603e51083a",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ecd19d34-45a1-408e-94ac-d6e776fd9483",
+      "id": "fd509dc8-b8a0-4923-90cf-d96d414a3596",
       "key": "authtoken",
       "value": ""
     }
