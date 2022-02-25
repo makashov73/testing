@@ -384,6 +384,18 @@
           "response": []
         },
         {
+          "name": "Update user profile data",
+          "id": "df7d4dec-2f58-4918-938a-cad9217b664c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
           "name": "Obtain user profile photo",
           "event": [
             {
@@ -819,18 +831,6 @@
             "url": "{{baseURL}}/v1/user/{{id_user}}/tests/"
           },
           "response": []
-        },
-        {
-          "name": "New Request",
-          "id": "df7d4dec-2f58-4918-938a-cad9217b664c",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": []
-          },
-          "response": []
         }
       ],
       "id": "dd4a9a4e-ecff-439e-9bd3-345ad066b962"
@@ -1043,25 +1043,25 @@
   ],
   "variable": [
     {
-      "id": "2f1276ea-9d6d-40d0-a779-5b492d0f9a86",
+      "id": "6b77add8-aea6-4561-bb46-fe0f5b2f0eff",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "16b5cce0-0671-492c-9852-0eef65048b52",
+      "id": "d0678ce0-fb9e-4a34-90ec-b392e386db0b",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "283102b0-e0d3-4a57-9dc4-535e79c4c751",
+      "id": "caef285d-4728-49a6-9357-ca22143cf77d",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9cb9a209-aeeb-4848-bf31-b33f638a51b7",
+      "id": "54f8b7af-20f8-4746-a0b5-6454a75240f1",
       "key": "authtoken",
       "value": ""
     }
