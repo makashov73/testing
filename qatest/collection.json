@@ -446,26 +446,7 @@
             },
             "method": "GET",
             "header": [],
-            "url": {
-              "raw": "{{baseURL}}/v1/user/{{id_user}}/photo/",
-              "host": [
-                "{{baseURL}}"
-              ],
-              "path": [
-                "v1",
-                "user",
-                "{{id_user}}",
-                "photo",
-                ""
-              ],
-              "query": [
-                {
-                  "key": "output",
-                  "value": "my_logo.jpg",
-                  "disabled": true
-                }
-              ]
-            }
+            "url": "{{baseURL}}/v1/user/{{id_user}}/photo/"
           },
           "response": []
         },
@@ -1048,25 +1029,25 @@
   ],
   "variable": [
     {
-      "id": "01d7558d-be7b-46a4-984b-7138910fc316",
+      "id": "76ca7b3f-f611-411e-a65c-e6d84f087c7a",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "698ba57a-63ed-4508-88ab-b30b26935e50",
+      "id": "eacbeff0-fd85-480e-bcb5-4c2d313db46c",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "7cb70545-de6d-4a0f-aa88-7bd2bc8f2877",
+      "id": "d8b04d90-1a02-4d2c-aa9f-9defe7afac1c",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5fea7052-d505-4192-9ab0-1e335c6d2c35",
+      "id": "8c897eda-38a1-4b90-b93a-d3f0474b1943",
       "key": "authtoken",
       "value": ""
     }
