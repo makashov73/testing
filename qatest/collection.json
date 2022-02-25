@@ -187,7 +187,7 @@
                 },
                 {
                   "key": "code",
-                  "value": "12345",
+                  "value": "1234",
                   "type": "text",
                   "disabled": true
                 }
@@ -1003,25 +1003,25 @@
   ],
   "variable": [
     {
-      "id": "5e87e4b4-2e56-4aec-b3b7-013cafb70951",
+      "id": "d0b0042d-5e58-4128-9ce6-d178673d49e9",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "cc96f3fd-f618-4c05-80fe-76c5af798708",
+      "id": "b04d86e4-72a9-450b-bc43-b956a7e698bb",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "4d5ad7d3-d9ee-453c-a8b7-88e106b7bf79",
+      "id": "fd25b7bd-4159-42d1-a5c7-2a0d801968f8",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "4d8288f9-55f7-4cd2-9498-3b10dec155f5",
+      "id": "7a731208-5de0-4b33-ab43-f8b44757adf7",
       "key": "authtoken",
       "value": ""
     }
