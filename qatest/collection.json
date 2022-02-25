@@ -453,6 +453,34 @@
           "response": []
         },
         {
+          "name": "Upload user profile photo",
+          "id": "1a8ab0e9-51c4-4a74-bcf8-ec59d10cf360",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "id_user",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "profileImage",
+                  "type": "file",
+                  "src": "photo.png"
+                }
+              ]
+            },
+            "url": "{{baseURL}}/v1/user/{{id_user}}/photo/"
+          },
+          "response": []
+        },
+        {
           "name": "Obtain user metric config",
           "event": [
             {
@@ -791,34 +819,6 @@
             "url": "{{baseURL}}/v1/user/{{id_user}}/tests/"
           },
           "response": []
-        },
-        {
-          "name": "New Request",
-          "id": "1a8ab0e9-51c4-4a74-bcf8-ec59d10cf360",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "id_user",
-                  "value": "2",
-                  "type": "text"
-                },
-                {
-                  "key": "profileImage",
-                  "type": "file",
-                  "src": "photo.png"
-                }
-              ]
-            },
-            "url": "{{baseURL}}/v1/user/{{id_user}}/photo/"
-          },
-          "response": []
         }
       ],
       "id": "dd4a9a4e-ecff-439e-9bd3-345ad066b962"
@@ -1031,25 +1031,25 @@
   ],
   "variable": [
     {
-      "id": "03357dd7-c39e-4710-a3c0-da9bfeaf3b00",
+      "id": "21d03f5b-1355-4b39-9045-0c67425f39bf",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "84cd6427-d686-4c3b-b4a5-cddc125c413e",
+      "id": "6f7b82e5-7b1a-4b0f-85da-3376b78044be",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "f8ed5263-860a-41f0-b705-cd431861193d",
+      "id": "46c3ff9f-5e2d-40b2-8c80-31b807e9b728",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d7f30291-d261-486b-960a-5835d3d012cb",
+      "id": "ca6b0b4d-e5a7-4e55-be2b-8ec06e605fc6",
       "key": "authtoken",
       "value": ""
     }
