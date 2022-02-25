@@ -275,7 +275,7 @@
                 "id": "6148f5a8-c6c3-4478-a69a-51128d3ef725",
                 "exec": [
                   "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Profile Test #1 - 'Obtain user profile data'\"); \r",
+                  "console.log(\"Profile Test #1 - 'Obtain user profile data'\");\r",
                   "\r",
                   "const schema = {\r",
                   "    \"type\": \"object\",\r",
@@ -882,6 +882,71 @@
       "id": "dd4a9a4e-ecff-439e-9bd3-345ad066b962"
     },
     {
+      "name": "Kiosk list tests",
+      "item": [
+        {
+          "name": "Obtain kiosk list",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "50dce8d5-2478-415e-ae88-24c760a0da96",
+                "exec": [
+                  "console.log(\"_______________________________________________\");\r",
+                  "console.log(\"Kiosk List Test #1 - 'Obtain kiosk list'\");\r",
+                  "\r",
+                  "const schema = {\r",
+                  "    \"type\": \"array\",\r",
+                  "    \"items\": [{\r",
+                  "        \"required\": [\"type\", \"name\"],\r",
+                  "        \"properties\": {\r",
+                  "            \"type\": {\r",
+                  "                \"type\": \"number\"\r",
+                  "            },\r",
+                  "            \"name\": {\r",
+                  "                \"type\": \"string\"\r",
+                  "            }\r",
+                  "        }\r",
+                  "    }]\r",
+                  "};\r",
+                  "\r",
+                  "pm.test(\"Server response\", () => {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "    console.log(\"1) User exist\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test('Schema is valid', () => {\r",
+                  "    pm.response.to.have.jsonSchema(schema);\r",
+                  "    console.log(\"2) JSON schema is valid\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
+                  "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                  "});\r",
+                  "\r",
+                  "console.log(\"Kiosk List Test #1 - Done\");\r",
+                  "console.log(\"_______________________________________________\");"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "c6bd3f96-8859-4271-91d4-d06ca50b87b4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseURL}}/v1/kiosk/types"
+          },
+          "response": []
+        }
+      ],
+      "id": "64dc1be6-6778-4a37-9a7d-1de520158c96"
+    },
+    {
       "name": "Help topics tests",
       "item": [
         {
@@ -992,71 +1057,6 @@
         }
       ],
       "id": "640f1a63-309c-4a3d-9162-6f0c0ffde614"
-    },
-    {
-      "name": "Kiosk list tests",
-      "item": [
-        {
-          "name": "Obtain kiosk list",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "50dce8d5-2478-415e-ae88-24c760a0da96",
-                "exec": [
-                  "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Kiosk List Test #1 - 'Obtain kiosk list'\");\r",
-                  "\r",
-                  "const schema = {\r",
-                  "    \"type\": \"array\",\r",
-                  "    \"items\": [{\r",
-                  "        \"required\": [\"type\", \"name\"],\r",
-                  "        \"properties\": {\r",
-                  "            \"type\": {\r",
-                  "                \"type\": \"number\"\r",
-                  "            },\r",
-                  "            \"name\": {\r",
-                  "                \"type\": \"string\"\r",
-                  "            }\r",
-                  "        }\r",
-                  "    }]\r",
-                  "};\r",
-                  "\r",
-                  "pm.test(\"Server response\", () => {\r",
-                  "    pm.response.to.have.status(200);\r",
-                  "    console.log(\"1) User exist\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test('Schema is valid', () => {\r",
-                  "    pm.response.to.have.jsonSchema(schema);\r",
-                  "    console.log(\"2) JSON schema is valid\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
-                  "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
-                  "});\r",
-                  "\r",
-                  "console.log(\"Kiosk List Test #1 - Done\");\r",
-                  "console.log(\"_______________________________________________\");"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "c6bd3f96-8859-4271-91d4-d06ca50b87b4",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": "{{baseURL}}/v1/kiosk/types"
-          },
-          "response": []
-        }
-      ],
-      "id": "64dc1be6-6778-4a37-9a7d-1de520158c96"
     }
   ],
   "auth": {
@@ -1089,25 +1089,25 @@
   ],
   "variable": [
     {
-      "id": "97aa58ee-4c5d-4225-92d6-9e4ad733f629",
+      "id": "ff51db28-7f43-45ee-a85a-857712b337ca",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "aeaa73fb-ea54-4a80-a96c-39b9980da840",
+      "id": "ef85fb3b-8b61-4728-bc4c-bde6da776383",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "d0c822ef-20b7-470c-8fbd-02dd4aedbeb7",
+      "id": "a78d8cbe-1644-4bf8-8604-367eeabe2394",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1ed67871-d72c-4ec0-b484-6a072aa5507f",
+      "id": "42e13764-bc9b-4823-9e09-2f3f40853760",
       "key": "authtoken",
       "value": ""
     }
