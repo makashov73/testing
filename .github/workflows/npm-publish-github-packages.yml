@@ -4,6 +4,11 @@ on:
     branches:
       - master
         
+defaults:
+  run:
+    shell: bash
+    working-directory: ./qatest
+    
 jobs:
   api-testing:
     runs-on: ubuntu-latest
