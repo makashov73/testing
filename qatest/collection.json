@@ -218,7 +218,7 @@
                       "",
                       "pm.test(\"Response time is less than 1000ms\", () => {",
                       "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));",
-                      "    console.log(\"4) Server response time is: \" + pm.response.responseTime);",
+                      "    console.log(\"4) Server response time is: \" + pm.response.responseTime)",
                       "});",
                       "",
                       "console.log(\"Authorization Test #3 - Done\");",
@@ -1481,30 +1481,30 @@
   ],
   "variable": [
     {
-      "id": "04b4f41d-a2c5-4a6e-979f-ddbd1e7c23f0",
+      "id": "e50a8c2c-4e05-4e2b-a9ef-9596bc2f10ce",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "551a740a-d552-4dfb-b09d-47180e5a710e",
+      "id": "8ab8cfd2-55b8-4446-a6de-3d24b154c0d7",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "f677cfdb-64ad-4967-b9b2-c6a6b344c327",
+      "id": "a0a7280e-49a5-4fd2-addd-cf4439d0cb53",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "339eb665-e86c-45f6-8df2-3416630c9661",
+      "id": "1d2add7b-f751-4816-9334-5c9998b8ed19",
       "key": "authtoken",
       "value": ""
     },
     {
-      "id": "f8f6d4ca-b239-4ae6-8c51-03a0b100e81f",
+      "id": "21181564-10de-48dc-99d6-84b445ab333f",
       "key": "report_id",
       "value": "",
       "type": "string"
