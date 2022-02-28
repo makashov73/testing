@@ -506,7 +506,8 @@
           ],
           "id": "1a8ab0e9-51c4-4a74-bcf8-ec59d10cf360",
           "protocolProfileBehavior": {
-            "disableBodyPruning": true
+            "disableBodyPruning": true,
+            "disabledSystemHeaders": {}
           },
           "request": {
             "method": "POST",
@@ -521,8 +522,8 @@
                 },
                 {
                   "key": "profileImage",
-                  "type": "text",
-                  "value": "./qatests/photo1.jpg"
+                  "type": "file",
+                  "src": "photo1.jpg"
                 }
               ]
             },
@@ -1193,25 +1194,25 @@
   ],
   "variable": [
     {
-      "id": "04e50a1e-324f-4494-a1b9-031d9e96b576",
+      "id": "e957b6c7-9191-478a-b391-d7595e856c8d",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "4906267e-4e08-426b-a97a-0f7d8e5faedb",
+      "id": "f48757c7-0867-41bc-a3d8-d3a3303c0b58",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "fb67827c-3dec-48f5-b27e-4d96b43308be",
+      "id": "10a54d7f-5cac-4d8e-8605-8953363a648b",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a5de1544-a781-4588-8e18-13dac0ced9f8",
+      "id": "a3663125-b29f-411e-a98a-b4dbb2e5f7a4",
       "key": "authtoken",
       "value": ""
     }
