@@ -523,7 +523,7 @@
                 {
                   "key": "profileImage",
                   "type": "file",
-                  "src": "./qatest/photo1.jpg"
+                  "src": "photo1.jpg"
                 }
               ]
             },
@@ -1162,6 +1162,11 @@
         }
       ],
       "id": "640f1a63-309c-4a3d-9162-6f0c0ffde614"
+    },
+    {
+      "name": "New Folder",
+      "item": [],
+      "id": "e1675a83-f16b-4467-b195-2936f4067e4f"
     }
   ],
   "auth": {
@@ -1194,25 +1199,25 @@
   ],
   "variable": [
     {
-      "id": "e957b6c7-9191-478a-b391-d7595e856c8d",
+      "id": "52dfe584-f749-46e0-8537-8dbc0a5da8f2",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "f48757c7-0867-41bc-a3d8-d3a3303c0b58",
+      "id": "262cb8ee-d135-4d86-bc4c-cabf5d0cb222",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "10a54d7f-5cac-4d8e-8605-8953363a648b",
+      "id": "e5fb9c44-0814-4d04-bcc6-596da6cc8241",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a3663125-b29f-411e-a98a-b4dbb2e5f7a4",
+      "id": "9746a32c-54ef-4cf4-afc8-2478c1a05f32",
       "key": "authtoken",
       "value": ""
     }
