@@ -1196,13 +1196,30 @@
       "item": [
         {
           "name": "New Request",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "d3d32879-e97c-460f-9638-51e36dc4d3d6",
+                "exec": [
+                  "pm.test(\"Server response\", () => {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "    console.log(\"1) User exist\");\r",
+                  "});\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "id": "8c6d2d04-7a09-44f1-8b1e-8b50946f70fe",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
           "request": {
             "method": "GET",
-            "header": []
+            "header": [],
+            "url": "{{baseURL}}/v1/user/{{id_user}}/"
           },
           "response": []
         }
@@ -1262,25 +1279,25 @@
   ],
   "variable": [
     {
-      "id": "ce34ada6-60eb-4a64-9ffe-47a90b7bd2e3",
+      "id": "3e8113d2-70fa-4514-a244-ca6cc84ab84e",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "21a53ab0-abb5-4e22-b538-a2b5e75be44d",
+      "id": "881d0e5b-284a-43c9-863e-4812b396e888",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "27ab5674-4d32-44cc-b082-eb4e0ad9dbf6",
+      "id": "d6311819-d011-4f4a-8dc4-71fd3ae9bf87",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9150b2ce-8802-4f10-820e-e7b631633c20",
+      "id": "ae71caf0-6780-423b-8c1f-62e120eee758",
       "key": "authtoken",
       "value": ""
     }
