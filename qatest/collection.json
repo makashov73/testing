@@ -885,7 +885,7 @@
                   "console.log(\"Profile Test #9 - 'Obtain user report list'\");\r",
                   "\r",
                   "pm.test(\"Server response\", () => {\r",
-                  "    pm.response.to.have.status(201);\r",
+                  "    pm.response.to.have.status(200);\r",
                   "    console.log(\"1) User exist\");\r",
                   "});\r",
                   "\r",
@@ -1193,25 +1193,25 @@
   ],
   "variable": [
     {
-      "id": "2389d415-caf1-4f3f-8cd7-8bf3bbf2c64e",
+      "id": "29b6ec11-4ab0-43bd-9eaa-510eb3c892eb",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "f93e539c-a438-4f5a-8f9f-addcd1256e61",
+      "id": "0254eb4e-7998-499d-9255-60f8f99f2d2d",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "02d8bfbe-02cb-4d79-be6a-41cebe231242",
+      "id": "bc560e47-69ad-4958-9857-d16f6ae32eed",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "67c60ff0-567c-4d5e-a3a8-55d0c9a336a3",
+      "id": "1e07a6fc-ac00-4a1c-93de-c711bd6e4e2f",
       "key": "authtoken",
       "value": ""
     }
