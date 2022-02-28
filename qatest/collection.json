@@ -925,7 +925,7 @@
                 "id": "fed870ae-a29a-4788-b4c4-3ffd2a9da417",
                 "exec": [
                   "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Profile Test #6 - 'Obtain user available tests list'\");\r",
+                  "console.log(\"Profile Test #10 - 'Obtain user available tests list'\");\r",
                   "\r",
                   "\r",
                   "const schema = {\r",
@@ -964,7 +964,7 @@
                   "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
                   "});\r",
                   "\r",
-                  "console.log(\"Profile Test #6 - Done\");\r",
+                  "console.log(\"Profile Test #10 - Done\");\r",
                   "console.log(\"_______________________________________________\");"
                 ],
                 "type": "text/javascript"
@@ -1193,25 +1193,25 @@
   ],
   "variable": [
     {
-      "id": "8aa34dc1-b7d6-4a39-94eb-c4f61a7253ab",
+      "id": "2389d415-caf1-4f3f-8cd7-8bf3bbf2c64e",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "d8e55252-b32b-4683-a825-ba5c3a988496",
+      "id": "f93e539c-a438-4f5a-8f9f-addcd1256e61",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "674609b8-c8d0-474c-8c53-e1ee4bb0c90f",
+      "id": "02d8bfbe-02cb-4d79-be6a-41cebe231242",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "487c1922-5856-4ff1-8463-b7796fae0690",
+      "id": "67c60ff0-567c-4d5e-a3a8-55d0c9a336a3",
       "key": "authtoken",
       "value": ""
     }
