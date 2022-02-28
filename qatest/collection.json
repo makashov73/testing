@@ -875,6 +875,32 @@
         },
         {
           "name": "Add user report",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "9a6748ba-9fba-4e6d-970c-d885f2c86042",
+                "exec": [
+                  "console.log(\"_______________________________________________\");\r",
+                  "console.log(\"Profile Test #9 - 'Obtain user report list'\");\r",
+                  "\r",
+                  "pm.test(\"Server response\", () => {\r",
+                  "    pm.response.to.have.status(201);\r",
+                  "    console.log(\"1) User exist\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
+                  "    console.log(\"2) Server response time is: \" + pm.response.responseTime)\r",
+                  "});\r",
+                  "\r",
+                  "console.log(\"Profile Test #9 - Done\");\r",
+                  "console.log(\"_______________________________________________\");"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "id": "f3bc2e23-4586-421a-b886-d53422e43b64",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -899,7 +925,7 @@
                 "id": "fed870ae-a29a-4788-b4c4-3ffd2a9da417",
                 "exec": [
                   "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Profile Test #6 - 'Obtain user available tests list'\");\r",
+                  "console.log(\"Profile Test #10 - 'Obtain user available tests list'\");\r",
                   "\r",
                   "\r",
                   "const schema = {\r",
@@ -938,7 +964,7 @@
                   "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
                   "});\r",
                   "\r",
-                  "console.log(\"Profile Test #6 - Done\");\r",
+                  "console.log(\"Profile Test #10 - Done\");\r",
                   "console.log(\"_______________________________________________\");"
                 ],
                 "type": "text/javascript"
@@ -1167,25 +1193,25 @@
   ],
   "variable": [
     {
-      "id": "84688a73-4689-427e-9e61-8bba1c808e0e",
+      "id": "f6f4e5e0-715c-4dbc-b44d-f1b31745ed2e",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "119dc557-636b-47b6-8872-12b5f5f4e710",
+      "id": "59f3c5a8-b9dc-4d55-abd1-d4004ee1dbd8",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "11093a02-f30f-4656-bd38-263615c9627a",
+      "id": "ff48fef3-6301-4f73-98a1-08b835fd6752",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e65a75f4-ce3a-476e-98eb-204702ab6e20",
+      "id": "6b0499ec-14b6-4fd4-a325-4b0cec2e7ac7",
       "key": "authtoken",
       "value": ""
     }
