@@ -485,7 +485,7 @@
                 "id": "a63e9d48-465a-4497-96ec-babaa966794b",
                 "exec": [
                   "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Profile Test #3 - 'Upload user photo'\");\r",
+                  "console.log(\"Profile Test #4 - 'Upload user photo'\");\r",
                   "\r",
                   "pm.test(\"Server response\", () => {\r",
                   "    pm.response.to.have.status(201);\r",
@@ -497,7 +497,7 @@
                   "    console.log(\"2) Server response time is: \" + pm.response.responseTime)\r",
                   "});\r",
                   "\r",
-                  "console.log(\"Profile Test #3 - Done\");\r",
+                  "console.log(\"Profile Test #4 - Done\");\r",
                   "console.log(\"_______________________________________________\");"
                 ],
                 "type": "text/javascript"
@@ -1141,25 +1141,25 @@
   ],
   "variable": [
     {
-      "id": "0043a080-344b-4b58-bccb-68edc0e2d226",
+      "id": "d17c209b-e574-4119-b1d8-4738fe122af6",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "5a59c275-9c82-4b2a-a779-63762af8f5d1",
+      "id": "717028bb-b5e7-4281-a4a1-9552be9e0052",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "aaa9ab1d-2f78-4df9-b56c-d4161a1849b9",
+      "id": "7249d7cd-d302-4363-bb22-efcf8ef1b46c",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "364713d6-330a-4eea-b849-91fced8b56ca",
+      "id": "9c6a30a2-6a7c-4aa6-9097-077947f6425c",
       "key": "authtoken",
       "value": ""
     }
