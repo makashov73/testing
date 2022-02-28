@@ -1164,7 +1164,7 @@
       "id": "640f1a63-309c-4a3d-9162-6f0c0ffde614"
     },
     {
-      "name": "New Folder",
+      "name": "Functional tests",
       "item": [],
       "id": "e1675a83-f16b-4467-b195-2936f4067e4f"
     }
@@ -1199,25 +1199,25 @@
   ],
   "variable": [
     {
-      "id": "52dfe584-f749-46e0-8537-8dbc0a5da8f2",
+      "id": "1928cb53-86f4-4b02-b9b0-87d13cc4381a",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "262cb8ee-d135-4d86-bc4c-cabf5d0cb222",
+      "id": "9494e518-6126-408e-9f73-77174f680984",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "e5fb9c44-0814-4d04-bcc6-596da6cc8241",
+      "id": "08f07ed7-23d7-41f6-b730-40ad934a094f",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9746a32c-54ef-4cf4-afc8-2478c1a05f32",
+      "id": "ec2d35ae-dfd6-4ef6-afec-26b3fa5b68ea",
       "key": "authtoken",
       "value": ""
     }
