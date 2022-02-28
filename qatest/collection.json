@@ -31,8 +31,9 @@
                       "\r",
                       "pm.test(\"Response time is less than 1000ms\", () => {\r",
                       "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
-                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime);\r",
                       "});\r",
+                      "\r",
                       "console.log(\"Authorization Test #1 - Done\");\r",
                       "console.log(\"_______________________________________________\");"
                     ],
@@ -144,14 +145,14 @@
                       "\r",
                       "pm.test(\"Response time is less than 1000ms\", () => {\r",
                       "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
-                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime);\r",
                       "});\r",
                       "\r",
                       "var bodyData = JSON.parse(responseBody);\r",
                       "var token = bodyData.access_token;\r",
                       "var uid = bodyData.id_user;\r",
-                      "pm.collectionVariables.set(\"authtoken\", token); // put access_token into postman global variable\r",
-                      "pm.collectionVariables.set(\"id_user\", uid); // put id_user into postman global variable\r",
+                      "pm.collectionVariables.set(\"authtoken\", token); // put access_token into postman environment variable\r",
+                      "pm.collectionVariables.set(\"id_user\", uid); // put id_user into postman environment variable\r",
                       "\r",
                       "console.log(\"Authorization Test #2 - Done\");\r",
                       "console.log(\"_______________________________________________\");"
@@ -1480,30 +1481,30 @@
   ],
   "variable": [
     {
-      "id": "777ee4e3-34a2-4e3d-b610-f76f4f5e35b4",
+      "id": "067b7b7b-67b4-4942-bece-f7a6f22adafb",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "7c0cba03-792b-4e8b-b1db-96c2d429b888",
+      "id": "b4c83c94-b16f-4933-b644-97002aa30c74",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "26445875-75d4-486b-a17b-88b19bfda15d",
+      "id": "1877f6c2-d1a0-48ea-8ae2-6239a97b300b",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1f1aa815-9cc8-4e36-be79-1e364c11f572",
+      "id": "c2d55c78-4a82-49ca-8785-f481d42e21f7",
       "key": "authtoken",
       "value": ""
     },
     {
-      "id": "39cd2e2c-ecb3-4960-8976-7bca4a9ca2ac",
+      "id": "00535be4-8797-432a-94cc-065625d5f52a",
       "key": "report_id",
       "value": "",
       "type": "string"
