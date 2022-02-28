@@ -539,7 +539,7 @@
                 "id": "832ecb9d-ca7b-45fa-b1c7-92240628db03",
                 "exec": [
                   "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Profile Test #3 - 'Obtain user metric config'\");\r",
+                  "console.log(\"Profile Test #4 - 'Obtain user metric config'\");\r",
                   "\r",
                   "const schema = {\r",
                   "    \"type\": \"object\",\r",
@@ -608,7 +608,7 @@
                   "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
                   "});\r",
                   "\r",
-                  "console.log(\"Profile Test #3 - Done\");\r",
+                  "console.log(\"Profile Test #4 - Done\");\r",
                   "console.log(\"_______________________________________________\");"
                 ],
                 "type": "text/javascript"
@@ -1115,25 +1115,25 @@
   ],
   "variable": [
     {
-      "id": "8f633a7f-9258-4f17-a90d-cfa70222a01e",
+      "id": "43e4ff09-4bf1-48be-9121-5c81e706b324",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "03ab7af7-5a10-4d32-99b3-5f54d663139f",
+      "id": "d9846267-c2a9-4714-b46e-ede84485253a",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "87a4d06b-360b-43a0-ba16-02dc09eb8bf4",
+      "id": "a017cb10-3957-4911-a3d0-a54445933e6a",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0bcecfa0-19f1-4e18-b2e1-75acb8da3655",
+      "id": "bf14965a-56d4-43be-aa37-7932656583ec",
       "key": "authtoken",
       "value": ""
     }
