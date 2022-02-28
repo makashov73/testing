@@ -6,1172 +6,1186 @@
   },
   "item": [
     {
-      "name": "Authorization test",
+      "name": "API Tests",
       "item": [
         {
-          "name": "Sending sms code",
-          "event": [
+          "name": "Authorization test",
+          "item": [
             {
-              "listen": "test",
-              "script": {
-                "id": "9fd7e5f9-e146-4710-9b81-72428b53ffd0",
-                "exec": [
-                  "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Authorization Test #1 - 'SMS sender test'\");\r",
-                  "\r",
-                  "/*\r",
-                  "pm.test(\"Server response\", () => {\r",
-                  "    pm.response.to.have.status(200);\r",
-                  "    console.log(\"Code sended\");\r",
-                  "});\r",
-                  "*/\r",
-                  "\r",
-                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
-                  "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
-                  "});\r",
-                  "console.log(\"Authorization Test #1 - Done\");\r",
-                  "console.log(\"_______________________________________________\");"
-                ],
-                "type": "text/javascript"
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "51a54fe6-3078-4c4d-bb61-45e8c480d2b6",
-                "exec": [
-                  "/*pm.sendRequest('https://dev.robotoir.cloud:8443/', (Error, response) => {\r",
-                  "    if (Error) {\r",
-                  "        console.log(Error);\r",
-                  "        const errorCode = Error.errorCode;\r",
-                  "        if (errorCode = 'ENOTFOUND') {\r",
-                  "            pm.globals.set('baseURL', 'https://dev.robotoir.cloud:8443');\r",
-                  "        }\r",
-                  "    }\r",
-                  "});*/"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "c0e5e92e-1ad8-4925-9302-c1a65ce52b32",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "{{baseURL}}/v1/auth/request/",
-              "host": [
-                "{{baseURL}}"
-              ],
-              "path": [
-                "v1",
-                "auth",
-                "request",
-                ""
-              ],
-              "query": [
+              "name": "Sending sms code",
+              "event": [
                 {
-                  "key": "phone",
-                  "value": "+7(905) 608 07 08",
-                  "disabled": true
-                }
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Generate token",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "48b4881d-f418-45c6-9928-81a7be5f3278",
-                "exec": [
-                  "/*pm.sendRequest('https://dev.robotoir.cloud:8443/', (Error, response) => {\r",
-                  "    if (Error) {\r",
-                  "        console.log(Error);\r",
-                  "        const errorCode = Error.errorCode;\r",
-                  "        if (errorCode = 'ENOTFOUND') {\r",
-                  "            pm.globals.set('baseURL', 'https://dev.robotoir.cloud:8443');\r",
-                  "        }\r",
-                  "    }\r",
-                  "});*/"
-                ],
-                "type": "text/javascript"
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "5fd20730-b9ff-4206-819d-c236da260adb",
-                "exec": [
-                  "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Authorization Test #2 - 'User token generation'\");\r",
-                  "\r",
-                  "const schema = {\r",
-                  "    \"type\": \"object\",\r",
-                  "    \"properties\": {\r",
-                  "        \"id_user\": {\r",
-                  "            \"type\": \"number\"\r",
-                  "        },\r",
-                  "        \"access_token\": {\r",
-                  "            \"type\": \"string\"\r",
-                  "        }\r",
-                  "    },\r",
-                  "    \"required\": [\r",
-                  "        \"id_user\",\r",
-                  "        \"access_token\"\r",
-                  "    ]\r",
-                  "};\r",
-                  "\r",
-                  "pm.test(\"Server response\", () => {\r",
-                  "    pm.response.to.have.status(200);\r",
-                  "    console.log(\"1) Token given\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test('Schema is valid', () => {\r",
-                  "    pm.response.to.have.jsonSchema(schema);\r",
-                  "    console.log(\"2) JSON schema is valid\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
-                  "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
-                  "});\r",
-                  "\r",
-                  "var bodyData = JSON.parse(responseBody);\r",
-                  "var token = bodyData.access_token;\r",
-                  "var uid = bodyData.id_user;\r",
-                  "pm.collectionVariables.set(\"authtoken\", token); // put access_token into postman global variable\r",
-                  "pm.collectionVariables.set(\"id_user\", uid); // put id_user into postman global variable\r",
-                  "\r",
-                  "console.log(\"Authorization Test #2 - Done\");\r",
-                  "console.log(\"_______________________________________________\");"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "481bc49e-f1b2-411b-a1cc-2a15b0ce726b",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "PUT",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"phone\":\"+7(905) 608 07 08\", \"code\":\"1234\"}"
-            },
-            "url": {
-              "raw": "{{baseURL}}/v1/auth/",
-              "host": [
-                "{{baseURL}}"
-              ],
-              "path": [
-                "v1",
-                "auth",
-                ""
-              ],
-              "query": [
-                {
-                  "key": "phone",
-                  "value": "+7(905) 608 07 08",
-                  "type": "text",
-                  "disabled": true
+                  "listen": "test",
+                  "script": {
+                    "id": "9fd7e5f9-e146-4710-9b81-72428b53ffd0",
+                    "exec": [
+                      "console.log(\"_______________________________________________\");\r",
+                      "console.log(\"Authorization Test #1 - 'SMS sender test'\");\r",
+                      "\r",
+                      "/*\r",
+                      "pm.test(\"Server response\", () => {\r",
+                      "    pm.response.to.have.status(200);\r",
+                      "    console.log(\"Code sended\");\r",
+                      "});\r",
+                      "*/\r",
+                      "\r",
+                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
+                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                      "});\r",
+                      "console.log(\"Authorization Test #1 - Done\");\r",
+                      "console.log(\"_______________________________________________\");"
+                    ],
+                    "type": "text/javascript"
+                  }
                 },
                 {
-                  "key": "code",
-                  "value": "1234",
-                  "type": "text",
-                  "disabled": true
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "51a54fe6-3078-4c4d-bb61-45e8c480d2b6",
+                    "exec": [
+                      "/*pm.sendRequest('https://dev.robotoir.cloud:8443/', (Error, response) => {\r",
+                      "    if (Error) {\r",
+                      "        console.log(Error);\r",
+                      "        const errorCode = Error.errorCode;\r",
+                      "        if (errorCode = 'ENOTFOUND') {\r",
+                      "            pm.globals.set('baseURL', 'https://dev.robotoir.cloud:8443');\r",
+                      "        }\r",
+                      "    }\r",
+                      "});*/"
+                    ],
+                    "type": "text/javascript"
+                  }
                 }
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Check-in",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "b980037c-c9c9-425d-adad-9c220520388a",
-                "exec": [
-                  "console.log(\"_______________________________________________\");",
-                  "console.log(\"Authorization Test #3 - 'Check-in test'\");",
-                  "",
-                  "pm.test(\"Server response\", () => {",
-                  "    pm.response.to.have.status(201);",
-                  "    console.log(\"1) resource have been successfully created\");",
-                  "});",
-                  "",
-                  "pm.test(\"Response time is less than 1000ms\", () => {",
-                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));",
-                  "    console.log(\"4) Server response time is: \" + pm.response.responseTime)",
-                  "});",
-                  "",
-                  "console.log(\"Authorization Test #3 - Done\");",
-                  "console.log(\"_______________________________________________\");"
-                ],
-                "type": "text/javascript"
-              }
+              ],
+              "id": "c0e5e92e-1ad8-4925-9302-c1a65ce52b32",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseURL}}/v1/auth/request/",
+                  "host": [
+                    "{{baseURL}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "auth",
+                    "request",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "phone",
+                      "value": "+7(905) 608 07 08",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
             },
             {
-              "listen": "prerequest",
-              "script": {
-                "id": "291312b3-dc8b-4aa7-b048-4cc4a25951a6",
-                "exec": [
-                  "/*pm.sendRequest('https://dev.robotoir.cloud:8443/', (Error, response) => {\r",
-                  "    if (Error) {\r",
-                  "        console.log(Error);\r",
-                  "        const errorCode = Error.errorCode;\r",
-                  "        if (errorCode = 'ENOTFOUND') {\r",
-                  "            pm.globals.set('baseURL', 'https://dev.robotoir.cloud:8443');\r",
-                  "        }\r",
-                  "    }\r",
-                  "});*/"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "5d2961e7-c942-4f1b-8193-7075a969b5a0",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": {
-                "token": "{{authtoken}}"
-              }
-            },
-            "method": "POST",
-            "header": [],
-            "url": "{{baseURL}}/v1/user/{{id_user}}/checkin/",
-            "description": "Test 1234"
-          },
-          "response": []
-        }
-      ],
-      "id": "98711013-a1f7-4b3e-9b14-ead08bf6a57c"
-    },
-    {
-      "name": "User profile tests",
-      "item": [
-        {
-          "name": "Obtain user profile data",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "6148f5a8-c6c3-4478-a69a-51128d3ef725",
-                "exec": [
-                  "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Profile Test #1 - 'Obtain user profile data'\");\r",
-                  "\r",
-                  "const schema = {\r",
-                  "    \"type\": \"object\",\r",
-                  "    \"required\": [\"id_user\", \"login\", \"created_at\", \"updated_at\", \"photo\", \"active\", \"last_login_time\", \"email\", \"sex\", \"name\", \"lastname\", \"patronymic\", \"full_name\", \"birthday\", \"address\", \"city\", \"country\", \"phone\", \"deleted\"],\r",
-                  "    \"properties\": {\r",
-                  "        \"id_user\": {\r",
-                  "            \"type\": \"number\"\r",
-                  "        },\r",
-                  "        \"login\": {\r",
-                  "            \"type\": \"string\"\r",
-                  "        },\r",
-                  "        \"created_at\": {\r",
-                  "            \"type\": \"string\"\r",
-                  "        },\r",
-                  "        \"updated_at\": {\r",
-                  "            \"type\": \"string\"\r",
-                  "        },\r",
-                  "        \"photo\": {\r",
-                  "            \"type\": \"string\"\r",
-                  "        },\r",
-                  "        \"active\": {\r",
-                  "            \"type\": \"number\"\r",
-                  "        },\r",
-                  "        \"last_login_time\": {\r",
-                  "            \"type\": \"string\"\r",
-                  "        },\r",
-                  "        \"login\": {\r",
-                  "            \"type\": \"string\"\r",
-                  "        },\r",
-                  "        \"email\": {\r",
-                  "            \"type\": \"string\"\r",
-                  "        },\r",
-                  "        \"sex\": {\r",
-                  "            \"type\": \"number\"\r",
-                  "        },\r",
-                  "        \"name\": {\r",
-                  "            \"type\": \"string\"\r",
-                  "        },\r",
-                  "        \"lastname\": {\r",
-                  "            \"type\": \"string\"\r",
-                  "        },\r",
-                  "        \"patronymic\": {\r",
-                  "            \"type\": \"string\"\r",
-                  "        },\r",
-                  "        \"full_name\": {\r",
-                  "            \"type\": \"string\"\r",
-                  "        },\r",
-                  "        \"birthday\": {\r",
-                  "            \"type\": \"string\"\r",
-                  "        },\r",
-                  "        \"address\": {\r",
-                  "            \"type\": \"string\"\r",
-                  "        },\r",
-                  "        \"city\": {\r",
-                  "            \"type\": \"string\"\r",
-                  "        },\r",
-                  "        \"country\": {\r",
-                  "            \"type\": \"string\"\r",
-                  "        },\r",
-                  "        \"phone\": {\r",
-                  "            \"type\": \"string\"\r",
-                  "        },\r",
-                  "        \"deleted\": {\r",
-                  "            \"type\": \"number\"\r",
-                  "        }\r",
-                  "    }\r",
-                  "};\r",
-                  "\r",
-                  "pm.test(\"Server response\", () => {\r",
-                  "    pm.response.to.have.status(200);\r",
-                  "    console.log(\"1) User exist\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test('Schema is valid', () => {\r",
-                  "    pm.response.to.have.jsonSchema(schema);\r",
-                  "    console.log(\"2) JSON schema is valid\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
-                  "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
-                  "});\r",
-                  "\r",
-                  "console.log(\"Profile Test #1 - Done\");\r",
-                  "console.log(\"_______________________________________________\");"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "5f744819-8e2c-4c13-ad24-64d7eee14633",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": {
-                "token": "{{authtoken}}"
-              }
-            },
-            "method": "GET",
-            "header": [],
-            "url": "{{baseURL}}/v1/user/{{id_user}}/"
-          },
-          "response": []
-        },
-        {
-          "name": "Update user profile data",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "be0cc21f-b6f9-426d-88b3-1cf139f5b603",
-                "exec": [
-                  "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Profile Test #2 - 'Obtain user profile data'\");\r",
-                  "\r",
-                  "pm.test(\"Server response\", () => {\r",
-                  "    pm.response.to.have.status(201);\r",
-                  "    console.log(\"1) User exist\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
-                  "    console.log(\"2) Server response time is: \" + pm.response.responseTime)\r",
-                  "});\r",
-                  "\r",
-                  "console.log(\"Profile Test #2 - Done\");\r",
-                  "console.log(\"_______________________________________________\");"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "df7d4dec-2f58-4918-938a-cad9217b664c",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "PUT",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"id_user\": 2, \"login\": \"79056080708\", \"created_at\": \"2020-11-23T00:00:00.000Z\", \"updated_at\": \"2021-06-14T21:58:52.000Z\", \"photo\": \"\", \"active\": 1, \"last_login_time\": \"2022-02-22T23:01:32.499Z\", \"email\": \"ivan@mail.ru\", \"sex\": 1, \"name\": \"Ivan\", \"lastname\": \"Ivanov\", \"patronymic\": \"Ivanovich\", \"full_name\": \"Иванов Иван Артемович\", \"birthday\": \"2001-12-31T00:00:00.000Z\", \"address\": \"Tver, Lenina, 3\", \"city\": \"\", \"country\": \"\", \"phone\": \"79056080708\", \"deleted\": 0}"
-            },
-            "url": "{{baseURL}}/v1/user/{{id_user}}/"
-          },
-          "response": []
-        },
-        {
-          "name": "Obtain user profile photo",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "b8db2be9-8cbf-4b42-bd44-5a296a9931ab",
-                "exec": [
-                  "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Profile Test #3 - 'Obtain user photo'\");\r",
-                  "\r",
-                  "pm.test(\"Server response\", () => {\r",
-                  "    pm.response.to.have.status(200);\r",
-                  "    console.log(\"1) User exist\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test(\"Content-Type header is image\", () => {\r",
-                  "    pm.expect(pm.response.headers.get('Content-Type')).to.be.oneOf(['image/jpeg', 'image/png']);\r",
-                  "    console.log(\"2) User profile photo exist - it is image\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
-                  "    console.log(\"2) Server response time is: \" + pm.response.responseTime)\r",
-                  "});\r",
-                  "\r",
-                  "console.log(\"Profile Test #3 - Done\");\r",
-                  "console.log(\"_______________________________________________\");"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "34c1cd3a-a97f-40ba-8c54-751ae233038d",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": {
-                "token": "{{authtoken}}"
-              }
-            },
-            "method": "GET",
-            "header": [],
-            "url": "{{baseURL}}/v1/user/{{id_user}}/photo/"
-          },
-          "response": []
-        },
-        {
-          "name": "Upload user profile photo",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "a63e9d48-465a-4497-96ec-babaa966794b",
-                "exec": [
-                  "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Profile Test #4 - 'Upload user photo'\");\r",
-                  "\r",
-                  "pm.test(\"Server response\", () => {\r",
-                  "    pm.response.to.have.status(201);\r",
-                  "    console.log(\"1) User exist\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
-                  "    console.log(\"2) Server response time is: \" + pm.response.responseTime)\r",
-                  "});\r",
-                  "\r",
-                  "console.log(\"Profile Test #4 - Done\");\r",
-                  "console.log(\"_______________________________________________\");"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "1a8ab0e9-51c4-4a74-bcf8-ec59d10cf360",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true,
-            "disabledSystemHeaders": {}
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "formdata",
-              "formdata": [
+              "name": "Generate token",
+              "event": [
                 {
-                  "key": "id_user",
-                  "value": "{{id_user}}",
-                  "type": "text"
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "48b4881d-f418-45c6-9928-81a7be5f3278",
+                    "exec": [
+                      "/*pm.sendRequest('https://dev.robotoir.cloud:8443/', (Error, response) => {\r",
+                      "    if (Error) {\r",
+                      "        console.log(Error);\r",
+                      "        const errorCode = Error.errorCode;\r",
+                      "        if (errorCode = 'ENOTFOUND') {\r",
+                      "            pm.globals.set('baseURL', 'https://dev.robotoir.cloud:8443');\r",
+                      "        }\r",
+                      "    }\r",
+                      "});*/"
+                    ],
+                    "type": "text/javascript"
+                  }
                 },
                 {
-                  "key": "profileImage",
-                  "type": "file",
-                  "src": "photo1.jpg"
+                  "listen": "test",
+                  "script": {
+                    "id": "5fd20730-b9ff-4206-819d-c236da260adb",
+                    "exec": [
+                      "console.log(\"_______________________________________________\");\r",
+                      "console.log(\"Authorization Test #2 - 'User token generation'\");\r",
+                      "\r",
+                      "const schema = {\r",
+                      "    \"type\": \"object\",\r",
+                      "    \"properties\": {\r",
+                      "        \"id_user\": {\r",
+                      "            \"type\": \"number\"\r",
+                      "        },\r",
+                      "        \"access_token\": {\r",
+                      "            \"type\": \"string\"\r",
+                      "        }\r",
+                      "    },\r",
+                      "    \"required\": [\r",
+                      "        \"id_user\",\r",
+                      "        \"access_token\"\r",
+                      "    ]\r",
+                      "};\r",
+                      "\r",
+                      "pm.test(\"Server response\", () => {\r",
+                      "    pm.response.to.have.status(200);\r",
+                      "    console.log(\"1) Token given\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test('Schema is valid', () => {\r",
+                      "    pm.response.to.have.jsonSchema(schema);\r",
+                      "    console.log(\"2) JSON schema is valid\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
+                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                      "});\r",
+                      "\r",
+                      "var bodyData = JSON.parse(responseBody);\r",
+                      "var token = bodyData.access_token;\r",
+                      "var uid = bodyData.id_user;\r",
+                      "pm.collectionVariables.set(\"authtoken\", token); // put access_token into postman global variable\r",
+                      "pm.collectionVariables.set(\"id_user\", uid); // put id_user into postman global variable\r",
+                      "\r",
+                      "console.log(\"Authorization Test #2 - Done\");\r",
+                      "console.log(\"_______________________________________________\");"
+                    ],
+                    "type": "text/javascript"
+                  }
                 }
-              ]
+              ],
+              "id": "481bc49e-f1b2-411b-a1cc-2a15b0ce726b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"phone\":\"+7(905) 608 07 08\", \"code\":\"1234\"}"
+                },
+                "url": {
+                  "raw": "{{baseURL}}/v1/auth/",
+                  "host": [
+                    "{{baseURL}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "auth",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "phone",
+                      "value": "+7(905) 608 07 08",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "code",
+                      "value": "1234",
+                      "type": "text",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
             },
-            "url": {
-              "raw": "{{baseURL}}/v1/user/{{id_user}}/photo/",
-              "host": [
-                "{{baseURL}}"
-              ],
-              "path": [
-                "v1",
-                "user",
-                "{{id_user}}",
-                "photo",
-                ""
-              ],
-              "query": [
+            {
+              "name": "Check-in",
+              "event": [
                 {
-                  "key": "id_user",
-                  "value": "{{id_user}}",
-                  "type": "text",
-                  "disabled": true
+                  "listen": "test",
+                  "script": {
+                    "id": "b980037c-c9c9-425d-adad-9c220520388a",
+                    "exec": [
+                      "console.log(\"_______________________________________________\");",
+                      "console.log(\"Authorization Test #3 - 'Check-in test'\");",
+                      "",
+                      "pm.test(\"Server response\", () => {",
+                      "    pm.response.to.have.status(201);",
+                      "    console.log(\"1) resource have been successfully created\");",
+                      "});",
+                      "",
+                      "pm.test(\"Response time is less than 1000ms\", () => {",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));",
+                      "    console.log(\"4) Server response time is: \" + pm.response.responseTime)",
+                      "});",
+                      "",
+                      "console.log(\"Authorization Test #3 - Done\");",
+                      "console.log(\"_______________________________________________\");"
+                    ],
+                    "type": "text/javascript"
+                  }
                 },
                 {
-                  "key": "profileImage",
-                  "value": "",
-                  "type": "text",
-                  "disabled": true
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "291312b3-dc8b-4aa7-b048-4cc4a25951a6",
+                    "exec": [
+                      "/*pm.sendRequest('https://dev.robotoir.cloud:8443/', (Error, response) => {\r",
+                      "    if (Error) {\r",
+                      "        console.log(Error);\r",
+                      "        const errorCode = Error.errorCode;\r",
+                      "        if (errorCode = 'ENOTFOUND') {\r",
+                      "            pm.globals.set('baseURL', 'https://dev.robotoir.cloud:8443');\r",
+                      "        }\r",
+                      "    }\r",
+                      "});*/"
+                    ],
+                    "type": "text/javascript"
+                  }
                 }
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Obtain user metric config",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "832ecb9d-ca7b-45fa-b1c7-92240628db03",
-                "exec": [
-                  "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Profile Test #5 - 'Obtain user metric config'\");\r",
-                  "\r",
-                  "const schema = {\r",
-                  "    \"type\": \"object\",\r",
-                  "    \"required\": [\"metrics\"],\r",
-                  "    \"properties\": {\r",
-                  "        \"metrics\": {\r",
-                  "            \"type\": \"array\",\r",
-                  "            \"items\": [{\r",
-                  "                \"type\": \"object\",\r",
-                  "                \"required\": [\"id\", \"name\", \"display_name\", \"icon\", \"description\", \"ranges\"],\r",
-                  "                \"properties\": {\r",
-                  "                    \"id\": {\r",
-                  "                        \"type\": \"number\"\r",
-                  "                    },\r",
-                  "                    \"name\": {\r",
-                  "                        \"type\": \"string\"\r",
-                  "                    },\r",
-                  "                    \"display_name\": {\r",
-                  "                        \"type\": \"string\"\r",
-                  "                    },\r",
-                  "                    \"icon\": {\r",
-                  "                        \"type\": \"string\"\r",
-                  "                    },\r",
-                  "                    \"description\": {\r",
-                  "                        \"type\": \"string\"\r",
-                  "                    },\r",
-                  "                    \"ranges\": {\r",
-                  "                        \"type\": \"array\",\r",
-                  "                        \"items\": [{\r",
-                  "                            \"type\": \"object\",                            \r",
-                  "                            \"required\": [\"min\", \"max\", \"rel\", \"type\"],\r",
-                  "                            \"properties\": {\r",
-                  "                                \"min\": {\r",
-                  "                                    \"type\": \"number\"\r",
-                  "                                },\r",
-                  "                                \"max\": {\r",
-                  "                                    \"type\": \"number\"\r",
-                  "                                },\r",
-                  "                                \"rel\": {\r",
-                  "                                    \"type\": \"string\"\r",
-                  "                                },\r",
-                  "                                \"type\": {\r",
-                  "                                    \"type\": \"string\"\r",
-                  "                                }\r",
-                  "                            }\r",
-                  "                        }]\r",
-                  "                    }\r",
-                  "                }\r",
-                  "            }]\r",
-                  "        }\r",
-                  "    }\r",
-                  "};\r",
-                  "\r",
-                  "pm.test(\"Server response\", () => {\r",
-                  "    pm.response.to.have.status(200);\r",
-                  "    console.log(\"1) User exist\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test('Schema is valid', () => {\r",
-                  "    pm.response.to.have.jsonSchema(schema);\r",
-                  "    console.log(\"2) JSON schema is valid\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
-                  "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
-                  "});\r",
-                  "\r",
-                  "console.log(\"Profile Test #5 - Done\");\r",
-                  "console.log(\"_______________________________________________\");"
-                ],
-                "type": "text/javascript"
-              }
+              ],
+              "id": "5d2961e7-c942-4f1b-8193-7075a969b5a0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{authtoken}}"
+                  }
+                },
+                "method": "POST",
+                "header": [],
+                "url": "{{baseURL}}/v1/user/{{id_user}}/checkin/",
+                "description": "Test 1234"
+              },
+              "response": []
             }
           ],
-          "id": "d037dfaf-d65a-42dc-ae7e-889092e5a3b2",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": {
-                "token": "{{authtoken}}"
-              }
+          "id": "98711013-a1f7-4b3e-9b14-ead08bf6a57c"
+        },
+        {
+          "name": "User profile tests",
+          "item": [
+            {
+              "name": "Obtain user profile data",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "6148f5a8-c6c3-4478-a69a-51128d3ef725",
+                    "exec": [
+                      "console.log(\"_______________________________________________\");\r",
+                      "console.log(\"Profile Test #1 - 'Obtain user profile data'\");\r",
+                      "\r",
+                      "const schema = {\r",
+                      "    \"type\": \"object\",\r",
+                      "    \"required\": [\"id_user\", \"login\", \"created_at\", \"updated_at\", \"photo\", \"active\", \"last_login_time\", \"email\", \"sex\", \"name\", \"lastname\", \"patronymic\", \"full_name\", \"birthday\", \"address\", \"city\", \"country\", \"phone\", \"deleted\"],\r",
+                      "    \"properties\": {\r",
+                      "        \"id_user\": {\r",
+                      "            \"type\": \"number\"\r",
+                      "        },\r",
+                      "        \"login\": {\r",
+                      "            \"type\": \"string\"\r",
+                      "        },\r",
+                      "        \"created_at\": {\r",
+                      "            \"type\": \"string\"\r",
+                      "        },\r",
+                      "        \"updated_at\": {\r",
+                      "            \"type\": \"string\"\r",
+                      "        },\r",
+                      "        \"photo\": {\r",
+                      "            \"type\": \"string\"\r",
+                      "        },\r",
+                      "        \"active\": {\r",
+                      "            \"type\": \"number\"\r",
+                      "        },\r",
+                      "        \"last_login_time\": {\r",
+                      "            \"type\": \"string\"\r",
+                      "        },\r",
+                      "        \"login\": {\r",
+                      "            \"type\": \"string\"\r",
+                      "        },\r",
+                      "        \"email\": {\r",
+                      "            \"type\": \"string\"\r",
+                      "        },\r",
+                      "        \"sex\": {\r",
+                      "            \"type\": \"number\"\r",
+                      "        },\r",
+                      "        \"name\": {\r",
+                      "            \"type\": \"string\"\r",
+                      "        },\r",
+                      "        \"lastname\": {\r",
+                      "            \"type\": \"string\"\r",
+                      "        },\r",
+                      "        \"patronymic\": {\r",
+                      "            \"type\": \"string\"\r",
+                      "        },\r",
+                      "        \"full_name\": {\r",
+                      "            \"type\": \"string\"\r",
+                      "        },\r",
+                      "        \"birthday\": {\r",
+                      "            \"type\": \"string\"\r",
+                      "        },\r",
+                      "        \"address\": {\r",
+                      "            \"type\": \"string\"\r",
+                      "        },\r",
+                      "        \"city\": {\r",
+                      "            \"type\": \"string\"\r",
+                      "        },\r",
+                      "        \"country\": {\r",
+                      "            \"type\": \"string\"\r",
+                      "        },\r",
+                      "        \"phone\": {\r",
+                      "            \"type\": \"string\"\r",
+                      "        },\r",
+                      "        \"deleted\": {\r",
+                      "            \"type\": \"number\"\r",
+                      "        }\r",
+                      "    }\r",
+                      "};\r",
+                      "\r",
+                      "pm.test(\"Server response\", () => {\r",
+                      "    pm.response.to.have.status(200);\r",
+                      "    console.log(\"1) User exist\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test('Schema is valid', () => {\r",
+                      "    pm.response.to.have.jsonSchema(schema);\r",
+                      "    console.log(\"2) JSON schema is valid\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
+                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                      "});\r",
+                      "\r",
+                      "console.log(\"Profile Test #1 - Done\");\r",
+                      "console.log(\"_______________________________________________\");"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "id": "5f744819-8e2c-4c13-ad24-64d7eee14633",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{authtoken}}"
+                  }
+                },
+                "method": "GET",
+                "header": [],
+                "url": "{{baseURL}}/v1/user/{{id_user}}/"
+              },
+              "response": []
             },
-            "method": "GET",
-            "header": [],
-            "url": "{{baseURL}}/v1/user/{{id_user}}/metric/config/"
-          },
-          "response": []
-        },
-        {
-          "name": "Obtain user metric list",
-          "event": [
             {
-              "listen": "test",
-              "script": {
-                "id": "f2a19f97-f956-4d2a-8e14-c36dc670e35c",
-                "exec": [
-                  "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Profile Test #6 - 'Obtain user metric list'\");\r",
-                  "\r",
-                  "const schema = {\r",
-                  "    \"type\": \"object\",\r",
-                  "    \"required\": [\r",
-                  "        \"StressLevel\",\r",
-                  "        \"PulseRate\",\r",
-                  "        \"RespiratoryRate\",\r",
-                  "        \"BodyOxygen\",\r",
-                  "        \"BodyTemperature\",\r",
-                  "        \"BreathingRate\",\r",
-                  "        \"PulseWaveform\",\r",
-                  "        \"PrefusionIndex\",\r",
-                  "        \"Ecg\",\r",
-                  "        \"LongBreathingRate\",\r",
-                  "        \"Glucose\",\r",
-                  "        \"LongBodyOxygen\",\r",
-                  "        \"LongPulseRate\",\r",
-                  "        \"Weight\",\r",
-                  "        \"Height\",\r",
-                  "        \"Pressure\",\r",
-                  "        \"LongSDNNHeartRateVariability\",\r",
-                  "        \"SDNNHeartRateVariability\",\r",
-                  "        \"LongStressLevel\",\r",
-                  "        \"SelfAssessmentStatus\"\r",
-                  "    ]\r",
-                  "};\r",
-                  "\r",
-                  "pm.test(\"Server response\", () => {\r",
-                  "    pm.response.to.have.status(200);\r",
-                  "    console.log(\"1) User exist\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test('Schema is valid', () => {\r",
-                  "    pm.response.to.have.jsonSchema(schema);\r",
-                  "    console.log(\"2) JSON schema is valid\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
-                  "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
-                  "});\r",
-                  "\r",
-                  "console.log(\"Profile Test #6 - Done\");\r",
-                  "console.log(\"_______________________________________________\");"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "f060358c-152d-4801-9371-e820480b9eb8",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": {
-                "token": "{{authtoken}}"
-              }
+              "name": "Update user profile data",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "be0cc21f-b6f9-426d-88b3-1cf139f5b603",
+                    "exec": [
+                      "console.log(\"_______________________________________________\");\r",
+                      "console.log(\"Profile Test #2 - 'Obtain user profile data'\");\r",
+                      "\r",
+                      "pm.test(\"Server response\", () => {\r",
+                      "    pm.response.to.have.status(201);\r",
+                      "    console.log(\"1) User exist\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
+                      "    console.log(\"2) Server response time is: \" + pm.response.responseTime)\r",
+                      "});\r",
+                      "\r",
+                      "console.log(\"Profile Test #2 - Done\");\r",
+                      "console.log(\"_______________________________________________\");"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "id": "df7d4dec-2f58-4918-938a-cad9217b664c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"id_user\": 2, \"login\": \"79056080708\", \"created_at\": \"2020-11-23T00:00:00.000Z\", \"updated_at\": \"2021-06-14T21:58:52.000Z\", \"photo\": \"\", \"active\": 1, \"last_login_time\": \"2022-02-22T23:01:32.499Z\", \"email\": \"ivan@mail.ru\", \"sex\": 1, \"name\": \"Ivan\", \"lastname\": \"Ivanov\", \"patronymic\": \"Ivanovich\", \"full_name\": \"Иванов Иван Артемович\", \"birthday\": \"2001-12-31T00:00:00.000Z\", \"address\": \"Tver, Lenina, 3\", \"city\": \"\", \"country\": \"\", \"phone\": \"79056080708\", \"deleted\": 0}"
+                },
+                "url": "{{baseURL}}/v1/user/{{id_user}}/"
+              },
+              "response": []
             },
-            "method": "GET",
-            "header": [],
-            "url": "{{baseURL}}/v1/user/{{id_user}}/metric/"
-          },
-          "response": []
-        },
-        {
-          "name": "Add user metric data",
-          "event": [
             {
-              "listen": "test",
-              "script": {
-                "id": "afc1d59f-df04-4744-b616-e3adbbed4772",
-                "exec": [
-                  "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Profile Test #7 - 'Add user metric list'\");\r",
-                  "\r",
-                  "pm.test(\"Server response\", () => {\r",
-                  "    pm.response.to.have.status(201);\r",
-                  "    console.log(\"1) User exist\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
-                  "    console.log(\"2) Server response time is: \" + pm.response.responseTime)\r",
-                  "});\r",
-                  "\r",
-                  "console.log(\"Profile Test #7 - Done\");\r",
-                  "console.log(\"_______________________________________________\");"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "e18ee6ff-f2f9-4abf-bde6-8749022c07df",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"value\": 123, \"timestamp\": \"2022-02-25T09:12:34.567Z\", \"device\": \"test\", \"name\": \"PulseRate\"}"
+              "name": "Obtain user profile photo",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "b8db2be9-8cbf-4b42-bd44-5a296a9931ab",
+                    "exec": [
+                      "console.log(\"_______________________________________________\");\r",
+                      "console.log(\"Profile Test #3 - 'Obtain user photo'\");\r",
+                      "\r",
+                      "pm.test(\"Server response\", () => {\r",
+                      "    pm.response.to.have.status(200);\r",
+                      "    console.log(\"1) User exist\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test(\"Content-Type header is image\", () => {\r",
+                      "    pm.expect(pm.response.headers.get('Content-Type')).to.be.oneOf(['image/jpeg', 'image/png']);\r",
+                      "    console.log(\"2) User profile photo exist - it is image\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
+                      "    console.log(\"2) Server response time is: \" + pm.response.responseTime)\r",
+                      "});\r",
+                      "\r",
+                      "console.log(\"Profile Test #3 - Done\");\r",
+                      "console.log(\"_______________________________________________\");"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "id": "34c1cd3a-a97f-40ba-8c54-751ae233038d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{authtoken}}"
+                  }
+                },
+                "method": "GET",
+                "header": [],
+                "url": "{{baseURL}}/v1/user/{{id_user}}/photo/"
+              },
+              "response": []
             },
-            "url": "{{baseURL}}/v1/user/{{id_user}}/metric/"
-          },
-          "response": []
-        },
-        {
-          "name": "Obtain user report list",
-          "event": [
             {
-              "listen": "test",
-              "script": {
-                "id": "3dfbe5c3-36c3-4be4-9c03-05257cd9f63e",
-                "exec": [
-                  "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Profile Test #8 - 'Obtain user report list'\");\r",
-                  "\r",
-                  "const schema = {\r",
-                  "    \"type\": \"object\",\r",
-                  "    \"required\": [\"data\"],\r",
-                  "    \"properties\": {\r",
-                  "        \"data\": {\r",
-                  "            \"type\": \"array\",\r",
-                  "            \"items\": [{\r",
-                  "                \"type\": \"object\",\r",
-                  "                \"required\": [\"id_report\", \"name\", \"date_start\", \"date_end\", \"created_at\", \"link\", \"metrics\"],\r",
-                  "                \"properties\": {\r",
-                  "                    \"id_report\": {\r",
-                  "                        \"type\": \"number\"\r",
-                  "                    },\r",
-                  "                    \"name\": {\r",
-                  "                        \"type\": \"string\"\r",
-                  "                    },\r",
-                  "                    \"date_start\": {\r",
-                  "                        \"type\": \"string\"\r",
-                  "                    },\r",
-                  "                    \"date_end\": {\r",
-                  "                        \"type\": \"string\"\r",
-                  "                    },\r",
-                  "                    \"created_at\": {\r",
-                  "                        \"type\": \"string\"\r",
-                  "                    },\r",
-                  "                    \"link\": {\r",
-                  "                        \"type\": \"string\"\r",
-                  "                    },\r",
-                  "                    \"metrics\": {\r",
-                  "                        \"type\": \"array\",\r",
-                  "                        \"items\": [{\r",
-                  "                            \"type\": \"object\",\r",
-                  "                            \"required\": [\"name\"],\r",
-                  "                            \"properties\": {\r",
-                  "                                \"name\": {\r",
-                  "                                    \"type\": \"string\"\r",
-                  "                                }\r",
-                  "                            }\r",
-                  "                        }]\r",
-                  "                    }\r",
-                  "                }\r",
-                  "            }]   \r",
-                  "        }\r",
-                  "    }  \r",
-                  "};\r",
-                  "\r",
-                  "pm.test(\"Server response\", () => {\r",
-                  "    pm.response.to.have.status(200);\r",
-                  "    console.log(\"1) User exist\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test('Schema is valid', () => {\r",
-                  "    pm.response.to.have.jsonSchema(schema);\r",
-                  "    console.log(\"2) JSON schema is valid\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
-                  "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
-                  "});\r",
-                  "\r",
-                  "console.log(\"Profile Test #8 - Done\");\r",
-                  "console.log(\"_______________________________________________\");"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "7f90ea5b-ed2d-4d51-a7b4-01177a727e72",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": {
-                "token": "{{authtoken}}"
-              }
+              "name": "Upload user profile photo",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "a63e9d48-465a-4497-96ec-babaa966794b",
+                    "exec": [
+                      "console.log(\"_______________________________________________\");\r",
+                      "console.log(\"Profile Test #4 - 'Upload user photo'\");\r",
+                      "\r",
+                      "pm.test(\"Server response\", () => {\r",
+                      "    pm.response.to.have.status(201);\r",
+                      "    console.log(\"1) User exist\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
+                      "    console.log(\"2) Server response time is: \" + pm.response.responseTime)\r",
+                      "});\r",
+                      "\r",
+                      "console.log(\"Profile Test #4 - Done\");\r",
+                      "console.log(\"_______________________________________________\");"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "id": "1a8ab0e9-51c4-4a74-bcf8-ec59d10cf360",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true,
+                "disabledSystemHeaders": {}
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "id_user",
+                      "value": "{{id_user}}",
+                      "type": "text"
+                    },
+                    {
+                      "key": "profileImage",
+                      "type": "file",
+                      "src": "photo1.jpg"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{baseURL}}/v1/user/{{id_user}}/photo/",
+                  "host": [
+                    "{{baseURL}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "user",
+                    "{{id_user}}",
+                    "photo",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "id_user",
+                      "value": "{{id_user}}",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "profileImage",
+                      "value": "",
+                      "type": "text",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
             },
-            "method": "GET",
-            "header": [],
-            "url": "{{baseURL}}/v1/user/{{id_user}}/report/"
-          },
-          "response": []
-        },
-        {
-          "name": "Add user report",
-          "event": [
             {
-              "listen": "test",
-              "script": {
-                "id": "9a6748ba-9fba-4e6d-970c-d885f2c86042",
-                "exec": [
-                  "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Profile Test #9 - 'Obtain user report list'\");\r",
-                  "\r",
-                  "pm.test(\"Server response\", () => {\r",
-                  "    pm.response.to.have.status(200);\r",
-                  "    console.log(\"1) User exist\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
-                  "    console.log(\"2) Server response time is: \" + pm.response.responseTime)\r",
-                  "});\r",
-                  "\r",
-                  "console.log(\"Profile Test #9 - Done\");\r",
-                  "console.log(\"_______________________________________________\");"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "f3bc2e23-4586-421a-b886-d53422e43b64",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"date_start\": \"2022-01-25T07:00:00.000Z\", \"date_end\": \"2022-02-25T16:00:00.000Z\", \"metricList\": [{\"name\": \"BodyOxygen\"},{\"name\": \"PulseRate\"}, {\"name\": \"RespiratoryRate\"}]}"
+              "name": "Obtain user metric config",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "832ecb9d-ca7b-45fa-b1c7-92240628db03",
+                    "exec": [
+                      "console.log(\"_______________________________________________\");\r",
+                      "console.log(\"Profile Test #5 - 'Obtain user metric config'\");\r",
+                      "\r",
+                      "const schema = {\r",
+                      "    \"type\": \"object\",\r",
+                      "    \"required\": [\"metrics\"],\r",
+                      "    \"properties\": {\r",
+                      "        \"metrics\": {\r",
+                      "            \"type\": \"array\",\r",
+                      "            \"items\": [{\r",
+                      "                \"type\": \"object\",\r",
+                      "                \"required\": [\"id\", \"name\", \"display_name\", \"icon\", \"description\", \"ranges\"],\r",
+                      "                \"properties\": {\r",
+                      "                    \"id\": {\r",
+                      "                        \"type\": \"number\"\r",
+                      "                    },\r",
+                      "                    \"name\": {\r",
+                      "                        \"type\": \"string\"\r",
+                      "                    },\r",
+                      "                    \"display_name\": {\r",
+                      "                        \"type\": \"string\"\r",
+                      "                    },\r",
+                      "                    \"icon\": {\r",
+                      "                        \"type\": \"string\"\r",
+                      "                    },\r",
+                      "                    \"description\": {\r",
+                      "                        \"type\": \"string\"\r",
+                      "                    },\r",
+                      "                    \"ranges\": {\r",
+                      "                        \"type\": \"array\",\r",
+                      "                        \"items\": [{\r",
+                      "                            \"type\": \"object\",                            \r",
+                      "                            \"required\": [\"min\", \"max\", \"rel\", \"type\"],\r",
+                      "                            \"properties\": {\r",
+                      "                                \"min\": {\r",
+                      "                                    \"type\": \"number\"\r",
+                      "                                },\r",
+                      "                                \"max\": {\r",
+                      "                                    \"type\": \"number\"\r",
+                      "                                },\r",
+                      "                                \"rel\": {\r",
+                      "                                    \"type\": \"string\"\r",
+                      "                                },\r",
+                      "                                \"type\": {\r",
+                      "                                    \"type\": \"string\"\r",
+                      "                                }\r",
+                      "                            }\r",
+                      "                        }]\r",
+                      "                    }\r",
+                      "                }\r",
+                      "            }]\r",
+                      "        }\r",
+                      "    }\r",
+                      "};\r",
+                      "\r",
+                      "pm.test(\"Server response\", () => {\r",
+                      "    pm.response.to.have.status(200);\r",
+                      "    console.log(\"1) User exist\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test('Schema is valid', () => {\r",
+                      "    pm.response.to.have.jsonSchema(schema);\r",
+                      "    console.log(\"2) JSON schema is valid\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
+                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                      "});\r",
+                      "\r",
+                      "console.log(\"Profile Test #5 - Done\");\r",
+                      "console.log(\"_______________________________________________\");"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "id": "d037dfaf-d65a-42dc-ae7e-889092e5a3b2",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{authtoken}}"
+                  }
+                },
+                "method": "GET",
+                "header": [],
+                "url": "{{baseURL}}/v1/user/{{id_user}}/metric/config/"
+              },
+              "response": []
             },
-            "url": "{{baseURL}}/v1/user/{{id_user}}/report/"
-          },
-          "response": []
-        },
-        {
-          "name": "Obtain user available tests list",
-          "event": [
             {
-              "listen": "test",
-              "script": {
-                "id": "fed870ae-a29a-4788-b4c4-3ffd2a9da417",
-                "exec": [
-                  "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Profile Test #10 - 'Obtain user available tests list'\");\r",
-                  "\r",
-                  "\r",
-                  "const schema = {\r",
-                  "    \"type\": \"array\",\r",
-                  "    \"items\": [{\r",
-                  "        \"required\": [\"id_test\", \"title\", \"description\", \"created_at\"],\r",
-                  "        \"properties\": {\r",
-                  "            \"id_test\": {\r",
-                  "                \"type\": \"number\"\r",
-                  "            },\r",
-                  "            \"title\": {\r",
-                  "                \"type\": \"string\"\r",
-                  "            },\r",
-                  "            \"description\": {\r",
-                  "                \"type\": \"string\"\r",
-                  "            },\r",
-                  "            \"created_at\": {\r",
-                  "                \"type\": \"string\"\r",
-                  "            }\r",
-                  "        }\r",
-                  "    }]\r",
-                  "};\r",
-                  "\r",
-                  "pm.test(\"Server response\", () => {\r",
-                  "    pm.response.to.have.status(200);\r",
-                  "    console.log(\"1) User exist\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test('Schema is valid', () => {\r",
-                  "    pm.response.to.have.jsonSchema(schema);\r",
-                  "    console.log(\"2) JSON schema is valid\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
-                  "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
-                  "});\r",
-                  "\r",
-                  "console.log(\"Profile Test #10 - Done\");\r",
-                  "console.log(\"_______________________________________________\");"
-                ],
-                "type": "text/javascript"
-              }
+              "name": "Obtain user metric list",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "f2a19f97-f956-4d2a-8e14-c36dc670e35c",
+                    "exec": [
+                      "console.log(\"_______________________________________________\");\r",
+                      "console.log(\"Profile Test #6 - 'Obtain user metric list'\");\r",
+                      "\r",
+                      "const schema = {\r",
+                      "    \"type\": \"object\",\r",
+                      "    \"required\": [\r",
+                      "        \"StressLevel\",\r",
+                      "        \"PulseRate\",\r",
+                      "        \"RespiratoryRate\",\r",
+                      "        \"BodyOxygen\",\r",
+                      "        \"BodyTemperature\",\r",
+                      "        \"BreathingRate\",\r",
+                      "        \"PulseWaveform\",\r",
+                      "        \"PrefusionIndex\",\r",
+                      "        \"Ecg\",\r",
+                      "        \"LongBreathingRate\",\r",
+                      "        \"Glucose\",\r",
+                      "        \"LongBodyOxygen\",\r",
+                      "        \"LongPulseRate\",\r",
+                      "        \"Weight\",\r",
+                      "        \"Height\",\r",
+                      "        \"Pressure\",\r",
+                      "        \"LongSDNNHeartRateVariability\",\r",
+                      "        \"SDNNHeartRateVariability\",\r",
+                      "        \"LongStressLevel\",\r",
+                      "        \"SelfAssessmentStatus\"\r",
+                      "    ]\r",
+                      "};\r",
+                      "\r",
+                      "pm.test(\"Server response\", () => {\r",
+                      "    pm.response.to.have.status(200);\r",
+                      "    console.log(\"1) User exist\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test('Schema is valid', () => {\r",
+                      "    pm.response.to.have.jsonSchema(schema);\r",
+                      "    console.log(\"2) JSON schema is valid\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
+                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                      "});\r",
+                      "\r",
+                      "console.log(\"Profile Test #6 - Done\");\r",
+                      "console.log(\"_______________________________________________\");"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "id": "f060358c-152d-4801-9371-e820480b9eb8",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{authtoken}}"
+                  }
+                },
+                "method": "GET",
+                "header": [],
+                "url": "{{baseURL}}/v1/user/{{id_user}}/metric/"
+              },
+              "response": []
+            },
+            {
+              "name": "Add user metric data",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "afc1d59f-df04-4744-b616-e3adbbed4772",
+                    "exec": [
+                      "console.log(\"_______________________________________________\");\r",
+                      "console.log(\"Profile Test #7 - 'Add user metric list'\");\r",
+                      "\r",
+                      "pm.test(\"Server response\", () => {\r",
+                      "    pm.response.to.have.status(201);\r",
+                      "    console.log(\"1) User exist\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
+                      "    console.log(\"2) Server response time is: \" + pm.response.responseTime)\r",
+                      "});\r",
+                      "\r",
+                      "console.log(\"Profile Test #7 - Done\");\r",
+                      "console.log(\"_______________________________________________\");"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "id": "e18ee6ff-f2f9-4abf-bde6-8749022c07df",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"value\": 123, \"timestamp\": \"2022-02-25T09:12:34.567Z\", \"device\": \"test\", \"name\": \"PulseRate\"}"
+                },
+                "url": "{{baseURL}}/v1/user/{{id_user}}/metric/"
+              },
+              "response": []
+            },
+            {
+              "name": "Obtain user report list",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "3dfbe5c3-36c3-4be4-9c03-05257cd9f63e",
+                    "exec": [
+                      "console.log(\"_______________________________________________\");\r",
+                      "console.log(\"Profile Test #8 - 'Obtain user report list'\");\r",
+                      "\r",
+                      "const schema = {\r",
+                      "    \"type\": \"object\",\r",
+                      "    \"required\": [\"data\"],\r",
+                      "    \"properties\": {\r",
+                      "        \"data\": {\r",
+                      "            \"type\": \"array\",\r",
+                      "            \"items\": [{\r",
+                      "                \"type\": \"object\",\r",
+                      "                \"required\": [\"id_report\", \"name\", \"date_start\", \"date_end\", \"created_at\", \"link\", \"metrics\"],\r",
+                      "                \"properties\": {\r",
+                      "                    \"id_report\": {\r",
+                      "                        \"type\": \"number\"\r",
+                      "                    },\r",
+                      "                    \"name\": {\r",
+                      "                        \"type\": \"string\"\r",
+                      "                    },\r",
+                      "                    \"date_start\": {\r",
+                      "                        \"type\": \"string\"\r",
+                      "                    },\r",
+                      "                    \"date_end\": {\r",
+                      "                        \"type\": \"string\"\r",
+                      "                    },\r",
+                      "                    \"created_at\": {\r",
+                      "                        \"type\": \"string\"\r",
+                      "                    },\r",
+                      "                    \"link\": {\r",
+                      "                        \"type\": \"string\"\r",
+                      "                    },\r",
+                      "                    \"metrics\": {\r",
+                      "                        \"type\": \"array\",\r",
+                      "                        \"items\": [{\r",
+                      "                            \"type\": \"object\",\r",
+                      "                            \"required\": [\"name\"],\r",
+                      "                            \"properties\": {\r",
+                      "                                \"name\": {\r",
+                      "                                    \"type\": \"string\"\r",
+                      "                                }\r",
+                      "                            }\r",
+                      "                        }]\r",
+                      "                    }\r",
+                      "                }\r",
+                      "            }]   \r",
+                      "        }\r",
+                      "    }  \r",
+                      "};\r",
+                      "\r",
+                      "pm.test(\"Server response\", () => {\r",
+                      "    pm.response.to.have.status(200);\r",
+                      "    console.log(\"1) User exist\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test('Schema is valid', () => {\r",
+                      "    pm.response.to.have.jsonSchema(schema);\r",
+                      "    console.log(\"2) JSON schema is valid\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
+                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                      "});\r",
+                      "\r",
+                      "console.log(\"Profile Test #8 - Done\");\r",
+                      "console.log(\"_______________________________________________\");"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "id": "7f90ea5b-ed2d-4d51-a7b4-01177a727e72",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{authtoken}}"
+                  }
+                },
+                "method": "GET",
+                "header": [],
+                "url": "{{baseURL}}/v1/user/{{id_user}}/report/"
+              },
+              "response": []
+            },
+            {
+              "name": "Add user report",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "9a6748ba-9fba-4e6d-970c-d885f2c86042",
+                    "exec": [
+                      "console.log(\"_______________________________________________\");\r",
+                      "console.log(\"Profile Test #9 - 'Obtain user report list'\");\r",
+                      "\r",
+                      "pm.test(\"Server response\", () => {\r",
+                      "    pm.response.to.have.status(200);\r",
+                      "    console.log(\"1) User exist\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
+                      "    console.log(\"2) Server response time is: \" + pm.response.responseTime)\r",
+                      "});\r",
+                      "\r",
+                      "console.log(\"Profile Test #9 - Done\");\r",
+                      "console.log(\"_______________________________________________\");"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "id": "f3bc2e23-4586-421a-b886-d53422e43b64",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"date_start\": \"2022-01-25T07:00:00.000Z\", \"date_end\": \"2022-02-25T16:00:00.000Z\", \"metricList\": [{\"name\": \"BodyOxygen\"},{\"name\": \"PulseRate\"}, {\"name\": \"RespiratoryRate\"}]}"
+                },
+                "url": "{{baseURL}}/v1/user/{{id_user}}/report/"
+              },
+              "response": []
+            },
+            {
+              "name": "Obtain user available tests list",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "fed870ae-a29a-4788-b4c4-3ffd2a9da417",
+                    "exec": [
+                      "console.log(\"_______________________________________________\");\r",
+                      "console.log(\"Profile Test #10 - 'Obtain user available tests list'\");\r",
+                      "\r",
+                      "\r",
+                      "const schema = {\r",
+                      "    \"type\": \"array\",\r",
+                      "    \"items\": [{\r",
+                      "        \"required\": [\"id_test\", \"title\", \"description\", \"created_at\"],\r",
+                      "        \"properties\": {\r",
+                      "            \"id_test\": {\r",
+                      "                \"type\": \"number\"\r",
+                      "            },\r",
+                      "            \"title\": {\r",
+                      "                \"type\": \"string\"\r",
+                      "            },\r",
+                      "            \"description\": {\r",
+                      "                \"type\": \"string\"\r",
+                      "            },\r",
+                      "            \"created_at\": {\r",
+                      "                \"type\": \"string\"\r",
+                      "            }\r",
+                      "        }\r",
+                      "    }]\r",
+                      "};\r",
+                      "\r",
+                      "pm.test(\"Server response\", () => {\r",
+                      "    pm.response.to.have.status(200);\r",
+                      "    console.log(\"1) User exist\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test('Schema is valid', () => {\r",
+                      "    pm.response.to.have.jsonSchema(schema);\r",
+                      "    console.log(\"2) JSON schema is valid\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
+                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                      "});\r",
+                      "\r",
+                      "console.log(\"Profile Test #10 - Done\");\r",
+                      "console.log(\"_______________________________________________\");"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "id": "42d007fa-7ad8-44d0-8f21-c8987e59f387",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{baseURL}}/v1/user/{{id_user}}/tests/"
+              },
+              "response": []
             }
           ],
-          "id": "42d007fa-7ad8-44d0-8f21-c8987e59f387",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": "{{baseURL}}/v1/user/{{id_user}}/tests/"
-          },
-          "response": []
+          "id": "dd4a9a4e-ecff-439e-9bd3-345ad066b962"
+        },
+        {
+          "name": "Kiosk list tests",
+          "item": [
+            {
+              "name": "Obtain kiosk list",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "50dce8d5-2478-415e-ae88-24c760a0da96",
+                    "exec": [
+                      "console.log(\"_______________________________________________\");\r",
+                      "console.log(\"Kiosk List Test #1 - 'Obtain kiosk list'\");\r",
+                      "\r",
+                      "const schema = {\r",
+                      "    \"type\": \"array\",\r",
+                      "    \"items\": [{\r",
+                      "        \"required\": [\"type\", \"name\"],\r",
+                      "        \"properties\": {\r",
+                      "            \"type\": {\r",
+                      "                \"type\": \"number\"\r",
+                      "            },\r",
+                      "            \"name\": {\r",
+                      "                \"type\": \"string\"\r",
+                      "            }\r",
+                      "        }\r",
+                      "    }]\r",
+                      "};\r",
+                      "\r",
+                      "pm.test(\"Server response\", () => {\r",
+                      "    pm.response.to.have.status(200);\r",
+                      "    console.log(\"1) User exist\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test('Schema is valid', () => {\r",
+                      "    pm.response.to.have.jsonSchema(schema);\r",
+                      "    console.log(\"2) JSON schema is valid\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
+                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                      "});\r",
+                      "\r",
+                      "console.log(\"Kiosk List Test #1 - Done\");\r",
+                      "console.log(\"_______________________________________________\");"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "id": "c6bd3f96-8859-4271-91d4-d06ca50b87b4",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{baseURL}}/v1/kiosk/types"
+              },
+              "response": []
+            }
+          ],
+          "id": "64dc1be6-6778-4a37-9a7d-1de520158c96"
+        },
+        {
+          "name": "Help topics tests",
+          "item": [
+            {
+              "name": "Obtain help topics list",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "d2242448-e5aa-4958-a92e-12168fb70203",
+                    "exec": [
+                      "console.log(\"_______________________________________________\");\r",
+                      "console.log(\"Help Topics Test #1 - 'Obtain help topics list'\");\r",
+                      "const schema = {\r",
+                      "\r",
+                      "}\r",
+                      "\r",
+                      "pm.test(\"Server response\", () => {\r",
+                      "    pm.response.to.have.status(200);\r",
+                      "    console.log(\"1) User exist\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test('Schema is valid', () => {\r",
+                      "    //pm.response.to.have.jsonSchema(schema);\r",
+                      "    console.log(\"2) JSON schema is valid\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
+                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                      "});\r",
+                      "\r",
+                      "console.log(\"Help Topics Test #1 - Done\");\r",
+                      "console.log(\"_______________________________________________\");"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "id": "cce89dd6-fcb1-433f-ab85-0b366ffa3804",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{authtoken}}"
+                  }
+                },
+                "method": "GET",
+                "header": [],
+                "url": "{{baseURL}}/v1/help"
+              },
+              "response": []
+            },
+            {
+              "name": "Obtain details of help topic",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "2827edfb-ca4d-45c5-803a-967f0353632c",
+                    "exec": [
+                      "console.log(\"_______________________________________________\");\r",
+                      "console.log(\"Help Topics Test #2 - 'Obtain details of help topic'\");\r",
+                      "const schema = {\r",
+                      "\r",
+                      "}\r",
+                      "\r",
+                      "pm.test(\"Server response\", () => {\r",
+                      "    pm.response.to.have.status(200);\r",
+                      "    console.log(\"1) User exist\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test('Schema is valid', () => {\r",
+                      "    //pm.response.to.have.jsonSchema(schema);\r",
+                      "    console.log(\"2) JSON schema is valid\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
+                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                      "});\r",
+                      "\r",
+                      "console.log(\"Help Topics Test #2 - Done\");\r",
+                      "console.log(\"_______________________________________________\");"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "id": "6e083f60-e81c-4255-85d4-25bbf8569cec",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{authtoken}}"
+                  }
+                },
+                "method": "GET",
+                "header": [],
+                "url": "{{baseURL}}/v1/help/1"
+              },
+              "response": []
+            }
+          ],
+          "id": "640f1a63-309c-4a3d-9162-6f0c0ffde614"
         }
       ],
-      "id": "dd4a9a4e-ecff-439e-9bd3-345ad066b962"
-    },
-    {
-      "name": "Kiosk list tests",
-      "item": [
-        {
-          "name": "Obtain kiosk list",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "50dce8d5-2478-415e-ae88-24c760a0da96",
-                "exec": [
-                  "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Kiosk List Test #1 - 'Obtain kiosk list'\");\r",
-                  "\r",
-                  "const schema = {\r",
-                  "    \"type\": \"array\",\r",
-                  "    \"items\": [{\r",
-                  "        \"required\": [\"type\", \"name\"],\r",
-                  "        \"properties\": {\r",
-                  "            \"type\": {\r",
-                  "                \"type\": \"number\"\r",
-                  "            },\r",
-                  "            \"name\": {\r",
-                  "                \"type\": \"string\"\r",
-                  "            }\r",
-                  "        }\r",
-                  "    }]\r",
-                  "};\r",
-                  "\r",
-                  "pm.test(\"Server response\", () => {\r",
-                  "    pm.response.to.have.status(200);\r",
-                  "    console.log(\"1) User exist\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test('Schema is valid', () => {\r",
-                  "    pm.response.to.have.jsonSchema(schema);\r",
-                  "    console.log(\"2) JSON schema is valid\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
-                  "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
-                  "});\r",
-                  "\r",
-                  "console.log(\"Kiosk List Test #1 - Done\");\r",
-                  "console.log(\"_______________________________________________\");"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "c6bd3f96-8859-4271-91d4-d06ca50b87b4",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": "{{baseURL}}/v1/kiosk/types"
-          },
-          "response": []
-        }
-      ],
-      "id": "64dc1be6-6778-4a37-9a7d-1de520158c96"
-    },
-    {
-      "name": "Help topics tests",
-      "item": [
-        {
-          "name": "Obtain help topics list",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "d2242448-e5aa-4958-a92e-12168fb70203",
-                "exec": [
-                  "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Help Topics Test #1 - 'Obtain help topics list'\");\r",
-                  "const schema = {\r",
-                  "\r",
-                  "}\r",
-                  "\r",
-                  "pm.test(\"Server response\", () => {\r",
-                  "    pm.response.to.have.status(200);\r",
-                  "    console.log(\"1) User exist\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test('Schema is valid', () => {\r",
-                  "    //pm.response.to.have.jsonSchema(schema);\r",
-                  "    console.log(\"2) JSON schema is valid\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
-                  "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
-                  "});\r",
-                  "\r",
-                  "console.log(\"Help Topics Test #1 - Done\");\r",
-                  "console.log(\"_______________________________________________\");"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "cce89dd6-fcb1-433f-ab85-0b366ffa3804",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": {
-                "token": "{{authtoken}}"
-              }
-            },
-            "method": "GET",
-            "header": [],
-            "url": "{{baseURL}}/v1/help"
-          },
-          "response": []
-        },
-        {
-          "name": "Obtain details of help topic",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "2827edfb-ca4d-45c5-803a-967f0353632c",
-                "exec": [
-                  "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Help Topics Test #2 - 'Obtain details of help topic'\");\r",
-                  "const schema = {\r",
-                  "\r",
-                  "}\r",
-                  "\r",
-                  "pm.test(\"Server response\", () => {\r",
-                  "    pm.response.to.have.status(200);\r",
-                  "    console.log(\"1) User exist\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test('Schema is valid', () => {\r",
-                  "    //pm.response.to.have.jsonSchema(schema);\r",
-                  "    console.log(\"2) JSON schema is valid\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
-                  "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
-                  "});\r",
-                  "\r",
-                  "console.log(\"Help Topics Test #2 - Done\");\r",
-                  "console.log(\"_______________________________________________\");"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "6e083f60-e81c-4255-85d4-25bbf8569cec",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": {
-                "token": "{{authtoken}}"
-              }
-            },
-            "method": "GET",
-            "header": [],
-            "url": "{{baseURL}}/v1/help/1"
-          },
-          "response": []
-        }
-      ],
-      "id": "640f1a63-309c-4a3d-9162-6f0c0ffde614"
+      "id": "5512cd16-48c7-40f7-8109-d77fba6131ba"
     },
     {
       "name": "Functional tests",
-      "item": [],
+      "item": [
+        {
+          "name": "New Request",
+          "id": "8c6d2d04-7a09-44f1-8b1e-8b50946f70fe",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ],
       "id": "e1675a83-f16b-4467-b195-2936f4067e4f"
-    },
-    {
-      "name": "API Tests",
-      "item": [],
-      "id": "5512cd16-48c7-40f7-8109-d77fba6131ba"
     }
   ],
   "auth": {
@@ -1204,25 +1218,25 @@
   ],
   "variable": [
     {
-      "id": "84a429bb-e7f5-460c-acf2-a54bd07dd843",
+      "id": "54f69758-7835-431f-bc79-72d2317d43af",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "3553f4cb-576a-4ca0-b2ee-17dbb652d57f",
+      "id": "53dba865-b30b-4dc7-9495-e6d8142fdb12",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "b2c3e93e-e071-4897-9a56-3a233391e758",
+      "id": "286f6259-af06-45a7-851d-bd10a2f3f47a",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3d867cb9-f8ea-43dd-bf3b-1d81ff89dd2d",
+      "id": "f527af05-8e07-42c6-a981-4fd83c0bad24",
       "key": "authtoken",
       "value": ""
     }
