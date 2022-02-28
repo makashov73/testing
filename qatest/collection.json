@@ -521,8 +521,8 @@
                 },
                 {
                   "key": "profileImage",
-                  "type": "file",
-                  "src": "photo1.jpg"
+                  "type": "text",
+                  "value": "./qatests/photo1.jpg"
                 }
               ]
             },
@@ -1193,25 +1193,25 @@
   ],
   "variable": [
     {
-      "id": "a8624a3c-7933-4e13-b495-464067317ae9",
+      "id": "04e50a1e-324f-4494-a1b9-031d9e96b576",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "6bb2e0af-a1fb-4bf6-9193-a5556902a2a3",
+      "id": "4906267e-4e08-426b-a97a-0f7d8e5faedb",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "4d2a3849-44b8-4065-8dea-42dd324eb8b2",
+      "id": "fb67827c-3dec-48f5-b27e-4d96b43308be",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1437c522-8a86-49ab-b3c3-057d8d178b47",
+      "id": "a5de1544-a781-4588-8e18-13dac0ced9f8",
       "key": "authtoken",
       "value": ""
     }
