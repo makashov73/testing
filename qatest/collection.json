@@ -1196,37 +1196,81 @@
       "item": [
         {
           "name": "Report tests",
-          "item": [],
-          "id": "d397c310-a0c3-4d5e-96ff-6950940f6b8e"
-        },
-        {
-          "name": "Day report",
-          "event": [
+          "item": [
             {
-              "listen": "test",
-              "script": {
-                "id": "d3d32879-e97c-460f-9638-51e36dc4d3d6",
-                "exec": [
-                  "pm.test(\"Server response\", () => {\r",
-                  "    pm.response.to.have.status(200);\r",
-                  "    console.log(\"1) User exist\");\r",
-                  "});\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
+              "name": "Add user metric data Copy",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "afc1d59f-df04-4744-b616-e3adbbed4772",
+                    "exec": [
+                      "console.log(\"_______________________________________________\");\r",
+                      "console.log(\"Profile Test #7 - 'Add user metric list'\");\r",
+                      "\r",
+                      "pm.test(\"Server response\", () => {\r",
+                      "    pm.response.to.have.status(201);\r",
+                      "    console.log(\"1) User exist\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
+                      "    console.log(\"2) Server response time is: \" + pm.response.responseTime)\r",
+                      "});\r",
+                      "\r",
+                      "console.log(\"Profile Test #7 - Done\");\r",
+                      "console.log(\"_______________________________________________\");"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "id": "7b24781e-22bf-48a9-9c9e-ced5e144a157",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"value\": 123, \"timestamp\": \"2022-02-25T09:12:34.567Z\", \"device\": \"test\", \"name\": \"PulseRate\"}"
+                },
+                "url": "{{baseURL}}/v1/user/{{id_user}}/metric/"
+              },
+              "response": []
+            },
+            {
+              "name": "Day report",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "d3d32879-e97c-460f-9638-51e36dc4d3d6",
+                    "exec": [
+                      "pm.test(\"Server response\", () => {\r",
+                      "    pm.response.to.have.status(200);\r",
+                      "    console.log(\"1) User exist\");\r",
+                      "});\r",
+                      ""
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "id": "8c6d2d04-7a09-44f1-8b1e-8b50946f70fe",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{baseURL}}/v1/user/{{id_user}}/"
+              },
+              "response": []
             }
           ],
-          "id": "8c6d2d04-7a09-44f1-8b1e-8b50946f70fe",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": "{{baseURL}}/v1/user/{{id_user}}/"
-          },
-          "response": []
+          "id": "d397c310-a0c3-4d5e-96ff-6950940f6b8e"
         }
       ],
       "id": "e1675a83-f16b-4467-b195-2936f4067e4f",
@@ -1284,30 +1328,30 @@
   ],
   "variable": [
     {
-      "id": "e2fb0568-6442-48f0-9a40-8d6f354e1590",
+      "id": "96e21b42-1c3f-4265-92a1-e693e2336e70",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "d4c6bc85-2f24-434b-b33e-070ac50ce4da",
+      "id": "c2698a29-cfda-4f27-a57f-ae143f3a6abf",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "f736c575-3080-4ea6-9b5d-fb84168ca45e",
+      "id": "46bccd3c-8fd5-4c13-975c-5ff32d857396",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fcee06fa-78c7-499d-ab35-61fa65f6c3ce",
+      "id": "627f7f14-0fcf-4871-8846-d10019313a96",
       "key": "authtoken",
       "value": ""
     },
     {
-      "id": "51fe94f0-dbeb-425c-baa7-7a4df7895d62",
+      "id": "0aefce07-2419-4191-a809-57270827ae2c",
       "key": "get_report",
       "value": "",
       "type": "string"
