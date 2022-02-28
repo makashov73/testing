@@ -1241,7 +1241,7 @@
               "response": []
             },
             {
-              "name": "Add BodyOxygen metric data Copy",
+              "name": "Add BodyOxygen metric data",
               "event": [
                 {
                   "listen": "test",
@@ -1430,30 +1430,30 @@
   ],
   "variable": [
     {
-      "id": "78be1bbc-a134-4830-b000-0d05e1deee90",
+      "id": "d791e970-528b-42dd-9fd6-ab3aeb7d8052",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "fd249524-8e8d-4113-8456-4a3be4fa79ad",
+      "id": "770a854f-f19c-4c8c-b920-5fa458e40f83",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "6ad8dba4-b696-43c8-b38e-fbaa03ac8a3a",
+      "id": "a8c8c683-0fdf-4ec2-8e64-4cbfda88e456",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1f1c2d14-5024-4beb-9e07-0f874bcc0a85",
+      "id": "ff45b130-1e43-49c3-ba52-a9b702604bcc",
       "key": "authtoken",
       "value": ""
     },
     {
-      "id": "1fa189e2-fee1-46e9-b85a-8f2fdff41254",
+      "id": "b617d402-6a6d-429e-ae78-3169755ce9c7",
       "key": "get_report",
       "value": "",
       "type": "string"
