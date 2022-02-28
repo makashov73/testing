@@ -385,6 +385,32 @@
         },
         {
           "name": "Update user profile data",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "be0cc21f-b6f9-426d-88b3-1cf139f5b603",
+                "exec": [
+                  "console.log(\"_______________________________________________\");\r",
+                  "console.log(\"Profile Test #2 - 'Obtain user profile data'\");\r",
+                  "\r",
+                  "pm.test(\"Server response\", () => {\r",
+                  "    pm.response.to.have.status(201);\r",
+                  "    console.log(\"1) User exist\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
+                  "    console.log(\"2) Server response time is: \" + pm.response.responseTime)\r",
+                  "});\r",
+                  "\r",
+                  "console.log(\"Profile Test #2 - Done\");\r",
+                  "console.log(\"_______________________________________________\");"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "id": "df7d4dec-2f58-4918-938a-cad9217b664c",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -1115,25 +1141,25 @@
   ],
   "variable": [
     {
-      "id": "43e4ff09-4bf1-48be-9121-5c81e706b324",
+      "id": "cff82c7e-0d6b-45eb-ab7f-5f7474e6d018",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "d9846267-c2a9-4714-b46e-ede84485253a",
+      "id": "0eb6f1fa-aec1-4c7f-bba0-a285d9e5ac16",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "a017cb10-3957-4911-a3d0-a54445933e6a",
+      "id": "6db294f0-4a80-424e-9314-f1c392a5d968",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "bf14965a-56d4-43be-aa37-7932656583ec",
+      "id": "05fe8469-bec0-4313-8336-1de2f37ecf66",
       "key": "authtoken",
       "value": ""
     }
