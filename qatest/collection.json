@@ -1248,11 +1248,23 @@
                   "script": {
                     "id": "d3d32879-e97c-460f-9638-51e36dc4d3d6",
                     "exec": [
+                      "console.log(\"_______________________________________________\");\r",
+                      "console.log(\"Report tests #1 - 'Day report'\");\r",
+                      "\r",
                       "pm.test(\"Server response\", () => {\r",
                       "    pm.response.to.have.status(200);\r",
                       "    console.log(\"1) User exist\");\r",
                       "});\r",
-                      ""
+                      "\r",
+                      "\r",
+                      "\r",
+                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
+                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                      "});\r",
+                      "\r",
+                      "console.log(\"Report tests #1 - 'Done'\");\r",
+                      "console.log(\"_______________________________________________\");"
                     ],
                     "type": "text/javascript"
                   }
@@ -1263,9 +1275,13 @@
                 "disableBodyPruning": true
               },
               "request": {
-                "method": "GET",
+                "method": "POST",
                 "header": [],
-                "url": "{{baseURL}}/v1/user/{{id_user}}/"
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"date_start\": \"2020-01-01T00:00:00.000Z\", \"date_end\": \"2020-01-01T23:59:59.000Z\", \"metricList\": [{\"name\": \"BodyOxygen\"},{\"name\": \"PulseRate\"}, {\"name\": \"RespiratoryRate\"}]}"
+                },
+                "url": "{{baseURL}}/v1/user/{{id_user}}/report/"
               },
               "response": []
             }
@@ -1328,30 +1344,30 @@
   ],
   "variable": [
     {
-      "id": "0e41b8ca-106a-46c7-bcc4-be2597658100",
+      "id": "d1525236-c529-42b4-8e36-83dc06a5e5fd",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "7ae62f33-8f9c-4964-b4c9-95bc247ef34a",
+      "id": "73e06791-575a-4dfc-866a-b17eefd6a9d7",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "9305751d-ee04-409a-b055-f1444019b404",
+      "id": "c1fa1010-e6c5-45db-aacc-91125590aae6",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3c186d4d-bffd-4d27-938c-e139f2f6f3be",
+      "id": "a6cd6f86-91ab-4a4c-9cdd-4494f65459c7",
       "key": "authtoken",
       "value": ""
     },
     {
-      "id": "75d1e644-951b-43bd-8d06-0bb573e25c96",
+      "id": "bd1f061a-abe6-4178-8ef7-a0fdb50b0bf4",
       "key": "get_report",
       "value": "",
       "type": "string"
