@@ -1195,7 +1195,7 @@
       "name": "Functional tests",
       "item": [
         {
-          "name": "Report tests",
+          "name": "Day report",
           "event": [
             {
               "listen": "test",
@@ -1279,30 +1279,30 @@
   ],
   "variable": [
     {
-      "id": "97851d22-c435-4f1b-9931-4d3b456a7726",
+      "id": "ffd68a83-6c36-48d6-ae9a-783ca47e3af5",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "f14dcfad-2127-4754-9cfe-4d49837fa268",
+      "id": "10ab19f1-4a8d-4bc3-9e72-64473447af8c",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "50fc2e49-b74c-470b-be3e-72bd6a4fbbff",
+      "id": "3934be4f-50f9-44d0-b5a1-d1b174f0b554",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2c612384-c103-40b4-8739-1e167a8bd9d0",
+      "id": "f12a361d-9a37-42e7-9731-bef7a6a5b7a7",
       "key": "authtoken",
       "value": ""
     },
     {
-      "id": "19fe3ae4-f81a-4785-aabd-229ec2afc528",
+      "id": "dd184368-fc6f-43c6-856f-d972ea5f873b",
       "key": "get_report",
       "value": "",
       "type": "string"
