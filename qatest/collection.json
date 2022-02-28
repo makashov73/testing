@@ -635,8 +635,8 @@
                       "});\r",
                       "\r",
                       "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
-                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
+                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime);\r",
                       "});\r",
                       "\r",
                       "console.log(\"Profile Test #5 - Done\");\r",
@@ -711,8 +711,8 @@
                       "});\r",
                       "\r",
                       "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
-                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
+                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime);\r",
                       "});\r",
                       "\r",
                       "console.log(\"Profile Test #6 - Done\");\r",
@@ -1481,30 +1481,30 @@
   ],
   "variable": [
     {
-      "id": "9717901e-9a20-4bcd-99cc-70c9a3bdd99b",
+      "id": "078ade13-8864-4627-b234-062b580b5ccd",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "55e63e57-691d-4d86-ac0a-f9c78005dafd",
+      "id": "92c6a43b-1a4e-4b53-8607-d72118842a84",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "ab523ad5-10cc-4aac-a626-78bd70a51676",
+      "id": "df590c39-2c7e-42e4-bac9-a7849414fb36",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f48de377-288c-4c53-bccc-20fb92f53c9e",
+      "id": "3fcedb72-97b2-4383-a1ad-3d7e625b9d4a",
       "key": "authtoken",
       "value": ""
     },
     {
-      "id": "db69c6bb-4a20-4895-a802-c12449006a62",
+      "id": "de880509-d215-48e3-a311-5d956794406d",
       "key": "report_id",
       "value": "",
       "type": "string"
