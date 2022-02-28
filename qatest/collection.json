@@ -1372,7 +1372,7 @@
               "response": []
             },
             {
-              "name": "New Request",
+              "name": "Get user last report",
               "id": "1beb5356-8fc3-403f-a1c4-c8de2531ae8e",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -1442,30 +1442,30 @@
   ],
   "variable": [
     {
-      "id": "7cef0c99-852b-4d02-ad7a-2c41e433a7c2",
+      "id": "b4f47f5d-64b4-4d3d-a994-98228d834597",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "e5888161-b2a2-4c6e-a7c2-995f1b540ea1",
+      "id": "8f2b2154-0cd4-43ca-9a65-f1457b642c52",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "7a38d988-631f-4888-905f-f3b5f8e67c4f",
+      "id": "09656890-4cb1-4126-b018-763fa6c895e5",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "55e02f6b-acd4-41e2-8919-515d8cba65da",
+      "id": "52211da3-585d-46f9-9f7b-cb46fc6c1114",
       "key": "authtoken",
       "value": ""
     },
     {
-      "id": "3e7f8451-8aad-4e45-9022-559ae2229e1b",
+      "id": "d55115c9-b03d-457c-a647-32c29ce27198",
       "key": "get_report",
       "value": "",
       "type": "string"
