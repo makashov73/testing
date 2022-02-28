@@ -452,6 +452,32 @@
         },
         {
           "name": "Upload user profile photo",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "a63e9d48-465a-4497-96ec-babaa966794b",
+                "exec": [
+                  "console.log(\"_______________________________________________\");\r",
+                  "console.log(\"Profile Test #3 - 'Upload user photo'\");\r",
+                  "\r",
+                  "pm.test(\"Server response\", () => {\r",
+                  "    pm.response.to.have.status(201);\r",
+                  "    console.log(\"1) User exist\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
+                  "    console.log(\"2) Server response time is: \" + pm.response.responseTime)\r",
+                  "});\r",
+                  "\r",
+                  "console.log(\"Profile Test #3 - Done\");\r",
+                  "console.log(\"_______________________________________________\");"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "id": "1a8ab0e9-51c4-4a74-bcf8-ec59d10cf360",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -1089,25 +1115,25 @@
   ],
   "variable": [
     {
-      "id": "ff51db28-7f43-45ee-a85a-857712b337ca",
+      "id": "8f633a7f-9258-4f17-a90d-cfa70222a01e",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "ef85fb3b-8b61-4728-bc4c-bde6da776383",
+      "id": "03ab7af7-5a10-4d32-99b3-5f54d663139f",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "a78d8cbe-1644-4bf8-8604-367eeabe2394",
+      "id": "87a4d06b-360b-43a0-ba16-02dc09eb8bf4",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "42e13764-bc9b-4823-9e09-2f3f40853760",
+      "id": "0bcecfa0-19f1-4e18-b2e1-75acb8da3655",
       "key": "authtoken",
       "value": ""
     }
