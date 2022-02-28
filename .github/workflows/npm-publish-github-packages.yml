@@ -7,7 +7,7 @@ on:
 defaults:
   run:
     shell: bash
-    working-directory: ./qatest
+    working-directory: ./qatest/
     
 jobs:
   api-testing:
@@ -32,4 +32,4 @@ jobs:
     - name: Run POSTMAN collection
       
       run: |
-       newman run ./qatest/collection.json
+       newman run collection.json
