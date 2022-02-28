@@ -1234,7 +1234,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\"value\": 123, \"timestamp\": \"2022-02-25T09:12:34.567Z\", \"device\": \"test\", \"name\": \"PulseRate\"}"
+                  "raw": "{\"value\": 777, \"timestamp\": \"2022-02-25T09:12:34.567Z\", \"device\": \"test\", \"name\": \"PulseRate\"}"
                 },
                 "url": "{{baseURL}}/v1/user/{{id_user}}/metric/"
               },
@@ -1328,30 +1328,30 @@
   ],
   "variable": [
     {
-      "id": "42ce8152-5e11-4fc3-bb8d-2c2a5b870ec4",
+      "id": "9775d23f-31eb-42fb-be2c-2a6a8d172b65",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "936b0cf5-93ea-4349-b8f1-0e8e7a72a405",
+      "id": "5f0560f6-4356-499d-8c67-2e825ce2803e",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "9eb2cded-ef60-4860-9356-f5c158639444",
+      "id": "e78cfeb5-2db7-48c4-b53d-a560a9665c2f",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "91c86251-4add-42fe-a3da-3a21b04ca78c",
+      "id": "b3daff0c-7148-4e05-a8ee-28aa77809c34",
       "key": "authtoken",
       "value": ""
     },
     {
-      "id": "c19c60cf-2d9b-4641-a95c-96222df9f858",
+      "id": "ea0f000e-fab2-449d-8d87-7ab6b1e0e696",
       "key": "get_report",
       "value": "",
       "type": "string"
