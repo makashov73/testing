@@ -1195,6 +1195,11 @@
       "name": "Functional tests",
       "item": [
         {
+          "name": "New Folder",
+          "item": [],
+          "id": "d397c310-a0c3-4d5e-96ff-6950940f6b8e"
+        },
+        {
           "name": "Day report",
           "event": [
             {
@@ -1279,30 +1284,30 @@
   ],
   "variable": [
     {
-      "id": "ffd68a83-6c36-48d6-ae9a-783ca47e3af5",
+      "id": "7f34b579-3599-41b0-9810-421fa83be42d",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "10ab19f1-4a8d-4bc3-9e72-64473447af8c",
+      "id": "327bbe3e-9415-49d7-a4d5-42201b85b777",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "3934be4f-50f9-44d0-b5a1-d1b174f0b554",
+      "id": "891470ee-29ab-405a-a490-1d22a36a2e6b",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f12a361d-9a37-42e7-9731-bef7a6a5b7a7",
+      "id": "6f9e71c9-72f4-449b-91a5-1cbac96866ca",
       "key": "authtoken",
       "value": ""
     },
     {
-      "id": "dd184368-fc6f-43c6-856f-d972ea5f873b",
+      "id": "1718d0e1-feec-4448-9c9b-643d334f36bd",
       "key": "get_report",
       "value": "",
       "type": "string"
