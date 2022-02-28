@@ -1198,7 +1198,7 @@
           "name": "Report tests",
           "item": [
             {
-              "name": "Add user metric data Copy",
+              "name": "Add user metric data",
               "event": [
                 {
                   "listen": "test",
@@ -1328,30 +1328,30 @@
   ],
   "variable": [
     {
-      "id": "96e21b42-1c3f-4265-92a1-e693e2336e70",
+      "id": "42ce8152-5e11-4fc3-bb8d-2c2a5b870ec4",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "c2698a29-cfda-4f27-a57f-ae143f3a6abf",
+      "id": "936b0cf5-93ea-4349-b8f1-0e8e7a72a405",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "46bccd3c-8fd5-4c13-975c-5ff32d857396",
+      "id": "9eb2cded-ef60-4860-9356-f5c158639444",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "627f7f14-0fcf-4871-8846-d10019313a96",
+      "id": "91c86251-4add-42fe-a3da-3a21b04ca78c",
       "key": "authtoken",
       "value": ""
     },
     {
-      "id": "0aefce07-2419-4191-a809-57270827ae2c",
+      "id": "c19c60cf-2d9b-4641-a95c-96222df9f858",
       "key": "get_report",
       "value": "",
       "type": "string"
