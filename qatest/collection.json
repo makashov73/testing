@@ -1335,21 +1335,30 @@
                     "id": "d3d32879-e97c-460f-9638-51e36dc4d3d6",
                     "exec": [
                       "console.log(\"_______________________________________________\");\r",
-                      "console.log(\"Report tests #1 - 'Day report'\");\r",
+                      "console.log(\"Report tests #4 - 'Create day report'\");\r",
                       "\r",
                       "pm.test(\"Server response\", () => {\r",
                       "    pm.response.to.have.status(200);\r",
                       "    console.log(\"1) User exist\");\r",
                       "});\r",
                       "\r",
-                      "\r",
-                      "\r",
                       "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
-                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
+                      "    console.log(\"2) Server response time is: \" + pm.response.responseTime);\r",
                       "});\r",
                       "\r",
-                      "console.log(\"Report tests #1 - 'Done'\");\r",
+                      "var bodyData = JSON.parse(responseBody);\r",
+                      "var rid = bodyData.id;\r",
+                      "var msg = bodyData.message;\r",
+                      "pm.collectionVariables.set(\"report_id\", rid); // put access_token into postman environment variable\r",
+                      "pm.variables.set(\"message\", msg); // put id_user into postman local variable\r",
+                      "\r",
+                      "pm.test(\"Create day report\", () => {\r",
+                      "    pm.expect(msg).to.be.equal(\"Report build successfully\");\r",
+                      "    console.log(\"3) Report successfully created\");\r",
+                      "});\r",
+                      "\r",
+                      "console.log(\"Report tests #4 - Done\");\r",
                       "console.log(\"_______________________________________________\");"
                     ],
                     "type": "text/javascript"
@@ -1471,30 +1480,30 @@
   ],
   "variable": [
     {
-      "id": "be7a7cbd-3e5a-4e35-a0e9-c316f4f85a92",
+      "id": "0f271da1-06f7-4084-90e4-e849ccd306ef",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "b52a6add-3e21-44c5-b17e-432ada2cd55c",
+      "id": "24a8dfa4-eea3-4285-a98e-32d276064e5e",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "dff1debc-2eaf-466d-8c4b-1920d69b7c65",
+      "id": "698f8efc-359f-470b-86f3-16ba87f913fa",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "24d4d8a8-652e-40d2-badb-b4da6660ec48",
+      "id": "e0091a98-fc8f-4e41-b16e-03316f56c827",
       "key": "authtoken",
       "value": ""
     },
     {
-      "id": "0d3225df-3bb9-4687-8ed1-c4618d931ffb",
+      "id": "568ff7e3-e539-4771-a138-c1f9ef92fbe1",
       "key": "report_id",
       "value": "",
       "type": "string"
