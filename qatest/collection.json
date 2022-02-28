@@ -1198,7 +1198,7 @@
           "name": "Report tests",
           "item": [
             {
-              "name": "Add user metric data",
+              "name": "Add PulseRate metric data",
               "event": [
                 {
                   "listen": "test",
@@ -1344,30 +1344,30 @@
   ],
   "variable": [
     {
-      "id": "cf74a42a-ad6c-42b8-b85c-f3ee5f9abd3c",
+      "id": "17581d6c-0425-4ac6-93a5-95d60882d9eb",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "deb10aba-9794-4100-b4d8-0f7122181308",
+      "id": "5a7eeec2-0bdc-4db0-8c41-4cd18848980d",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "765d38d8-c704-4f7a-a005-774aec226f86",
+      "id": "a074b483-9f9f-49c1-8a93-08ae10fa268b",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2a94a1bb-ff58-46e1-9e09-860292d54a33",
+      "id": "a3615c2f-2981-47c1-87c8-13bb38a194bf",
       "key": "authtoken",
       "value": ""
     },
     {
-      "id": "c140feb4-b2c1-467b-9030-b1510a09d544",
+      "id": "77468eb8-6c82-4777-a94e-771598efcbcd",
       "key": "get_report",
       "value": "",
       "type": "string"
