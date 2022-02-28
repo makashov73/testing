@@ -1382,7 +1382,7 @@
               "response": []
             },
             {
-              "name": "Get user last report",
+              "name": "Get user day report",
               "event": [
                 {
                   "listen": "test",
@@ -1481,30 +1481,30 @@
   ],
   "variable": [
     {
-      "id": "d6b2f5cb-0e27-4eeb-828f-db525d488d56",
+      "id": "85a37b36-6d96-4259-a341-ff9ac2f511a6",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "b984d99a-6caa-4367-ae7e-baad6bcdd118",
+      "id": "b709f86c-8fdd-4001-9ab7-d03305e6daa0",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "978a0f57-05cb-4cf4-be55-4af3a1fca9d0",
+      "id": "f5e433e6-647f-4fef-964a-271a0b0b4ac7",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ebf96cfb-5acc-450b-85f4-674e67ca7771",
+      "id": "59616df7-58f8-49f4-bca3-5cee689e552c",
       "key": "authtoken",
       "value": ""
     },
     {
-      "id": "d574e625-e84b-4dc1-bfda-bc033b98a2c5",
+      "id": "3a8d9e4b-0b63-4c07-88d8-91690f715106",
       "key": "report_id",
       "value": "",
       "type": "string"
