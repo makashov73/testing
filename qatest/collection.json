@@ -218,7 +218,7 @@
                       "",
                       "pm.test(\"Response time is less than 1000ms\", () => {",
                       "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));",
-                      "    console.log(\"4) Server response time is: \" + pm.response.responseTime)",
+                      "    console.log(\"4) Server response time is: \" + pm.response.responseTime);",
                       "});",
                       "",
                       "console.log(\"Authorization Test #3 - Done\");",
@@ -360,7 +360,7 @@
                       "\r",
                       "pm.test(\"Response time is less than 1000ms\", () => {\r",
                       "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
-                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime);\r",
                       "});\r",
                       "\r",
                       "console.log(\"Profile Test #1 - Done\");\r",
@@ -1481,30 +1481,30 @@
   ],
   "variable": [
     {
-      "id": "e50a8c2c-4e05-4e2b-a9ef-9596bc2f10ce",
+      "id": "b3c14b80-7112-43dd-8e3e-e88b1e52ee0a",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "8ab8cfd2-55b8-4446-a6de-3d24b154c0d7",
+      "id": "7bf10828-0ee8-4503-96d4-a32db888ab9f",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "a0a7280e-49a5-4fd2-addd-cf4439d0cb53",
+      "id": "0933a393-8c8c-4ff8-ad0b-ba56cc5d76dd",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1d2add7b-f751-4816-9334-5c9998b8ed19",
+      "id": "d9e7afad-b401-4f92-a88d-74865f64fd76",
       "key": "authtoken",
       "value": ""
     },
     {
-      "id": "21181564-10de-48dc-99d6-84b445ab333f",
+      "id": "ebd4576c-aca2-4ad7-8f3a-40ea43c5849e",
       "key": "report_id",
       "value": "",
       "type": "string"
