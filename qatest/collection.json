@@ -850,8 +850,8 @@
                       "});\r",
                       "\r",
                       "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
-                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
+                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime);\r",
                       "});\r",
                       "\r",
                       "console.log(\"Profile Test #8 - Done\");\r",
@@ -895,8 +895,8 @@
                       "});\r",
                       "\r",
                       "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
-                      "    console.log(\"2) Server response time is: \" + pm.response.responseTime)\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
+                      "    console.log(\"2) Server response time is: \" + pm.response.responseTime);\r",
                       "});\r",
                       "\r",
                       "console.log(\"Profile Test #9 - Done\");\r",
@@ -965,8 +965,8 @@
                       "});\r",
                       "\r",
                       "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
-                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
+                      "    console.log(\"3) Server response time is: \" + pm.response.responseTime);\r",
                       "});\r",
                       "\r",
                       "console.log(\"Profile Test #10 - Done\");\r",
@@ -1481,30 +1481,30 @@
   ],
   "variable": [
     {
-      "id": "21038256-6c9b-4110-99b6-788aa5d51d9e",
+      "id": "0bd77250-1943-46bd-ab46-0b252fce4d5b",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "fcda2d55-ff11-4223-8cb8-eef042758959",
+      "id": "614ca892-b497-4396-bf61-c47c93c7fb1c",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "e10a5825-e326-4136-8039-c47e30ab63b6",
+      "id": "f33e0126-9014-4e44-be47-56d025a173ac",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ce4d890c-e2f1-4868-b8d9-35a866877b2c",
+      "id": "e434ef74-daa5-4029-80e9-60e18a0e3728",
       "key": "authtoken",
       "value": ""
     },
     {
-      "id": "2d8caca4-3db3-404f-a217-2ba05b06e779",
+      "id": "a3628b57-129a-4901-9504-4e64654a0498",
       "key": "report_id",
       "value": "",
       "type": "string"
