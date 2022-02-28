@@ -667,7 +667,7 @@
                 "id": "f2a19f97-f956-4d2a-8e14-c36dc670e35c",
                 "exec": [
                   "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Profile Test #4 - 'Obtain user metric list'\");\r",
+                  "console.log(\"Profile Test #6 - 'Obtain user metric list'\");\r",
                   "\r",
                   "const schema = {\r",
                   "    \"type\": \"object\",\r",
@@ -710,7 +710,7 @@
                   "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
                   "});\r",
                   "\r",
-                  "console.log(\"Profile Test #4 - Done\");\r",
+                  "console.log(\"Profile Test #6 - Done\");\r",
                   "console.log(\"_______________________________________________\");"
                 ],
                 "type": "text/javascript"
@@ -736,6 +736,32 @@
         },
         {
           "name": "Add user metric data",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "afc1d59f-df04-4744-b616-e3adbbed4772",
+                "exec": [
+                  "console.log(\"_______________________________________________\");\r",
+                  "console.log(\"Profile Test #7 - 'Add user metric list'\");\r",
+                  "\r",
+                  "pm.test(\"Server response\", () => {\r",
+                  "    pm.response.to.have.status(201);\r",
+                  "    console.log(\"1) User exist\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
+                  "    console.log(\"2) Server response time is: \" + pm.response.responseTime)\r",
+                  "});\r",
+                  "\r",
+                  "console.log(\"Profile Test #7 - Done\");\r",
+                  "console.log(\"_______________________________________________\");"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "id": "e18ee6ff-f2f9-4abf-bde6-8749022c07df",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -760,7 +786,7 @@
                 "id": "3dfbe5c3-36c3-4be4-9c03-05257cd9f63e",
                 "exec": [
                   "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Profile Test #5 - 'Obtain user report list'\");\r",
+                  "console.log(\"Profile Test #8 - 'Obtain user report list'\");\r",
                   "\r",
                   "const schema = {\r",
                   "    \"type\": \"object\",\r",
@@ -823,7 +849,7 @@
                   "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
                   "});\r",
                   "\r",
-                  "console.log(\"Profile Test #5 - Done\");\r",
+                  "console.log(\"Profile Test #8 - Done\");\r",
                   "console.log(\"_______________________________________________\");"
                 ],
                 "type": "text/javascript"
@@ -849,6 +875,32 @@
         },
         {
           "name": "Add user report",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "9a6748ba-9fba-4e6d-970c-d885f2c86042",
+                "exec": [
+                  "console.log(\"_______________________________________________\");\r",
+                  "console.log(\"Profile Test #9 - 'Obtain user report list'\");\r",
+                  "\r",
+                  "pm.test(\"Server response\", () => {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "    console.log(\"1) User exist\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
+                  "    console.log(\"2) Server response time is: \" + pm.response.responseTime)\r",
+                  "});\r",
+                  "\r",
+                  "console.log(\"Profile Test #9 - Done\");\r",
+                  "console.log(\"_______________________________________________\");"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "id": "f3bc2e23-4586-421a-b886-d53422e43b64",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -873,7 +925,7 @@
                 "id": "fed870ae-a29a-4788-b4c4-3ffd2a9da417",
                 "exec": [
                   "console.log(\"_______________________________________________\");\r",
-                  "console.log(\"Profile Test #6 - 'Obtain user available tests list'\");\r",
+                  "console.log(\"Profile Test #10 - 'Obtain user available tests list'\");\r",
                   "\r",
                   "\r",
                   "const schema = {\r",
@@ -912,7 +964,7 @@
                   "    console.log(\"3) Server response time is: \" + pm.response.responseTime)\r",
                   "});\r",
                   "\r",
-                  "console.log(\"Profile Test #6 - Done\");\r",
+                  "console.log(\"Profile Test #10 - Done\");\r",
                   "console.log(\"_______________________________________________\");"
                 ],
                 "type": "text/javascript"
@@ -1141,25 +1193,25 @@
   ],
   "variable": [
     {
-      "id": "36451c53-2abf-49ba-945a-7933d325d1fa",
+      "id": "a8624a3c-7933-4e13-b495-464067317ae9",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "0b871005-7d1e-4f85-82cc-c3ea6545dd71",
+      "id": "6bb2e0af-a1fb-4bf6-9193-a5556902a2a3",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "b7782493-8423-4763-943e-5ae10f90e7cd",
+      "id": "4d2a3849-44b8-4065-8dea-42dd324eb8b2",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "bf278581-11fb-49ba-8e6a-1198c02a5d31",
+      "id": "1437c522-8a86-49ab-b3c3-057d8d178b47",
       "key": "authtoken",
       "value": ""
     }
