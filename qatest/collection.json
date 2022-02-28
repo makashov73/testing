@@ -1373,13 +1373,42 @@
             },
             {
               "name": "Get user last report",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "e152391b-1130-4043-9946-ad8a4f0b1275",
+                    "exec": [
+                      "console.log(\"_______________________________________________\");\r",
+                      "console.log(\"Report tests #5 - 'Get user last report'\");\r",
+                      "\r",
+                      "pm.test(\"Server response\", () => {\r",
+                      "    pm.response.to.have.status(200);\r",
+                      "    console.log(\"1) User exist\");\r",
+                      "});\r",
+                      "\r",
+                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
+                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
+                      "    console.log(\"2) Server response time is: \" + pm.response.responseTime);\r",
+                      "});\r",
+                      "\r",
+                      "\r",
+                      "\r",
+                      "console.log(\"Report tests #5 - Done\");\r",
+                      "console.log(\"_______________________________________________\");"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
               "id": "1beb5356-8fc3-403f-a1c4-c8de2531ae8e",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
               "request": {
                 "method": "GET",
-                "header": []
+                "header": [],
+                "url": "{{baseURL}}/v1/user/{{id_user}}/report/{{report_id}}"
               },
               "response": []
             }
@@ -1442,30 +1471,30 @@
   ],
   "variable": [
     {
-      "id": "8f2d58cd-0fe2-4616-b188-af4e68c2f764",
+      "id": "be7a7cbd-3e5a-4e35-a0e9-c316f4f85a92",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "176eeb27-cf18-4e95-ab54-b896eff8f280",
+      "id": "b52a6add-3e21-44c5-b17e-432ada2cd55c",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "69912cb6-6cc2-4612-adfa-2b520252f238",
+      "id": "dff1debc-2eaf-466d-8c4b-1920d69b7c65",
       "key": "id_user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "22cbbddd-eb5b-4de8-aebf-5e56fd24f9a6",
+      "id": "24d4d8a8-652e-40d2-badb-b4da6660ec48",
       "key": "authtoken",
       "value": ""
     },
     {
-      "id": "c694a867-3441-4739-89f1-14547342b4ae",
+      "id": "0d3225df-3bb9-4687-8ed1-c4618d931ffb",
       "key": "report_id",
       "value": "",
       "type": "string"
