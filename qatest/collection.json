@@ -523,7 +523,7 @@
                 {
                   "key": "profileImage",
                   "type": "file",
-                  "src": "photo1.jpg"
+                  "src": "./qatest/photo1.jpg"
                 }
               ]
             },
