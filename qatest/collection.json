@@ -1204,7 +1204,7 @@
                 {
                   "listen": "test",
                   "script": {
-                    "id": "afc1d59f-df04-4744-b616-e3adbbed4772",
+                    "id": "7ac3f6e5-33f5-4d02-901f-457359571ebd",
                     "exec": [
                       "console.log(\"_______________________________________________\");\r",
                       "console.log(\"Report tests #1 - 'Add PulseRate metric data'\");\r",
@@ -1668,30 +1668,30 @@
   ],
   "variable": [
     {
-      "id": "bde735a5-4799-4e2c-b366-5d0f656ddaac",
+      "id": "fb172de9-eb40-4fbe-b7e8-224305e4d2d4",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "6aafd35d-faf9-4f57-9075-43a38bf7bfa8",
+      "id": "f99564fc-aad6-40aa-8fd1-1276c1bfeff4",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "fa100d7d-7b42-47b2-8bb3-e6d331f2d6af",
+      "id": "d375ad45-1253-4807-afeb-6b9369af8399",
       "key": "id_user",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "73ee9cb4-c0f8-4e0d-90c7-c471c996a9b4",
+      "id": "b973c3b2-cc1f-4baa-a9be-706d9734b526",
       "key": "authtoken",
       "value": "0"
     },
     {
-      "id": "cef25ab7-2adb-4a0f-95f3-fe4e1a18873c",
+      "id": "c3bd584d-9def-4b52-ac09-9ffdc9ba0fd3",
       "key": "report_id",
       "value": "0",
       "type": "string"
