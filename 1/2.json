@@ -1706,30 +1706,30 @@
   ],
   "variable": [
     {
-      "id": "aa82ab30-d992-40ee-93a7-5e08c2117d49",
+      "id": "03cc3b99-b60d-49a4-bdf2-29a416925327",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "2bb1716d-3527-4662-87eb-1639bf81e01b",
+      "id": "e65fe022-6373-426e-8d74-74437f267ab1",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "4877269f-9afa-4fd6-bf76-0fdd32dbc946",
+      "id": "42ac195f-1614-46ce-bb49-e66a0eeaaed7",
       "key": "id_user",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "923e4cfc-b481-4871-9e61-2197cfbb161a",
+      "id": "a073cf71-1bd3-43c2-8f60-0737550be0f1",
       "key": "authtoken",
       "value": "0"
     },
     {
-      "id": "d23d53f5-20f7-4218-89bb-23c7af8eb945",
+      "id": "9576eaec-90fc-41a4-851a-2a0ce2fc2588",
       "key": "report_id",
       "value": "0",
       "type": "string"
