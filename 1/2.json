@@ -1283,21 +1283,38 @@
                   "script": {
                     "id": "afc1d59f-df04-4744-b616-e3adbbed4772",
                     "exec": [
-                      "console.log(\"_______________________________________________\");\r",
-                      "console.log(\"Report tests #2 - 'Add BodyOxygen metric data'\");\r",
+                      "const dates = pm.collectionVariables.get(\"dates\");\r",
+                      "\r",
+                      "if(dates && dates.length > 0) {\r",
+                      "    postman.setNextRequest(\"Add BodyOxygen metric data\");\r",
+                      "} else {\r",
+                      "    postman.setNextRequest(null);\r",
+                      "    pm.collectionVariables.set(\"date\", null);\r",
+                      "    pm.collectionVariables.set(\"dates\", null);\r",
+                      "}\r",
                       "\r",
                       "pm.test(\"Server response\", () => {\r",
                       "    pm.response.to.have.status(201);\r",
-                      "    console.log(\"1) User exist\");\r",
-                      "});\r",
+                      "    console.log(\"BodyOxygen metric added\");\r",
+                      "});"
+                    ],
+                    "type": "text/javascript"
+                  }
+                },
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "f4823f02-0f00-420c-840a-6fbf2dc99469",
+                    "exec": [
+                      "let dates = pm.collectionVariables.get(\"dates\");\r",
                       "\r",
-                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
-                      "    console.log(\"2) Server response time is: \" + pm.response.responseTime);\r",
-                      "});\r",
+                      "if(!dates || dates.length == 0) {\r",
+                      "    dates = [\"2020-01-01T00:00:00.000Z\", \"2020-01-02T00:31:30.000Z\", \"2020-01-03T01:22:00.000Z\", \"2020-01-04T04:08:01.000Z\", \"2020-01-05T11:31:12.000Z\", \"2020-01-06T06:36:14.000Z\", \"2020-01-07T09:54:31.000Z\", \"2020-01-08T16:44:23.000Z\", \"2020-01-09T12:31:11.000Z\", \"2020-01-10T18:25:04.000Z\", \"2020-01-11T22:11:31.000Z\", \"2020-01-12T23:50:41.000Z\", \"2020-01-13T17:32:12.000Z\", \"2020-01-14T14:20:31.000Z\", \"2020-01-15T21:56:30.000Z\", \"2020-01-16T21:03:10.000Z\", \"2020-01-17T03:10:35.000Z\", \"2020-01-18T11:31:23.000Z\", \"2020-01-19T23:44:59.000Z\", \"2020-01-20T19:23:21.000Z\", \"2020-01-21T16:47:00.000Z\", \"2020-01-22T17:00:00.000Z\", \"2020-01-23T21:11:31.000Z\", \"2020-01-24T09:07:26.000Z\", \"2020-01-25T21:14:13.000Z\", \"2020-01-26T22:36:11.000Z\", \"2020-01-27T08:31:11.000Z\", \"2020-01-28T07:33:41.000Z\", \"2020-01-29T12:31:35.000Z\", \"2020-01-30T14:47:22.000Z\", \"2020-01-31T13:47:24.000Z\"];\r",
+                      "}\r",
                       "\r",
-                      "console.log(\"Report tests #2 - Done\");\r",
-                      "console.log(\"_______________________________________________\");"
+                      "let currDate = dates.shift();\r",
+                      "pm.collectionVariables.set(\"date\", currDate);\r",
+                      "pm.collectionVariables.set(\"dates\", dates);"
                     ],
                     "type": "text/javascript"
                   }
@@ -1312,7 +1329,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\"value\": 101, \"timestamp\": \"2020-01-01T00:00:00.000Z\", \"device\": \"test\", \"name\": \"BodyOxygen\"}"
+                  "raw": "{\"value\": 99, \"timestamp\": \"{{date}}\", \"device\": \"test\", \"name\": \"BodyOxygen\"}"
                 },
                 "url": "{{baseURL}}/v1/user/{{id_user}}/metric/"
               },
@@ -1739,54 +1756,54 @@
   ],
   "variable": [
     {
-      "id": "461650fe-1533-4cf8-9924-6126153ee979",
+      "id": "bbfaa118-42c7-4a6d-8de3-dd6888f65ad1",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "fb40b88f-9528-4258-895f-0feccdb4ceb4",
+      "id": "7b187949-bae9-49b6-8507-066e6b866cbb",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "95338ea4-cc02-4b9a-99ea-db9677abd73b",
+      "id": "122aa8d9-860e-427c-be1e-25583e108715",
       "key": "id_user",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "03000db6-f29f-4872-8e88-103f8cd8624b",
+      "id": "05b4331d-1802-4603-bfbe-7c1f7f85264a",
       "key": "authtoken",
       "value": "0"
     },
     {
-      "id": "6b15cc92-3ea7-425d-a351-3c71a252bb9f",
+      "id": "3ce34dfc-2f99-4180-982c-9ac6ed945f64",
       "key": "report_id",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "31e5d541-9e6e-4582-89e9-4003540918a2",
+      "id": "9c69b890-7d3e-4183-b3dc-a9dc665c6043",
       "key": "start",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fa9754bb-d987-4127-8d61-72ac8aa7145a",
+      "id": "0b1776ca-9fa5-4a4f-8946-881ba9a897e2",
       "key": "end",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b88b246a-94e0-42bd-9331-eb89e1a59116",
+      "id": "611277c0-633c-49fc-8405-fc0acd7c2c76",
       "key": "date",
       "value": "",
       "type": "string"
     },
     {
-      "id": "8f5b36d4-7171-46b6-ae3c-87467c99eb2c",
+      "id": "0a857343-97e0-4a96-888c-1f627d9309e7",
       "key": "dates",
       "value": "",
       "type": "string"
