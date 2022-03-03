@@ -1434,7 +1434,7 @@
               "response": []
             },
             {
-              "name": "Get user day report",
+              "name": "Get generated reports",
               "event": [
                 {
                   "listen": "test",
@@ -1757,65 +1757,65 @@
   ],
   "variable": [
     {
-      "id": "5b89cde5-5e75-4e3a-8cca-7e421593adb6",
+      "id": "00e21ece-25db-4fb1-9227-9bbab3e7016c",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "fbe9d935-ed59-49e6-95d7-1c4a332f3d84",
+      "id": "15959b03-febb-4a8e-a146-445e229fa350",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "37067c64-e07f-4643-b6ea-723042451e36",
+      "id": "4995a454-54b0-4ab2-b6eb-8f645f11d82f",
       "key": "id_user",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "5174acc6-a56f-4d70-9a27-42a306ba790f",
+      "id": "bbac3be6-bc44-42af-807d-3086691c4d76",
       "key": "authtoken",
       "value": "0"
     },
     {
-      "id": "c50b3ed1-42a1-4b48-b256-5b4206321989",
+      "id": "c4e23773-63f2-455a-a199-50915c67fc22",
       "key": "report_id",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "ee6456ec-5cad-4a3e-a846-e07bc222126d",
+      "id": "d0a4f07d-aaaf-421b-8469-7580168d90c6",
       "key": "start",
       "value": "",
       "type": "string"
     },
     {
-      "id": "85c95a07-73fe-4667-8e05-86ede8ca6ba0",
+      "id": "f6572987-c68a-4c65-a2ab-1a4bf20bc9f4",
       "key": "end",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ba42f34e-e998-4c78-b84a-c2f7d9e38c7e",
+      "id": "6c9ed904-947e-44e8-9cc2-9e28b79c8ab1",
       "key": "date",
       "value": "",
       "type": "string"
     },
     {
-      "id": "496ab541-0b9c-4f76-a5db-eb6e89c641a5",
+      "id": "b2ee36ff-228b-4558-8a9e-95ff1082e6b4",
       "key": "dates",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1e4ffe2f-fb43-4d71-a64a-9e478dd95718",
+      "id": "3c0c6836-4e45-4038-a7fa-906da8eac28b",
       "key": "starts",
       "value": ""
     },
     {
-      "id": "79206781-deca-404b-8b6f-e56d47994dd2",
+      "id": "b301e40b-42a1-4810-8a8d-4c2e919f1d9f",
       "key": "ends",
       "value": ""
     }
