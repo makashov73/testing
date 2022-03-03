@@ -1207,35 +1207,19 @@
                   "script": {
                     "id": "7ac3f6e5-33f5-4d02-901f-457359571ebd",
                     "exec": [
-                      "/*\r",
-                      "console.log(\"_______________________________________________\");\r",
-                      "console.log(\"Report tests #1 - 'Add PulseRate metric data'\");\r",
-                      "\r",
-                      "pm.test(\"Server response\", () => {\r",
-                      "    pm.response.to.have.status(201);\r",
-                      "    console.log(\"1) User exist\");\r",
-                      "});\r",
-                      "\r",
-                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")));\r",
-                      "    console.log(\"2) Server response time is: \" + pm.response.responseTime);\r",
-                      "});\r",
-                      "\r",
-                      "console.log(\"Report tests #1 - Done\");\r",
-                      "console.log(\"_______________________________________________\");\r",
-                      "*/\r",
-                      "\r",
                       "const dates = pm.collectionVariables.get(\"dates\");\r",
                       "\r",
                       "if(dates && dates.length > 0) {\r",
                       "    postman.setNextRequest(\"Add PulseRate metric data\");\r",
                       "} else {\r",
                       "    postman.setNextRequest(null);\r",
+                      "    pm.collectionVariables.set(\"date\", null);\r",
+                      "    pm.collectionVariables.set(\"dates\", null);\r",
                       "}\r",
                       "\r",
                       "pm.test(\"Server response\", () => {\r",
                       "    pm.response.to.have.status(201);\r",
-                      "    console.log(\"Metric added\");\r",
+                      "    console.log(\"PulseRate metric added\");\r",
                       "});"
                     ],
                     "type": "text/javascript"
@@ -1756,54 +1740,54 @@
   ],
   "variable": [
     {
-      "id": "bbfaa118-42c7-4a6d-8de3-dd6888f65ad1",
+      "id": "7f2d827b-bd4a-4308-a095-f8a07ccc6367",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "7b187949-bae9-49b6-8507-066e6b866cbb",
+      "id": "5e4577f4-a0ef-41de-bc2b-3d7427ba3e23",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "122aa8d9-860e-427c-be1e-25583e108715",
+      "id": "eaeff7e2-3b36-438e-a21d-b12657b684ec",
       "key": "id_user",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "05b4331d-1802-4603-bfbe-7c1f7f85264a",
+      "id": "ada16dc7-64ea-4479-824c-2391d7b5146e",
       "key": "authtoken",
       "value": "0"
     },
     {
-      "id": "3ce34dfc-2f99-4180-982c-9ac6ed945f64",
+      "id": "14b7eb8f-6ed5-4a25-a424-8c4c3a8700a6",
       "key": "report_id",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "9c69b890-7d3e-4183-b3dc-a9dc665c6043",
+      "id": "f0772890-533d-46fb-bcec-a30ddb5fdf3b",
       "key": "start",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0b1776ca-9fa5-4a4f-8946-881ba9a897e2",
+      "id": "1de59846-bf58-4f7c-9b1d-e3f23787d40b",
       "key": "end",
       "value": "",
       "type": "string"
     },
     {
-      "id": "611277c0-633c-49fc-8405-fc0acd7c2c76",
+      "id": "7dbeab94-8dc1-4b8a-9cea-8120d07c8135",
       "key": "date",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0a857343-97e0-4a96-888c-1f627d9309e7",
+      "id": "9526fd49-6768-47aa-8692-89b897bf3e38",
       "key": "dates",
       "value": "",
       "type": "string"
