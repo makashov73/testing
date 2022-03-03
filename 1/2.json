@@ -1618,66 +1618,66 @@
   ],
   "variable": [
     {
-      "id": "69e6a18f-d6bd-40b8-93b3-584a8e75c5a0",
+      "id": "7225d068-3d55-474d-9442-ffafb1788141",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "cd8389bc-831a-4a70-a06b-05c7f3131da4",
+      "id": "4cccc70e-edd0-4779-84d8-c542e9fcdc9f",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "d234105a-fefa-41c9-87c4-c5f0f0cfa3fb",
+      "id": "4d56fece-8125-4d42-8cae-058aec55148d",
       "key": "id_user",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "a1134e15-8b8c-4e12-a522-292445b4962f",
+      "id": "97fbf14e-0a35-476b-9161-03e8ccb75c35",
       "key": "authtoken",
       "value": "0"
     },
     {
-      "id": "1a163a0d-da2d-4d3c-a98b-8fff8793b8e0",
+      "id": "77b9b1ab-d918-4f2d-825f-0ea6f0f949dc",
       "key": "report_id",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "2f36dc4c-bc25-425b-8d8a-612d9882969f",
+      "id": "b6049a64-671d-4d90-bf3f-670b71a0b108",
       "key": "start",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b8f82ef6-7dea-4d35-b8fa-4fa032852574",
+      "id": "8b6a55ca-0607-4236-b5b4-5fbc9fc61564",
       "key": "end",
       "value": "",
       "type": "string"
     },
     {
-      "id": "28d17dcc-88b0-49b5-94cb-3d3dbfb7fbce",
+      "id": "616e1b89-aa91-4793-bb30-459820ce70b2",
       "key": "date",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7caa852f-8c5f-4c17-9c96-6e49d5688499",
+      "id": "87a7285b-7c37-4c66-bb18-73809db98aa9",
       "key": "dates",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1da5c576-ba7a-48de-b2dc-b1fe90306887",
+      "id": "e226abcb-cfb6-48af-ba6d-d3b6beb72a91",
       "key": "starts",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6312579c-f8be-4c50-84ca-14503aa0e39e",
+      "id": "a64889e1-2f82-4e82-a65d-4ed5cc6ceb95",
       "key": "ends",
       "value": "",
       "type": "string"
