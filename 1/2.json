@@ -1618,63 +1618,68 @@
   ],
   "variable": [
     {
-      "id": "d9eaf5a0-dec3-4bb2-a73b-601ad9227b17",
+      "id": "63f85ef3-b997-4c4b-8aee-de54b99db2ba",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "800ddaa1-943d-498e-bc43-b9c2328ecdeb",
+      "id": "cde3705c-0d01-4ded-8d10-49190ccfb634",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "6b582620-45d0-419f-ac4f-787f47378e3c",
+      "id": "0344856d-f5fd-48bf-971c-241fe067b7c7",
       "key": "id_user",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "de28ad3a-f188-4cad-bd0e-80461322c149",
+      "id": "178c937b-c911-4642-914e-7aaa86685960",
       "key": "authtoken",
       "value": "0"
     },
     {
-      "id": "2e695f4e-c66b-45e0-ad8f-c21ce6db0f3c",
+      "id": "cb73d407-77ce-4f02-96a3-d3eca9fe3678",
       "key": "report_id",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "f10d6d4d-48ef-4275-b9c2-df024712aa8b",
+      "id": "b6062514-4a0c-4f37-a4ca-4cb95a67d6ad",
       "key": "start",
       "value": "",
       "type": "string"
     },
     {
-      "id": "559f0386-4d59-4789-9363-1ef198418835",
+      "id": "84229809-406c-4414-b898-13a8f353ee26",
       "key": "end",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5939e08d-e499-4eb9-a318-e0c8d46d1c70",
+      "id": "8c533df5-a689-4e23-93aa-fbab6bbdeddd",
       "key": "dates",
       "value": "",
       "type": "string"
     },
     {
-      "id": "022a0f95-5652-4b76-a79e-609fead2dd39",
+      "id": "2e30fb75-8a3a-4db4-8255-16c4450c5303",
       "key": "starts",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7dc9a802-3ae8-4f85-9426-ae9249798418",
+      "id": "7469f9ce-2a11-488d-b2f1-269b64bf7d4f",
       "key": "ends",
       "value": "",
       "type": "string"
+    },
+    {
+      "id": "47555aab-d9a4-42bd-9813-2ef835e58b3f",
+      "key": "date",
+      "value": ""
     }
   ]
 }
