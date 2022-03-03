@@ -1618,66 +1618,66 @@
   ],
   "variable": [
     {
-      "id": "08dbdf50-c163-430f-9dd9-ca21d1582cc6",
+      "id": "8c49fe7d-7e4d-4312-acd4-3e067edcad3d",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "c59683f4-d741-45b1-b490-5c9e4ea75d70",
+      "id": "85c2a00e-4654-4dbc-b272-ca4aa69673c6",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "9087a41b-fe47-408d-8752-296a2363a18b",
+      "id": "38788963-5dba-4e9b-bb41-019174963e20",
       "key": "id_user",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "3e39714b-6bf5-414f-9575-e94a033b43d5",
+      "id": "8786564d-1422-4a60-8b82-ce7a0a36e11d",
       "key": "authtoken",
       "value": "0"
     },
     {
-      "id": "cba0c9c7-20b9-44cd-b596-598b6fdd3c23",
+      "id": "040f6bba-efcf-4275-b6a1-d25b6b5b3ccf",
       "key": "report_id",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "54185963-efdb-4c63-b92e-6eff481944a8",
+      "id": "fca764f3-4ea7-45a0-8bd4-db3a5bae5a87",
       "key": "start",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d09858df-60b6-4d03-bacf-116d5a79d062",
+      "id": "e7192128-685f-4984-a830-0f2e38739601",
       "key": "end",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2044df68-d649-48ba-bb38-cc2dbf0dc58d",
+      "id": "650fb6b2-3654-47b7-9ac2-e1cf47cf64da",
       "key": "date",
       "value": "",
       "type": "string"
     },
     {
-      "id": "30898e56-3c8b-465b-8b0a-e16dbac06af0",
+      "id": "868014c5-3adf-40d1-ab2a-4087c4d51111",
       "key": "dates",
       "value": "",
       "type": "string"
     },
     {
-      "id": "23159cf3-60bb-4b3c-b46a-94214d8b510c",
+      "id": "d52580ce-907b-45c2-8e74-a39fb6fac719",
       "key": "starts",
       "value": "",
       "type": "string"
     },
     {
-      "id": "87d79709-e6da-4737-9a44-020b728a6b76",
+      "id": "3bb7381c-066c-436b-a1e4-68644ce38c40",
       "key": "ends",
       "value": "",
       "type": "string"
