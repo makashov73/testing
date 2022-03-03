@@ -1598,7 +1598,7 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "04a77a1f-1e5c-4b10-840a-936d0b31ef06",
+        "id": "227de50e-ddca-45eb-91e3-6f717b4a9141",
         "type": "text/javascript",
         "exec": [
           ""
@@ -1608,7 +1608,7 @@
     {
       "listen": "test",
       "script": {
-        "id": "15a21f8d-af93-40af-a4cc-c12ec9ff4190",
+        "id": "e2eedfc5-515a-4fc1-a7f3-ca5d2251e45d",
         "type": "text/javascript",
         "exec": [
           ""
@@ -1618,67 +1618,69 @@
   ],
   "variable": [
     {
-      "id": "690e2171-ba42-4fbd-8b14-ae2852ac6fe8",
+      "id": "05557917-41c8-4a65-8d62-03370046e80c",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "83cd56fd-0df8-47b2-ac41-f1ca8567ddf0",
+      "id": "feb1abf7-984c-4bb4-8807-e467c23926c9",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "b5a24494-3216-4213-81fb-1d9fe747811b",
+      "id": "209a4b1d-b31e-4f1a-a0f6-0d0724b4c0ba",
       "key": "id_user",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "0695123e-bcf4-44e5-bfde-8eca842b36c0",
+      "id": "0a6171e6-97ca-4a8d-be79-d7797b3252ad",
       "key": "authtoken",
       "value": "0"
     },
     {
-      "id": "58d1c9a8-21b9-492f-9009-67c8e3673f4f",
+      "id": "063137af-45c3-4182-8a81-341453d13102",
       "key": "report_id",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "817ac224-56a5-44b0-a9fd-af501027bd70",
+      "id": "358ead73-8001-4dfd-946a-d24db8b6791c",
       "key": "start",
       "value": "",
       "type": "string"
     },
     {
-      "id": "03601b12-95c0-4296-9d62-c9282f99f082",
+      "id": "02aab3da-3407-470d-bc60-49bbba8e814b",
       "key": "end",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7e451f4f-ba1b-446a-b952-defac83b4e97",
+      "id": "9a5e6e02-5d6e-43a8-9f32-64a9ab0a0132",
       "key": "date",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2d219c83-4a90-408a-beae-3c5118bc05e3",
+      "id": "59baf329-2413-497b-bb06-6479faab4282",
       "key": "dates",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7e241f15-db1f-4f01-9c18-32d78519849a",
+      "id": "cc809f06-eec2-41c3-a8e2-53c53dcf75d3",
       "key": "starts",
-      "value": ""
+      "value": "",
+      "type": "string"
     },
     {
-      "id": "e45b9e4b-db5e-45b8-8a37-20927d7e6cb5",
+      "id": "7d6f0fcc-b183-4660-a006-9e9cd2b9f633",
       "key": "ends",
-      "value": ""
+      "value": "",
+      "type": "string"
     }
   ]
 }
