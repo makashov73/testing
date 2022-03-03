@@ -1618,66 +1618,66 @@
   ],
   "variable": [
     {
-      "id": "560fbddc-7179-4026-8c39-d96768e81020",
+      "id": "7d8974d6-f50e-46f8-a389-6f7537673474",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "ac21ea88-4539-4cec-b2b3-15e48a939094",
+      "id": "657d30af-9f11-4e6e-a1e4-d52d6ed1518d",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "d4d5c19f-9cb2-401c-8898-1d67a7d23d82",
+      "id": "2b11b0a6-b978-4cc0-9263-56c02e012c6f",
       "key": "id_user",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "038a1430-a712-4d3e-8a8a-0c062cfa9cca",
+      "id": "47963485-2f9b-4854-a965-2cda0cb3ce45",
       "key": "authtoken",
       "value": "0"
     },
     {
-      "id": "0ee2ba48-bbed-4aaa-af06-d14f5bd76d66",
+      "id": "9d79f4f8-0b00-4afb-96a9-034a8d22906f",
       "key": "report_id",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "574aba76-7b10-4a3a-82fe-02221e373192",
+      "id": "6957c4e3-e797-4d90-9a5b-7104257c0c77",
       "key": "start",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e25aa409-ae2a-48d0-85b9-068fd773a820",
+      "id": "9494da93-507b-4379-8b6a-65549bcca1d0",
       "key": "end",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fbb0553d-3a05-450c-b82b-08afb95cfe3d",
+      "id": "15c8814a-1ca8-4e05-aaf1-f01561a8ebd1",
       "key": "dates",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1f7d7864-cd1f-4dd0-bb4e-0da12f1139fa",
+      "id": "9c1c8fc0-2fc3-4662-92ce-f0e051fe4362",
       "key": "date",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fe42cbf2-1c8f-4f0b-9796-7e79d27b70b5",
+      "id": "beebd175-f38f-47e1-8fe5-0e41ebdc804f",
       "key": "starts",
       "value": "",
       "type": "string"
     },
     {
-      "id": "4779741b-54a2-4490-8537-28d5a9e3b299",
+      "id": "346679b2-2c3a-48f2-a513-33d9aa0b5033",
       "key": "ends",
       "value": "",
       "type": "string"
