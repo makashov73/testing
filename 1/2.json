@@ -1706,54 +1706,54 @@
   ],
   "variable": [
     {
-      "id": "acd35fe6-5b61-4b86-aee3-9337a5c61503",
+      "id": "57b1254f-a6c8-4db6-810b-e23b347e22cd",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "76c942aa-7638-4da2-92dc-8d819392b3f7",
+      "id": "4df13a2f-e004-4adc-bff6-0a660e230025",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "a6f36aeb-9fcf-482b-b23e-46a595119503",
+      "id": "fd4319ad-01c6-45ed-9aee-67b86a7d8e5c",
       "key": "id_user",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "d61076f1-c5e8-4697-8130-29bc22598b72",
+      "id": "add5f302-f4da-4a60-bbeb-e0ecaae72e63",
       "key": "authtoken",
       "value": "0"
     },
     {
-      "id": "49bd9966-2c3f-45b7-95ef-6d9bccff820c",
+      "id": "977e666e-3748-46a1-9075-6961e8d34964",
       "key": "report_id",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "614f5dec-0286-4d3e-9a16-374c7098d503",
+      "id": "845860c0-6d15-4b5a-9abd-e1d9716d0829",
       "key": "start",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ae2e9c31-9e6d-4d06-bd0d-d8c0c26cc04b",
+      "id": "f66e14b2-dfd6-483e-b389-e0cb0b871b6c",
       "key": "end",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c9ee026d-fc51-49e2-a1a4-57f70ee8ef72",
+      "id": "9b9b7a67-6680-45cf-9f69-45816ffc4a58",
       "key": "date",
       "value": "",
       "type": "string"
     },
     {
-      "id": "8573f6c3-e866-4e55-968a-c23efd0f1abf",
+      "id": "8c318c22-0a48-491d-a6da-20fcca9aa9d6",
       "key": "dates",
       "value": "",
       "type": "string"
