@@ -1618,65 +1618,65 @@
   ],
   "variable": [
     {
-      "id": "0d904d4d-ad81-40d5-ac8a-18bb7a19d913",
+      "id": "8be8bfde-93a5-499c-b69f-71942debbbb2",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "26e8c19a-e0d7-4eab-84fc-ae8f5114775f",
+      "id": "fcb97135-651a-445d-9d74-1a148fd03da5",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "597f6ed4-2017-4cfd-86be-a1687471e74a",
+      "id": "971df5b9-ca54-4d19-8b18-b1507f53ad58",
       "key": "id_user",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "aeb1d305-37fa-47e4-bc9d-4c43c2353060",
+      "id": "3a825b7d-afb0-43b5-8628-d048f839ddd7",
       "key": "authtoken",
       "value": "0"
     },
     {
-      "id": "d95d8f36-e943-41ea-9290-0bb5b2c69c39",
+      "id": "bda6e6f1-fdaa-42dd-95d6-b228c5756b28",
       "key": "report_id",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "1f75e0e7-78b3-4d82-bd5f-a3c5215d461c",
+      "id": "92d50470-17c4-4bff-8b34-60579708ab69",
       "key": "start",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5d540833-9fff-4f14-a376-38e123a9e24c",
+      "id": "7ef35420-dbfb-4118-af6c-2ac3a2915890",
       "key": "end",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ba44e1cd-b4d7-4656-99da-f6fa4dd643e6",
+      "id": "25ae87f3-5625-4527-b3bf-64591cfcdfd2",
       "key": "date",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ca180454-e062-4660-8afc-b22c3464294f",
+      "id": "a797b597-7ecc-42fd-8859-7dbbdab7ebd2",
       "key": "dates",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0ae805f1-06de-441c-8476-573734e391c0",
+      "id": "cc36bfa3-be23-49ca-899d-217d216c31b7",
       "key": "starts",
       "value": ""
     },
     {
-      "id": "6f6c3735-21ef-4296-9ef1-9d6f62ecc6e2",
+      "id": "2bec50b7-bd8d-4e38-9bad-4b3836bd10cc",
       "key": "ends",
       "value": ""
     }
