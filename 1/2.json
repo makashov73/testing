@@ -1327,21 +1327,38 @@
                   "script": {
                     "id": "afc1d59f-df04-4744-b616-e3adbbed4772",
                     "exec": [
-                      "console.log(\"_______________________________________________\");\r",
-                      "console.log(\"Report tests #3 - 'Add RespiratoryRate metric data'\");\r",
+                      "const dates = pm.collectionVariables.get(\"dates\");\r",
+                      "\r",
+                      "if(dates && dates.length > 0) {\r",
+                      "    postman.setNextRequest(\"Add RespiratoryRate metric data\");\r",
+                      "} else {\r",
+                      "    postman.setNextRequest(null);\r",
+                      "    pm.collectionVariables.set(\"date\", null);\r",
+                      "    pm.collectionVariables.set(\"dates\", null);\r",
+                      "}\r",
                       "\r",
                       "pm.test(\"Server response\", () => {\r",
                       "    pm.response.to.have.status(201);\r",
-                      "    console.log(\"1) User exist\");\r",
-                      "});\r",
+                      "    console.log(\"RespiratoryRate metric added\");\r",
+                      "});"
+                    ],
+                    "type": "text/javascript"
+                  }
+                },
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "8f2e57b4-0a7b-4eca-a899-308d5e410343",
+                    "exec": [
+                      "let dates = pm.collectionVariables.get(\"dates\");\r",
                       "\r",
-                      "pm.test(\"Response time is less than 1000ms\", () => {\r",
-                      "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.collectionVariables.get(\"response_time\")))\r",
-                      "    console.log(\"2) Server response time is: \" + pm.response.responseTime);\r",
-                      "});\r",
+                      "if(!dates || dates.length == 0) {\r",
+                      "    dates = [\"2020-01-01T00:00:00.000Z\", \"2020-01-02T00:31:30.000Z\", \"2020-01-03T01:22:00.000Z\", \"2020-01-04T04:08:01.000Z\", \"2020-01-05T11:31:12.000Z\", \"2020-01-06T06:36:14.000Z\", \"2020-01-07T09:54:31.000Z\", \"2020-01-08T16:44:23.000Z\", \"2020-01-09T12:31:11.000Z\", \"2020-01-10T18:25:04.000Z\", \"2020-01-11T22:11:31.000Z\", \"2020-01-12T23:50:41.000Z\", \"2020-01-13T17:32:12.000Z\", \"2020-01-14T14:20:31.000Z\", \"2020-01-15T21:56:30.000Z\", \"2020-01-16T21:03:10.000Z\", \"2020-01-17T03:10:35.000Z\", \"2020-01-18T11:31:23.000Z\", \"2020-01-19T23:44:59.000Z\", \"2020-01-20T19:23:21.000Z\", \"2020-01-21T16:47:00.000Z\", \"2020-01-22T17:00:00.000Z\", \"2020-01-23T21:11:31.000Z\", \"2020-01-24T09:07:26.000Z\", \"2020-01-25T21:14:13.000Z\", \"2020-01-26T22:36:11.000Z\", \"2020-01-27T08:31:11.000Z\", \"2020-01-28T07:33:41.000Z\", \"2020-01-29T12:31:35.000Z\", \"2020-01-30T14:47:22.000Z\", \"2020-01-31T13:47:24.000Z\"];\r",
+                      "}\r",
                       "\r",
-                      "console.log(\"Report tests #3 - Done\");\r",
-                      "console.log(\"_______________________________________________\");"
+                      "let currDate = dates.shift();\r",
+                      "pm.collectionVariables.set(\"date\", currDate);\r",
+                      "pm.collectionVariables.set(\"dates\", dates);"
                     ],
                     "type": "text/javascript"
                   }
@@ -1356,7 +1373,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\"value\": 299, \"timestamp\": \"2020-01-01T00:00:00.000Z\", \"device\": \"test\", \"name\": \"RespiratoryRate\"}"
+                  "raw": "{\"value\": 297, \"timestamp\": \"{{date}}\", \"device\": \"test\", \"name\": \"RespiratoryRate\"}"
                 },
                 "url": "{{baseURL}}/v1/user/{{id_user}}/metric/"
               },
@@ -1740,54 +1757,54 @@
   ],
   "variable": [
     {
-      "id": "1d0519ea-3e55-4df3-a8f2-e21215b0eb24",
+      "id": "f9154284-e29c-4140-93fa-d1ed7fa0f764",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "e1e0e0d8-b3ad-420b-aa25-8017936db013",
+      "id": "8f6f646c-fadb-4ba8-b71a-9aad6cdba1c6",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "b09027db-2acd-4781-82f5-67359b55d841",
+      "id": "dbb4d377-411d-4872-974f-9a0d378f4eb4",
       "key": "id_user",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "6b2df1db-8846-4caa-991e-facff57e44b2",
+      "id": "8fcbef76-7abd-4031-acd3-107dcf2e51d6",
       "key": "authtoken",
       "value": "0"
     },
     {
-      "id": "0cad8e60-530b-4a32-a57c-cb648aba94f1",
+      "id": "ba56f2e2-5701-4964-acc3-a98ad806901a",
       "key": "report_id",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "da07589b-a58f-472d-8596-61e36c9a11d2",
+      "id": "5975478a-4840-439e-8182-b472a1568376",
       "key": "start",
       "value": "",
       "type": "string"
     },
     {
-      "id": "94bae617-0f16-4b01-a562-fded9591bc11",
+      "id": "172ed112-4e45-489a-812f-d1c3b68768cc",
       "key": "end",
       "value": "",
       "type": "string"
     },
     {
-      "id": "632acd98-05bc-4abf-99f7-6ff9f2ba54b4",
+      "id": "8b5f604b-3618-4e67-90fc-eb67e2549417",
       "key": "date",
       "value": "",
       "type": "string"
     },
     {
-      "id": "438b8e99-d489-4f4d-9035-e54d1bf45fa6",
+      "id": "1524cbf4-6fb9-4b90-af32-6fa52e68bfe8",
       "key": "dates",
       "value": "",
       "type": "string"
