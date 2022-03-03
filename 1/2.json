@@ -1402,7 +1402,7 @@
                       "var bodyData = JSON.parse(responseBody);\r",
                       "var repid = bodyData.id;\r",
                       "pm.collectionVariables.set(\"report_id\", repid);\r",
-                      "console.log(\"Report {{report_id}} successfully generated\");"
+                      "console.log(\"Report ${report_id} successfully generated\");"
                     ],
                     "type": "text/javascript"
                   }
@@ -1618,65 +1618,65 @@
   ],
   "variable": [
     {
-      "id": "c870eea4-f4dc-4344-a486-7a12e7c0c0f2",
+      "id": "243a39ea-55a5-4994-ad4c-cf67f2a779b9",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "3459be57-585f-49cf-9d7d-c5e5748052d7",
+      "id": "1f4f2412-5d82-4557-93d4-6535d076d0d3",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "97fb9846-147e-4fee-9081-2a5eda0c2633",
+      "id": "1dec4466-ce0c-4577-b2f6-9800cdab7c3b",
       "key": "id_user",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "241e96df-7e92-4694-b47b-c6f331b842ef",
+      "id": "7e61b681-6610-445e-8924-bf2aba9d336e",
       "key": "authtoken",
       "value": "0"
     },
     {
-      "id": "99ccb09e-488b-47b8-9b5a-d1e4691cd6d6",
+      "id": "6d1ad151-6250-4705-a4c7-b69c950f8628",
       "key": "report_id",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "f9ea065f-d0f4-476a-9cf6-13fef54c9de4",
+      "id": "0f9eb65c-e9a3-4498-883a-612497af90a6",
       "key": "start",
       "value": "",
       "type": "string"
     },
     {
-      "id": "851c190c-7719-4569-8a96-36b339c27193",
+      "id": "0f4f0b57-a457-42c9-8ef0-bae1d5b367e7",
       "key": "end",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5849e4dd-d559-4b6c-84b9-5ca0e8cfae95",
+      "id": "66be9763-f256-4db9-b461-fbb1e827dc15",
       "key": "date",
       "value": "",
       "type": "string"
     },
     {
-      "id": "4e8537c4-2faf-4483-b276-8db6d30b4066",
+      "id": "54b2caa7-ab1d-4f00-8198-9c34e02ea666",
       "key": "dates",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e3ba460f-046a-40e0-9a8e-62787317f4fb",
+      "id": "42081926-71b5-4979-a2c1-8bb245ebefee",
       "key": "starts",
       "value": ""
     },
     {
-      "id": "c610841d-b5bc-4a89-b9f8-6f62a4bce533",
+      "id": "551e4dc9-e3e6-4cf3-aeb4-511a30475612",
       "key": "ends",
       "value": ""
     }
