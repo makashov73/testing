@@ -1208,6 +1208,7 @@
                     "id": "7ac3f6e5-33f5-4d02-901f-457359571ebd",
                     "exec": [
                       "const dates = pm.collectionVariables.get(\"dates\");\r",
+                      "const date = pm.collectionVariables.get(\"date\");\r",
                       "\r",
                       "if(dates && dates.length > 0) {\r",
                       "    postman.setNextRequest(\"Add PulseRate metric data\");\r",
@@ -1220,7 +1221,9 @@
                       "pm.test(\"Server response\", () => {\r",
                       "    pm.response.to.have.status(201);\r",
                       "    console.log(\"PulseRate metric added\");\r",
-                      "});"
+                      "});\r",
+                      "\r",
+                      "console.log(`${date}`);"
                     ],
                     "type": "text/javascript"
                   }
@@ -1618,66 +1621,66 @@
   ],
   "variable": [
     {
-      "id": "4b6cab90-54e7-4d34-8b40-977896bd1a74",
+      "id": "4717b9f3-428a-4744-8397-19dbf75f938e",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "91a98c53-79b4-4c34-a682-f5b8476e7c4b",
+      "id": "1759f77d-1929-4265-872b-ad2c138e5f7c",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "233710a1-3f2d-4408-8dd6-d723a24b18a5",
+      "id": "215ce20b-77d3-4feb-a7cb-fbddef3afe3d",
       "key": "id_user",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "163b8c55-45cb-4a21-bdb7-99b97660f4d7",
+      "id": "435cab61-443c-4b20-976a-d22a0d5958fb",
       "key": "authtoken",
       "value": "0"
     },
     {
-      "id": "7dc66f01-ebfc-4073-aaf4-da9594684461",
+      "id": "162d1ee8-5790-4c0a-a5a1-a160456b8cbb",
       "key": "report_id",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "4dc136ba-9b8d-42b0-b941-1d8ff0050087",
+      "id": "4e2dde71-2c3d-4f8b-bb0a-d600fc77a61f",
       "key": "start",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7cd18d5a-5b6d-472d-a383-aeab77daedbc",
+      "id": "d5ddfb71-dc26-45ab-aa96-743a61f302fb",
       "key": "end",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6c113413-8773-473b-b801-6dfadc9d9f47",
+      "id": "42c83fd4-f940-4982-8fe8-1fd36c09bb56",
       "key": "dates",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c8b8455f-1ee4-42a0-bb22-adb319c14e90",
+      "id": "54c3ae5d-7fe9-4da6-970b-9891272839cc",
       "key": "starts",
       "value": "",
       "type": "string"
     },
     {
-      "id": "101effd9-6240-4c54-9937-d70a8d1c12a4",
+      "id": "99f4d437-e611-492d-b7e6-d40136ba8562",
       "key": "ends",
       "value": "",
       "type": "string"
     },
     {
-      "id": "51336d3d-7008-4944-9fba-875a07709055",
+      "id": "0e6d73fd-1b6a-4e87-80c6-263c8bef6542",
       "key": "date",
       "value": "",
       "type": "string"
