@@ -1618,66 +1618,66 @@
   ],
   "variable": [
     {
-      "id": "9515d1d0-accd-44a0-be9d-d0555e49128f",
+      "id": "c978a152-a6d6-4acd-8d31-d07ac58666c5",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "49e47a1a-b465-4b1a-b988-abfdbba83204",
+      "id": "0a1721b5-5a84-43ad-9e98-13c20e64e5e9",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "2f9d48a2-f45c-4d2a-bff5-8f7301a2f374",
+      "id": "d97dfdaf-1f9d-4dad-918b-bc8a04e6437f",
       "key": "id_user",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "eeeaf3b1-842c-4775-b287-a21bbe099da6",
+      "id": "9a435080-4928-4c2a-96c5-7acd3167ff8c",
       "key": "authtoken",
       "value": "0"
     },
     {
-      "id": "1cb24fc3-f0bc-4298-b6e8-0002fb0a237e",
+      "id": "b0215c85-7f77-441b-89a8-56d16d948d42",
       "key": "report_id",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "ad9d09d9-f633-4a4e-865e-f2abad4aa4e1",
+      "id": "3777abca-b149-4369-94de-bf095755953d",
       "key": "start",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3db232c6-1731-4a70-9d9d-893b4935fd40",
+      "id": "b8c78464-2185-4952-ae1e-be58a7a63637",
       "key": "end",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7bc72c97-ce5b-40c7-82e2-bbae95669a38",
+      "id": "437fa28d-baad-46c1-9883-898e4dbeba28",
       "key": "dates",
       "value": "",
       "type": "string"
     },
     {
-      "id": "29ca7f3f-4e78-4e0a-8ac4-927ac26b2b28",
+      "id": "f7c6968b-b5ff-4bdb-9361-d8f90ab28a02",
       "key": "starts",
       "value": "",
       "type": "string"
     },
     {
-      "id": "189a755a-95f8-410a-842e-4dafdd40171b",
+      "id": "c88689e5-6ee6-437e-adaf-378a81fd02aa",
       "key": "ends",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e2226f85-822e-4e07-b2f4-2bde3f12f7f4",
+      "id": "577ce663-b420-4528-84c6-ead7a8129161",
       "key": "date",
       "value": "",
       "type": "string"
