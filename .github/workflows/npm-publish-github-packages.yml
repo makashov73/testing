@@ -32,4 +32,4 @@ jobs:
     - name: Run POSTMAN collection
       
       run: |
-       newman run collection.json
+       newman run collection.json --delay-request 250
