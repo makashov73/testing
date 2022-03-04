@@ -1332,7 +1332,7 @@
                       "if(dates && dates.length > 0) {\r",
                       "    postman.setNextRequest(\"Add RespiratoryRate metric data\");\r",
                       "} else {\r",
-                      "    postman.setNextRequest(null);\r",
+                      "    postman.setNextRequest(\"Generate reports\");\r",
                       "    pm.collectionVariables.set(\"date\", null);\r",
                       "    pm.collectionVariables.set(\"dates\", null);\r",
                       "}\r",
@@ -1618,66 +1618,66 @@
   ],
   "variable": [
     {
-      "id": "5fac8f51-9a6a-492d-aa85-553ce9b09b3a",
+      "id": "5f945e40-6e24-4f65-882c-104654899037",
       "key": "baseURL",
       "value": "https://dev.robotoir.cloud:8443",
       "type": "string"
     },
     {
-      "id": "c64c5d5c-974f-472c-9917-009553f517d6",
+      "id": "3aa52bb4-d439-478d-adc1-8fcd5c74a498",
       "key": "response_time",
       "value": "1000",
       "type": "string"
     },
     {
-      "id": "7f0845cb-171d-4eb1-b31e-792b829ef015",
+      "id": "606d9a8e-5bd8-4b8e-bb8c-7e13e2ab29a6",
       "key": "id_user",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "0b720893-0b3a-4305-a369-aa24fd227b61",
+      "id": "c089896f-b02b-4752-ae07-43e44900d2d5",
       "key": "authtoken",
       "value": "0"
     },
     {
-      "id": "a72e11e4-1a02-486e-83c1-7733252fd1f5",
+      "id": "23566ce9-c574-4851-8122-24c56c0f0bd2",
       "key": "report_id",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "ff3006d8-7053-47da-97e4-191feb792a1d",
+      "id": "7913da6e-4c33-4a6a-bd36-78f4979b9a5b",
       "key": "start",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ed5a3c40-df0a-4567-91b2-4c87c1a4b706",
+      "id": "4d1d2a4a-9779-4024-bc2f-6fc9eb6dd4cf",
       "key": "end",
       "value": "",
       "type": "string"
     },
     {
-      "id": "bd17b610-372b-46b5-abce-38d81b0baddc",
+      "id": "2a102e1a-765a-4ca8-b7e7-78f827d7bfa2",
       "key": "dates",
       "value": "",
       "type": "string"
     },
     {
-      "id": "afe0d1e2-04a1-49ff-80ed-1a14de838782",
+      "id": "d2489cf1-5562-4714-8279-bcff3791c40e",
       "key": "starts",
       "value": "",
       "type": "string"
     },
     {
-      "id": "bf0994fb-b8c4-4eba-aeab-485da9b1ca65",
+      "id": "1acbec00-2901-4dcb-9766-60442add5d3a",
       "key": "ends",
       "value": "",
       "type": "string"
     },
     {
-      "id": "310285d2-e87f-4d73-b88e-830be999a79a",
+      "id": "8e272c96-3b5d-4edd-88a7-b511bffe45f6",
       "key": "date",
       "value": "",
       "type": "string"
