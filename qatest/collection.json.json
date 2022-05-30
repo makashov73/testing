@@ -54,7 +54,7 @@
 									}
 								}
 							],
-							"_postman_id": "e4aa98f1-17db-4513-8103-3e6343ff5a0e",
+							"id": "e4aa98f1-17db-4513-8103-3e6343ff5a0e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -187,7 +187,7 @@
 									}
 								}
 							],
-							"_postman_id": "38d42d42-2257-465e-aca1-73db27f93ba5",
+							"id": "38d42d42-2257-465e-aca1-73db27f93ba5",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -199,8 +199,7 @@
 								"header": [],
 								"body": {
 									"mode": "formdata",
-									"formdata": [],
-									"options": {}
+									"formdata": []
 								},
 								"url": {
 									"raw": "{{baseURL}}/auth/phone/?phone={{phone}}&code={{code}}",
@@ -269,7 +268,7 @@
 									}
 								}
 							],
-							"_postman_id": "c94c438d-1cc0-4ca4-ae25-08bae82b351f",
+							"id": "c94c438d-1cc0-4ca4-ae25-08bae82b351f",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -395,7 +394,7 @@
 									}
 								}
 							],
-							"_postman_id": "6704528e-a998-4898-a924-034ffde8e6ac",
+							"id": "6704528e-a998-4898-a924-034ffde8e6ac",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -408,7 +407,7 @@
 							"response": []
 						}
 					],
-					"_postman_id": "32fe3e49-3407-4368-a0f8-0b2d73f1e415",
+					"id": "32fe3e49-3407-4368-a0f8-0b2d73f1e415",
 					"description": "> Набор запросов для тестирования авторизации.\n\n*   **Request OTP** - запрашивает четырёхзначный код в СМС по номеру телефона.\n*   **Confirm OTP** - осуществляет авторизацию пользователя путем сопоставления полученного OTP с ожидаемым значением.\n*   **Check-in** - осуществляет чек-ин (отметку приложением о последней авторизации в виде timestamp, который отображается в поле *last_login_time* профиля пользователя).\n*   **Refresh token** - осуществляет обновление текущего токена и переприсваевает полученное значение в переменной *token_access*.",
 					"event": [
 						{
@@ -431,8 +430,7 @@
 								"id": "5dcb2bd8-dd02-412f-9bec-d551c6053085"
 							}
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "User profile",
@@ -482,7 +480,7 @@
 											}
 										}
 									],
-									"_postman_id": "b578c777-308c-4556-baea-e6d5cca7baaf",
+									"id": "b578c777-308c-4556-baea-e6d5cca7baaf",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -546,7 +544,7 @@
 											}
 										}
 									],
-									"_postman_id": "21b91753-9e5f-4f37-9c65-99373e25164a",
+									"id": "21b91753-9e5f-4f37-9c65-99373e25164a",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -559,9 +557,8 @@
 									"response": []
 								}
 							],
-							"_postman_id": "7647b521-db85-4a1b-8e83-850c541c8c3f",
-							"description": "> Набор запросов для наполнения профиля пользователя тестовыми данными\n\n**Completing user profile data** - осуществляет заполнение профиля пользователя данными.",
-							"_postman_isSubFolder": true
+							"id": "7647b521-db85-4a1b-8e83-850c541c8c3f",
+							"description": "> Набор запросов для наполнения профиля пользователя тестовыми данными\n\n**Completing user profile data** - осуществляет заполнение профиля пользователя данными."
 						},
 						{
 							"name": "Read user profile",
@@ -700,7 +697,7 @@
 											}
 										}
 									],
-									"_postman_id": "5924462f-2a11-492d-8ee2-89d85e478b3b",
+									"id": "5924462f-2a11-492d-8ee2-89d85e478b3b",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -789,7 +786,7 @@
 											}
 										}
 									],
-									"_postman_id": "f0d7f24a-4e00-4d3a-92f7-0161993c66f2",
+									"id": "f0d7f24a-4e00-4d3a-92f7-0161993c66f2",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -802,7 +799,7 @@
 									"response": []
 								}
 							],
-							"_postman_id": "da7646da-c0b5-4aba-92c5-9e5b40bc3f1f",
+							"id": "da7646da-c0b5-4aba-92c5-9e5b40bc3f1f",
 							"description": "> Набор запросов для чтения профиля пользователя\n\n**Obtain user profile data** - запрашивает данные профиля пользователя.\n\n**Obtain user profile photo** - запрашивает файл пользовательского аватара.",
 							"event": [
 								{
@@ -825,8 +822,7 @@
 										"id": "5af068e6-852c-4102-bcfb-42a1704499b2"
 									}
 								}
-							],
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "Update user profile",
@@ -875,7 +871,7 @@
 											}
 										}
 									],
-									"_postman_id": "38ac133f-f4ce-4a90-b3a0-439fda9ef063",
+									"id": "38ac133f-f4ce-4a90-b3a0-439fda9ef063",
 									"protocolProfileBehavior": {
 										"disabledSystemHeaders": {},
 										"disableBodyPruning": true
@@ -891,8 +887,7 @@
 													"type": "file",
 													"src": "{{filepath}}"
 												}
-											],
-											"options": {}
+											]
 										},
 										"url": "{{baseURL}}/user/photo",
 										"description": "POST-запрос **Upload user profile photo**.\n\nОсуществляет загрузку на сервер файла-изображения пользовательского автара.\n\nПередаваемые параметры:\n\n*   *Image* - путь и наименование передаваемого файла."
@@ -941,7 +936,7 @@
 											}
 										}
 									],
-									"_postman_id": "240c5abb-8a56-4d3a-b379-a667166083eb",
+									"id": "240c5abb-8a56-4d3a-b379-a667166083eb",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -963,7 +958,7 @@
 									"response": []
 								}
 							],
-							"_postman_id": "0ce61b58-c60d-43de-8511-063bfa9fe72d",
+							"id": "0ce61b58-c60d-43de-8511-063bfa9fe72d",
 							"description": "> Набор запросов для обновления пользовательских данных и аватара\n\n**Upload user profile photo** - загружает на сервер файл-изображение в качестве аватара пользователя.\n\n**Updating user profile date** - обновление информации в профиле пользователя.",
 							"event": [
 								{
@@ -986,8 +981,7 @@
 										"id": "247d61cc-8ace-4570-9d78-62b0613c03ec"
 									}
 								}
-							],
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "Use Case",
@@ -1038,7 +1032,7 @@
 													}
 												}
 											],
-											"_postman_id": "41e2ae5a-e4cf-4b69-93af-963a44af999f",
+											"id": "41e2ae5a-e4cf-4b69-93af-963a44af999f",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
@@ -1053,8 +1047,7 @@
 															"type": "file",
 															"src": "{{filepath}}"
 														}
-													],
-													"options": {}
+													]
 												},
 												"url": "{{baseURL}}/user/photo",
 												"description": "POST-запрос **Remove user profile photo**.\n\nПроизводит загрузку пустого файла-изображения пользовательского аватара. Имитирует удаление пользовательского аватара.\n\nПередаваемые параметры:\n\n*   *Image* - путь и наименование передаваемого файла."
@@ -1113,7 +1106,7 @@
 													}
 												}
 											],
-											"_postman_id": "53b03f29-ea78-409e-9400-ff9b1fc525ca",
+											"id": "53b03f29-ea78-409e-9400-ff9b1fc525ca",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
@@ -1169,7 +1162,7 @@
 													}
 												}
 											],
-											"_postman_id": "e477ea3e-a2c6-49df-9a24-870483c2283b",
+											"id": "e477ea3e-a2c6-49df-9a24-870483c2283b",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
@@ -1184,8 +1177,7 @@
 															"type": "file",
 															"src": "{{filepath}}"
 														}
-													],
-													"options": {}
+													]
 												},
 												"url": "{{baseURL}}/user/photo/",
 												"description": "POST-запрос **Upload user profile photo**.\n\nПроизводит загрузку нового изображения пользовательского аватара профиля.\n\nПередаваемые параметры:\n\n*   *Image* - путь и наименование передаваемого файла."
@@ -1256,7 +1248,7 @@
 													}
 												}
 											],
-											"_postman_id": "9184f425-1849-40aa-ae8a-797907326296",
+											"id": "9184f425-1849-40aa-ae8a-797907326296",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
@@ -1269,7 +1261,7 @@
 											"response": []
 										}
 									],
-									"_postman_id": "1b03b712-6ad2-4464-82f6-f83e256fe066",
+									"id": "1b03b712-6ad2-4464-82f6-f83e256fe066",
 									"description": "> Набор запросов для тестирования установки аватара пользователя\n\n**Remove user profile photo** - удаляет пользовательский аватар, путем загрузки пустого файла изображения.\n\n**Obtain user profile photo** - проверяет то, что аватар пользователя был удален.\n\n**Upload user profile photo** - загружает новый аватар пользователя.\n\n**Obtain user profile photo** - производит сверку значения MD5-hash установленного аватара с эталонным значением.",
 									"event": [
 										{
@@ -1292,8 +1284,7 @@
 												"id": "7e13210c-5957-418e-8364-753b0ebc3f0e"
 											}
 										}
-									],
-									"_postman_isSubFolder": true
+									]
 								},
 								{
 									"name": "Profile data test",
@@ -1340,7 +1331,7 @@
 													}
 												}
 											],
-											"_postman_id": "fe100699-2903-44ec-8664-0e7808aacdd5",
+											"id": "fe100699-2903-44ec-8664-0e7808aacdd5",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
@@ -1547,7 +1538,7 @@
 													}
 												}
 											],
-											"_postman_id": "c659ed85-f7fe-42d2-bd5f-d9818b9c7c17",
+											"id": "c659ed85-f7fe-42d2-bd5f-d9818b9c7c17",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
@@ -1602,7 +1593,7 @@
 													}
 												}
 											],
-											"_postman_id": "428c0ea3-f671-4e18-836a-c86087ec459e",
+											"id": "428c0ea3-f671-4e18-836a-c86087ec459e",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
@@ -1615,7 +1606,7 @@
 											"response": []
 										}
 									],
-									"_postman_id": "995a04b9-2646-4098-a4f2-4a249aee505c",
+									"id": "995a04b9-2646-4098-a4f2-4a249aee505c",
 									"description": "> Набор запросов для тестирования наполнения данными профиля пользователя\n\n**Upload user profile data** - запрос осуществляет заполнение полей профиля пользователя различными данными.\n\n**Check user profile data** - запрос осуществляет получение списка полей с данными пользователя и их валидацию.",
 									"event": [
 										{
@@ -1638,16 +1629,14 @@
 												"id": "55235fd6-1b50-4687-a630-1b99cab2c0df"
 											}
 										}
-									],
-									"_postman_isSubFolder": true
+									]
 								}
 							],
-							"_postman_id": "c2fffc8d-0bca-441f-95b7-202920ea0d05",
-							"description": "> Содержит набор со списками запросов для тестирования работы с профилем пользователя\n\n*   *Profile photo test*\n*   *Profile data test*",
-							"_postman_isSubFolder": true
+							"id": "c2fffc8d-0bca-441f-95b7-202920ea0d05",
+							"description": "> Содержит набор со списками запросов для тестирования работы с профилем пользователя\n\n*   *Profile photo test*\n*   *Profile data test*"
 						}
 					],
-					"_postman_id": "920b0f1a-95bc-43b3-9cee-5a45038aabf6",
+					"id": "920b0f1a-95bc-43b3-9cee-5a45038aabf6",
 					"description": "> Набор тестов профиля пользователя\n\n**Create user profile** - набор запросов для наполнения профиля пользователя данными.\n\n**Read user profile** - набор запросов для получения информации из профиля пользователя.\n\n**Update user profile** - содержит набор запросов на обновление информации, содержащейся в профиле пользователя.\n\n**Use Case** - содержит набор запросов для тестирования замены пользовательского аватара и валидации файла изображения (*Profile photo test*), а также набор запросов для заполнения данными профиля пользователя и валидации добавленных данных (*Profile data test*).",
 					"event": [
 						{
@@ -1670,8 +1659,7 @@
 								"id": "55347992-a53f-4485-b849-4bda3d5360d8"
 							}
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Metrics",
@@ -1724,7 +1712,7 @@
 											}
 										}
 									],
-									"_postman_id": "e5a5f7ae-1ed9-4877-b842-b7ad1c0da5d6",
+									"id": "e5a5f7ae-1ed9-4877-b842-b7ad1c0da5d6",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -1790,7 +1778,7 @@
 											}
 										}
 									],
-									"_postman_id": "1bb9ac1c-d87b-4bf8-80fe-7595d62ccf50",
+									"id": "1bb9ac1c-d87b-4bf8-80fe-7595d62ccf50",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -1812,7 +1800,7 @@
 									"response": []
 								}
 							],
-							"_postman_id": "d6b44ba2-6188-43c4-80b7-1466fea5094b",
+							"id": "d6b44ba2-6188-43c4-80b7-1466fea5094b",
 							"description": "> Набор запросов для тестирования добавления метрик пользователя\n\n**Add a metric** - запрос добавляет новые значения для метрик пользователя.\n\n**Add a specific metric (Oxygen)** - запрос добавляет новое значения для метрики конкретной метрики (Oxygen).",
 							"event": [
 								{
@@ -1835,8 +1823,7 @@
 										"id": "8fdc4365-23f3-4a7b-ab05-03ded7eb2d57"
 									}
 								}
-							],
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "Read metric",
@@ -1951,7 +1938,7 @@
 											}
 										}
 									],
-									"_postman_id": "39c7e866-b15e-4478-b430-a81a03e27e12",
+									"id": "39c7e866-b15e-4478-b430-a81a03e27e12",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -2049,7 +2036,7 @@
 											}
 										}
 									],
-									"_postman_id": "f37912d1-b1f0-4671-b5db-fd30f135dd51",
+									"id": "f37912d1-b1f0-4671-b5db-fd30f135dd51",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -2062,7 +2049,7 @@
 									"response": []
 								}
 							],
-							"_postman_id": "c3f5d333-f8e8-4d7b-9917-20abf7ccf65b",
+							"id": "c3f5d333-f8e8-4d7b-9917-20abf7ccf65b",
 							"description": "> Набор запросов получения и валидации метрик пользователя\n\n**Obtain metric meta** \\- получает список параметров и описания метрик пользователя.\n\n**Obtain last user metric** - получает список значений результатов последних измерений по каждой метрике для пользователя.",
 							"event": [
 								{
@@ -2085,11 +2072,10 @@
 										"id": "d375b18c-d3be-4f39-a21f-5a8526216ba2"
 									}
 								}
-							],
-							"_postman_isSubFolder": true
+							]
 						}
 					],
-					"_postman_id": "b10dea00-b712-4176-a8ed-fecb3a0b628b",
+					"id": "b10dea00-b712-4176-a8ed-fecb3a0b628b",
 					"description": "> Набор тестов метрик пользователя\n\n**Create metric** - содержит запрос для тестирования добавления метрик пользователя.\n\n**Read metric** - содержит набор запросов для тестирования получения конфигурации и списка метрик пользователя.",
 					"event": [
 						{
@@ -2112,8 +2098,7 @@
 								"id": "61fdd2d5-7fde-44fa-9b0f-8fc3b8085b81"
 							}
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Reports",
@@ -2173,7 +2158,7 @@
 											}
 										}
 									],
-									"_postman_id": "c8c3c5b5-9a7e-401a-a0fc-2ec7957e82e7",
+									"id": "c8c3c5b5-9a7e-401a-a0fc-2ec7957e82e7",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -2195,7 +2180,7 @@
 									"response": []
 								}
 							],
-							"_postman_id": "861b82b3-bdcc-4c16-b034-c73e70979aba",
+							"id": "861b82b3-bdcc-4c16-b034-c73e70979aba",
 							"description": "> Набор запросов тестирования создания нового отчета пользователем\n\n**Add a user report** \\- запрос создания нового отчета пользователя.",
 							"event": [
 								{
@@ -2218,8 +2203,7 @@
 										"id": "4953c3cc-20ac-45de-8716-f1508ebe8788"
 									}
 								}
-							],
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "Read report",
@@ -2382,7 +2366,7 @@
 											}
 										}
 									],
-									"_postman_id": "79b16a0c-73a1-487c-b125-c53a00b83cf2",
+									"id": "79b16a0c-73a1-487c-b125-c53a00b83cf2",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -2601,7 +2585,7 @@
 											}
 										}
 									],
-									"_postman_id": "68a8a8a6-c973-4968-bb09-6e030b44f8ca",
+									"id": "68a8a8a6-c973-4968-bb09-6e030b44f8ca",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -2834,7 +2818,7 @@
 											}
 										}
 									],
-									"_postman_id": "7333f105-9687-4627-9bf4-2b43b20bc887",
+									"id": "7333f105-9687-4627-9bf4-2b43b20bc887",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -2960,7 +2944,7 @@
 											}
 										}
 									],
-									"_postman_id": "3885bc78-24b7-4b79-b1db-d4b35160d4a9",
+									"id": "3885bc78-24b7-4b79-b1db-d4b35160d4a9",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -2982,7 +2966,7 @@
 									"response": []
 								}
 							],
-							"_postman_id": "0ccf4959-5054-46b3-a4d7-d2cb6816cabb",
+							"id": "0ccf4959-5054-46b3-a4d7-d2cb6816cabb",
 							"description": "> Набор запросов получения списка пользовательских отчетов\n\n**Obtain a specific custom user report** - запрос на получение определенного пользовательского отчета по его id.\n\n**Obtain report list in a range** - запрос на получение списка отчетов в заданном временном промежутке\n\n**Obtain user report list** - запрос на получение полного списка пользовательских отчетов.\n\n**Obtain last user report** - запрос на получение отчета последних метрик пользователя за заданный промежуток времени.",
 							"event": [
 								{
@@ -3005,11 +2989,10 @@
 										"id": "85c62702-30b1-412b-9e7a-4b33ccedc7bb"
 									}
 								}
-							],
-							"_postman_isSubFolder": true
+							]
 						}
 					],
-					"_postman_id": "156aca4f-8734-4735-a6c0-e565562b59af",
+					"id": "156aca4f-8734-4735-a6c0-e565562b59af",
 					"description": "> Набор тестов пользовательских отчетов\n\n**Create report** - содержит запрос для тестирования функции создания пользовательского отчета.\n\n**Read report** \\- содержит запросы для тестирования функции получения списка отчетов пользователя.",
 					"event": [
 						{
@@ -3032,8 +3015,7 @@
 								"id": "449090ad-fc27-4752-91b7-91d9df31c85e"
 							}
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Tests",
@@ -3157,7 +3139,7 @@
 											}
 										}
 									],
-									"_postman_id": "126b69f2-ccd5-4ddc-95f6-542074110064",
+									"id": "126b69f2-ccd5-4ddc-95f6-542074110064",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -3335,7 +3317,7 @@
 											}
 										}
 									],
-									"_postman_id": "777730cc-ea71-43a8-920f-521ec8ae641f",
+									"id": "777730cc-ea71-43a8-920f-521ec8ae641f",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -3348,9 +3330,8 @@
 									"response": []
 								}
 							],
-							"_postman_id": "11165403-900f-4a4a-b0b8-a096737ff615",
-							"description": "> Набор запросов тестирования чтения шаблонов тестов\n\nObtain template list - запрос на получение списка шаблонов тестов.\n\nObtain a specific template - запрос на получение конкретного шаблона теста по его id.",
-							"_postman_isSubFolder": true
+							"id": "11165403-900f-4a4a-b0b8-a096737ff615",
+							"description": "> Набор запросов тестирования чтения шаблонов тестов\n\nObtain template list - запрос на получение списка шаблонов тестов.\n\nObtain a specific template - запрос на получение конкретного шаблона теста по его id."
 						},
 						{
 							"name": "Create tests",
@@ -3421,7 +3402,7 @@
 											}
 										}
 									],
-									"_postman_id": "54ab6c1f-1b1e-4e86-99fa-0cff76c833c7",
+									"id": "54ab6c1f-1b1e-4e86-99fa-0cff76c833c7",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -3509,7 +3490,7 @@
 											}
 										}
 									],
-									"_postman_id": "728676e0-3917-4ebc-8169-ae932a03a1df",
+									"id": "728676e0-3917-4ebc-8169-ae932a03a1df",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -3612,7 +3593,7 @@
 											}
 										}
 									],
-									"_postman_id": "22f1bccb-327a-45ca-b667-30880b82979e",
+									"id": "22f1bccb-327a-45ca-b667-30880b82979e",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -3689,7 +3670,7 @@
 											}
 										}
 									],
-									"_postman_id": "39a25098-e16b-41f1-81e1-1e2dc79992c2",
+									"id": "39a25098-e16b-41f1-81e1-1e2dc79992c2",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -3777,7 +3758,7 @@
 											}
 										}
 									],
-									"_postman_id": "6c52cca6-2594-45b1-83b5-696c647918b8",
+									"id": "6c52cca6-2594-45b1-83b5-696c647918b8",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -3880,7 +3861,7 @@
 											}
 										}
 									],
-									"_postman_id": "7dba079f-8077-4c24-a315-1662bfc2358b",
+									"id": "7dba079f-8077-4c24-a315-1662bfc2358b",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -3957,7 +3938,7 @@
 											}
 										}
 									],
-									"_postman_id": "0dd3b685-e321-43f2-a4a1-4c095c7a2956",
+									"id": "0dd3b685-e321-43f2-a4a1-4c095c7a2956",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -4045,7 +4026,7 @@
 											}
 										}
 									],
-									"_postman_id": "9f4e46d0-fd38-411b-859a-f474ba77b65a",
+									"id": "9f4e46d0-fd38-411b-859a-f474ba77b65a",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -4148,7 +4129,7 @@
 											}
 										}
 									],
-									"_postman_id": "038bf7b0-d6ca-4521-a32f-6f1d666be788",
+									"id": "038bf7b0-d6ca-4521-a32f-6f1d666be788",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -4225,7 +4206,7 @@
 											}
 										}
 									],
-									"_postman_id": "a7d4fe9e-5666-4671-9720-455452f54e48",
+									"id": "a7d4fe9e-5666-4671-9720-455452f54e48",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -4313,7 +4294,7 @@
 											}
 										}
 									],
-									"_postman_id": "cdc0c510-7d19-4a8e-ba8e-49c8b22fe69e",
+									"id": "cdc0c510-7d19-4a8e-ba8e-49c8b22fe69e",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -4416,7 +4397,7 @@
 											}
 										}
 									],
-									"_postman_id": "742d9628-d905-4d18-b187-81a91e3522ca",
+									"id": "742d9628-d905-4d18-b187-81a91e3522ca",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -4493,7 +4474,7 @@
 											}
 										}
 									],
-									"_postman_id": "46ea66f1-8e45-4f46-bc6c-d8a067dc2371",
+									"id": "46ea66f1-8e45-4f46-bc6c-d8a067dc2371",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -4581,7 +4562,7 @@
 											}
 										}
 									],
-									"_postman_id": "213597e1-9d79-4c49-9cff-05c2e6723231",
+									"id": "213597e1-9d79-4c49-9cff-05c2e6723231",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -4684,7 +4665,7 @@
 											}
 										}
 									],
-									"_postman_id": "97c83868-1ab3-4385-9d5e-01ca3cac04ec",
+									"id": "97c83868-1ab3-4385-9d5e-01ca3cac04ec",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -4696,9 +4677,8 @@
 									"response": []
 								}
 							],
-							"_postman_id": "4b11237a-15a4-466a-90cd-ee8432787682",
-							"description": "> Набор запросов для выполнения проверки по объявлению, выполнению и чтению созданных пользователем тестов",
-							"_postman_isSubFolder": true
+							"id": "4b11237a-15a4-466a-90cd-ee8432787682",
+							"description": "> Набор запросов для выполнения проверки по объявлению, выполнению и чтению созданных пользователем тестов"
 						},
 						{
 							"name": "Read test",
@@ -4831,7 +4811,7 @@
 											}
 										}
 									],
-									"_postman_id": "173a63e1-7d7b-4e11-a73f-760f72fe5d22",
+									"id": "173a63e1-7d7b-4e11-a73f-760f72fe5d22",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -4941,7 +4921,7 @@
 											}
 										}
 									],
-									"_postman_id": "f170fb76-abc4-4c76-aed9-adb9ee38c23b",
+									"id": "f170fb76-abc4-4c76-aed9-adb9ee38c23b",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -4954,14 +4934,12 @@
 									"response": []
 								}
 							],
-							"_postman_id": "22fe80fe-4465-432c-b295-abec1fab8a4c",
-							"description": "> Набор запросов для получения списка пользовательских тестов\n\n**Obtain user tests** - запрос получения списка всех выполненных пользователем тестов.\n\n**Obtain last user tests** - запрос получения последних выполненных пользователем тестов.",
-							"_postman_isSubFolder": true
+							"id": "22fe80fe-4465-432c-b295-abec1fab8a4c",
+							"description": "> Набор запросов для получения списка пользовательских тестов\n\n**Obtain user tests** - запрос получения списка всех выполненных пользователем тестов.\n\n**Obtain last user tests** - запрос получения последних выполненных пользователем тестов."
 						}
 					],
-					"_postman_id": "e50da8f7-bf4b-4dd5-8d3c-652b6808cb99",
-					"description": "> Набор проверок пользовательских тестов\n\n**Read template** - набор запросов на чтение шаблонов тестов.\n\n**Create tests** - набор последовательных запросов, осуществляющих проверку создания, наполнения и чтения созданных тестов.\n\n**Read test** - набор запросов чтения созданных пользователем тестов.",
-					"_postman_isSubFolder": true
+					"id": "e50da8f7-bf4b-4dd5-8d3c-652b6808cb99",
+					"description": "> Набор проверок пользовательских тестов\n\n**Read template** - набор запросов на чтение шаблонов тестов.\n\n**Create tests** - набор последовательных запросов, осуществляющих проверку создания, наполнения и чтения созданных тестов.\n\n**Read test** - набор запросов чтения созданных пользователем тестов."
 				},
 				{
 					"name": "Subscriptions",
@@ -5104,7 +5082,7 @@
 									}
 								}
 							],
-							"_postman_id": "a47f6468-5294-4f04-96d9-daed66f3fdd5",
+							"id": "a47f6468-5294-4f04-96d9-daed66f3fdd5",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -5286,7 +5264,7 @@
 									}
 								}
 							],
-							"_postman_id": "1649c3ba-6e8e-439d-8887-ec080968177e",
+							"id": "1649c3ba-6e8e-439d-8887-ec080968177e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -5299,9 +5277,8 @@
 							"response": []
 						}
 					],
-					"_postman_id": "c1bf1de1-0862-41d0-8549-feb446c56656",
-					"description": "> Набор тестов планов подписок\n\n**Obtain list of subscription plans** - запрос получения списка подписочных планов.\n\n**Obtain a specific subscription plan** - запрос получения конкретного подписочного плана по его id.\n\n**Update subscription plan** - обновление информации о подписочном плане.",
-					"_postman_isSubFolder": true
+					"id": "c1bf1de1-0862-41d0-8549-feb446c56656",
+					"description": "> Набор тестов планов подписок\n\n**Obtain list of subscription plans** - запрос получения списка подписочных планов.\n\n**Obtain a specific subscription plan** - запрос получения конкретного подписочного плана по его id.\n\n**Update subscription plan** - обновление информации о подписочном плане."
 				},
 				{
 					"name": "Help Q&A",
@@ -5383,7 +5360,7 @@
 											}
 										}
 									],
-									"_postman_id": "1a5b6e26-8de4-4597-8c9d-f5ed96bda817",
+									"id": "1a5b6e26-8de4-4597-8c9d-f5ed96bda817",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -5463,7 +5440,7 @@
 											}
 										}
 									],
-									"_postman_id": "92f57391-748b-4613-b587-1a82ec5a0365",
+									"id": "92f57391-748b-4613-b587-1a82ec5a0365",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -5491,7 +5468,7 @@
 									"response": []
 								}
 							],
-							"_postman_id": "b33c3101-1644-4c81-89cd-7f32682ac9fe",
+							"id": "b33c3101-1644-4c81-89cd-7f32682ac9fe",
 							"description": "> Набор запросов для получения списка справочной информации системы.\n\n**Obtain help topics list** - запрос получения списка справочных тем.\n\n**Obtain details of help topic** - запрос получения детальной справки по определенной теме.",
 							"event": [
 								{
@@ -5514,11 +5491,10 @@
 										"id": "64590d51-6bbf-4754-b374-5c9bf5488c29"
 									}
 								}
-							],
-							"_postman_isSubFolder": true
+							]
 						}
 					],
-					"_postman_id": "54db7fba-af8d-4493-b96e-3458f4ea1d3d",
+					"id": "54db7fba-af8d-4493-b96e-3458f4ea1d3d",
 					"description": "> Набор тестов справочной информации\n\n**Read help** - содержит набор запросов для получения списка справочной информации системы.",
 					"event": [
 						{
@@ -5541,11 +5517,10 @@
 								"id": "3993f66b-7d51-446c-a272-3cbd0555ca7a"
 							}
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				}
 			],
-			"_postman_id": "9660cecf-286a-46e6-905b-2cff49b69555",
+			"id": "9660cecf-286a-46e6-905b-2cff49b69555",
 			"description": "> Коллекция тестов API *FlowVit.Mobile* содержит несколько групп тестов, включая тесты сценариев.\n\n*   **Authorization** - набор запросов, позволяющих произвести тестирование авторизации.\n*   **User profile** - набор запросов, позволяющих произвести тестирование профиля пользователя.\n*   **Metrics** - набор запросов, позволяющих произвести тестирование работы с метриками пользователя.\n*   **Reports** - набор запросов, позволяющих произвести тестирование работы с отчетами пользователя.\n*   **Tests** - набор запросов, позволяющих произвести проверку работы с тестами.\n*   **Subscriptions** - набор запросов, позволяющих произвести тестирование работы с планами подписок.\n*   **Help Q&A** - набор запросов, позволяющих произвести тестирование работы со справкой.",
 			"event": [
 				{
@@ -5581,10 +5556,10 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "77432a5b-9aa1-496c-aad0-c8e431946ace",
+				"id": "83d75bb8-526b-4eb8-9fb6-de222260754f",
 				"type": "text/javascript",
 				"exec": [
-					"/*let protocol = pm.collectionVariables.get(\"protocol\");",
+					"let protocol = pm.collectionVariables.get(\"protocol\");",
 					"let endpoint = pm.collectionVariables.get(\"endpoint\");",
 					"let port = pm.collectionVariables.get(\"port\");",
 					"let version = pm.collectionVariables.get(\"version\");",
@@ -5673,14 +5648,14 @@
 					"",
 					"let token_test = pm.collectionVariables.get(\"token_access\");",
 					"console.log(token_test);",
-					"console.log(\"Token generated!\");*/"
+					"console.log(\"Token generated!\");"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "da5575b3-2f65-428f-b02c-0c415575a233",
+				"id": "dadbdede-1c46-4616-9da1-23d165b9e551",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -5690,139 +5665,131 @@
 	],
 	"variable": [
 		{
-			"id": "d0a76358-acd8-428f-b401-2e1863eac5ea",
+			"id": "f68ddaaf-71e3-4987-ac6f-394d6822cddf",
 			"key": "baseURL",
 			"value": "{{protocol}}//{{endpoint}}{{port}}/{{version}}",
 			"type": "string"
 		},
 		{
-			"id": "e24c2567-35f1-4060-9a96-522d773552c3",
+			"id": "60e21469-6d2e-480e-8313-6bb759f3029f",
 			"key": "response_time",
 			"value": "5000",
 			"type": "string"
 		},
 		{
-			"id": "3e7a7102-8a7b-415f-8de5-75cbe398a174",
+			"id": "7efbb7b7-9839-48fd-a24a-247222577865",
 			"key": "report_id",
 			"value": "8",
 			"type": "string"
 		},
 		{
-			"id": "f0acb560-f991-40f4-8c97-0ed5cf2a5113",
+			"id": "33210c82-8290-4c47-9a62-b83865c00340",
 			"key": "filepath",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "4fdccefc-e3a0-4228-b497-0b926d528d59",
+			"id": "2c69a22f-6288-4a21-9855-f6bd5726414e",
 			"key": "ava",
 			"value": "photo2.jpg",
 			"type": "string"
 		},
 		{
-			"id": "1fd0d1ce-857b-456e-8650-db091cd7da16",
+			"id": "6c1ab0e6-ac85-4e2e-83bf-748e63e6f736",
 			"key": "hashB",
 			"value": "c6f5239221866bb37e0c42264a11aee8",
 			"type": "string"
 		},
 		{
-			"id": "42db7b03-babc-4eeb-8ddc-3cc7f746af03",
+			"id": "47a08ffc-eb44-4d39-b467-abc9342a398a",
 			"key": "start",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
-			"id": "f779c8dd-2cd4-4443-8c61-075ef2d6ceab",
+			"id": "a1b40990-c96f-42b7-89e9-21dd2394167e",
 			"key": "end",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
-			"id": "999fa168-07e9-417b-a99b-9403af53b19d",
+			"id": "2c7b180b-441a-4f97-b2d2-8b6337cc66b7",
 			"key": "currData",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
-			"id": "db49147b-1a51-46b9-8195-a6acf970773b",
+			"id": "189b3a1e-b2ee-4444-8415-4795be339883",
 			"key": "profileData",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
-			"id": "b84b663c-13df-4fba-bafc-757fb00b84cf",
+			"id": "28bd8742-2348-4f15-a081-e267ca684937",
 			"key": "currObtainedData",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
-			"id": "610bcf0c-94ae-47e3-9f47-4e6a28c59b43",
+			"id": "d3245d01-e720-4d04-a099-a94f89983334",
 			"key": "obtainedData",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
-			"id": "e5d24945-a15c-4ea8-b058-7acf37115e1c",
+			"id": "cc2f7f1c-a4db-467f-a0c7-6a07a176850a",
 			"key": "phone",
 			"value": "79378839459",
 			"type": "string"
 		},
 		{
-			"id": "8f699b37-df1f-401b-80e6-2d7ad4ffdc7d",
+			"id": "d7ed7019-6d1a-46bf-9394-75b201381553",
 			"key": "code",
 			"value": "1111",
 			"type": "string"
 		},
 		{
-			"id": "17af9c8f-a69d-47af-91e0-6e08d2e9a2ed",
+			"id": "8b6bd380-f9b3-4bb3-9e07-e394d2e29540",
 			"key": "token_access",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
-			"id": "58da35f4-e103-482a-a57a-1bbd10a61597",
+			"id": "7a115226-b09b-4f6b-b00e-dc73a153a58f",
 			"key": "port",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "0691fed4-4c1a-45a3-8ebd-a202876ba7fb",
+			"id": "25a96643-fe63-4676-8afb-7c7a4cc56285",
 			"key": "protocol",
 			"value": "https:",
 			"type": "string"
 		},
 		{
-			"id": "7bbec6ab-c59e-495c-bd31-dfabb04d4489",
+			"id": "549dcd44-0950-4741-9426-fcdbdb9e9a6b",
 			"key": "version",
 			"value": "api/v2",
 			"type": "string"
 		},
 		{
-			"id": "77146fc4-ca8e-48e2-91ba-f117f5d51657",
+			"id": "d57dd451-b6e5-4d44-b994-0e5ca826a375",
 			"key": "endpoint",
 			"value": "api-tests.galen-dev.site",
 			"type": "string"
 		},
 		{
-			"id": "0f1e4534-0003-4c27-853d-cb5091107172",
+			"id": "62d82b04-cac7-41e0-8b59-a6f4c7eaedd6",
 			"key": "avatar",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "3afd4186-1b8d-43f4-9177-86af85b52455",
+			"id": "5eaa1284-e90c-4bb4-963c-9156e960abeb",
 			"key": "id_test",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "566b5bde-3ef9-4de1-a82b-429de0e6d249",
+			"id": "eb4b52a9-51bd-4b58-864c-03c5cf79fdf9",
 			"key": "currdatetime",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
-			"id": "74625230-8cc0-4bc6-9572-77209ee8c026",
+			"id": "68c31c95-c3d7-4e6e-b35b-6964ea84183a",
 			"key": "subscription",
 			"value": "1",
 			"type": "string"
